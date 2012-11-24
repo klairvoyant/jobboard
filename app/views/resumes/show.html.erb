@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User:</b>
+  <%= @resume.user_id %>
+</p>
+
+<p>
+  <b>Option no:</b>
+  <%= @resume.option_no %>
+</p>
+
+<p>
+  <b>File name:</b>
+  <%= @resume.file_name %>
+</p>
+
+<p>
+  <b>Type:</b>
+  <%= @resume.type %>
+</p>
+
+<p>
+  <b>Data:</b>
+  <%= @resume.data %>
+</p>
+
+
+<%= link_to 'Edit', edit_resume_path(@resume) %> |
+<%= link_to 'Back', resumes_path %>

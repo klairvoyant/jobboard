@@ -1,0 +1,21 @@
+<%= simple_form_for(@job_detail) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :job_title %>
+    <%= f.input :category %>
+    <%= f.input :company %>
+    <%= f.input :job_posted_date %>
+    <%= f.input :direct_employee %>
+    <%= f.input :staffing_agency %>
+    <%= f.input :job_type %>
+    <%= f.input :experience %>
+    <%= f.input :education_level %>
+    <%= f.input :description %>
+    <%= f.input :zip_code %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

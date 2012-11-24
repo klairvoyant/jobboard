@@ -1,0 +1,28 @@
+
+<section class="content_body">
+  <article class="main_logo">
+    <%=image_tag("main_logo2.png")%>
+  </article>
+  <article class="form_box">
+    <div class="left_side">
+      <!--<%#= link_to image_tag("google.png"), user_omniauth_authorize_path(:twitter) %>-->
+      <%= link_to image_tag("google.png"), user_omniauth_authorize_path(:google_oauth2) %>
+      <%= link_to image_tag("linkedin.png"), user_omniauth_authorize_path(:linkedin) %>
+      <%= link_to image_tag("facebook.png"), user_omniauth_authorize_path(:facebook) %>
+    </div>
+    <div class="right_side">
+      <p class="header"><span>Register</span>or    <span>Log in</span></p>
+      <%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+          <p class="notice"><%= notice %></p>
+          <%= f.error_notification %>
+          <%= f.input :email, :autofocus => true %>
+          <%= f.input :password %>
+          <%= f.button :submit, "Log in",:class=> "btn btn-primary" %>
+      <% end %>
+    </div>
+    <div class="clear"></div>
+    <div class="form_footer gap3">
+        <%= render :partial => "users/shared/links" %>
+    </div>
+  </article>
+</section>

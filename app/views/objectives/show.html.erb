@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Objective:</b>
+  <%= @objective.objective %>
+</p>
+
+<p>
+  <b>Area of interest:</b>
+  <%= @objective.area_of_interest %>
+</p>
+
+<p>
+  <b>Job type:</b>
+  <%= @objective.job_type %>
+</p>
+
+<p>
+  <b>Salary range:</b>
+  <%= @objective.salary_range %>
+</p>
+
+
+<%= link_to 'Edit', edit_objective_path(@objective) %> |
+<%= link_to 'Back', objectives_path %>

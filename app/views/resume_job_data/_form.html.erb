@@ -1,0 +1,15 @@
+<%= simple_form_for(@resume_job_datum) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :resume_id %>
+    <%= f.input :objective %>
+    <%= f.input :area_of_interest %>
+    <%= f.input :job_type %>
+    <%= f.input :salary %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

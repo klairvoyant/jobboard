@@ -1,0 +1,22 @@
+<div class="row-fluid">
+  <div class="span10">
+<h3>Skills</h3>
+<%= simple_form_for(@skill) do |f| %>
+  <%= f.error_notification %>
+
+  <!--<div class="form-inputs">-->
+    <!--<%= f.input :resume_id %>-->
+    <%= f.input :skill_name %>
+    <%= f.input :skill_years %>
+  <!--</div>-->
+
+  <!--<div class="form-actions">-->
+    <%= f.button :submit, 'Add Skill',:class=> "btn btn-primary" %>
+  <!--</div>-->
+<% end %>
+<%= link_to 'Next', new_language_path,:class => 'btn btn-primary pull-right' %>
+  </div>
+  <div class="span2">
+
+  </div>
+</div>

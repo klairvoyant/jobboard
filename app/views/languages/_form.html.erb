@@ -1,0 +1,25 @@
+<div class="row-fluid">
+  <div class="span10">
+<h3>Language Skills</h3>
+<%= simple_form_for(@language) do |f| %>
+  <%= f.error_notification %>
+
+  <!--<div class="form-inputs">-->
+    <!--<%= f.input :resume_id %>-->
+    <%= f.input :language_name %>
+    <%= f.input :language_proficiency %>
+  <!--</div>-->
+
+  <!--<div class="form-actions">-->
+    <%= f.button :submit, 'Add Language',:class=> "btn btn-primary" %>
+  <!--</div>-->
+<% end %>
+  </div>
+  <div class="span2">
+
+    <div class="dashboard-photo">
+      <%=image_tag("profile-pic.png")%>
+    </div>
+
+  </div>
+</div>

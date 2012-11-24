@@ -1,0 +1,31 @@
+<h1>Listing resume_job_data</h1>
+
+<table>
+  <tr>
+    <th>Resume</th>
+    <th>Objective</th>
+    <th>Area of interest</th>
+    <th>Job type</th>
+    <th>Salary</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @resume_job_data.each do |resume_job_datum| %>
+  <tr>
+    <td><%= resume_job_datum.resume_id %></td>
+    <td><%= resume_job_datum.objective %></td>
+    <td><%= resume_job_datum.area_of_interest %></td>
+    <td><%= resume_job_datum.job_type %></td>
+    <td><%= resume_job_datum.salary %></td>
+    <td><%= link_to 'Show', resume_job_datum %></td>
+    <td><%= link_to 'Edit', edit_resume_job_datum_path(resume_job_datum) %></td>
+    <td><%= link_to 'Destroy', resume_job_datum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Resume job datum', new_resume_job_datum_path %>

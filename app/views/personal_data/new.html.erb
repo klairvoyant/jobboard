@@ -1,0 +1,94 @@
+<div class="row-fluid topPush">
+    <div class="span2">
+    <p><button class="btn btn-large dashboard-name-btn" type="button"><h4><%=image_tag("dashboard/name.png")%>&nbsp;Name</h4></button></p>
+    <p><button class="btn btn-large dashboard-left-btns" type="button"><i class="icon-user"></i>&nbsp;Apprentice</button></p>
+    <p><button class="btn btn-large dashboard-left-btns" type="button"><i class="icon-envelope"></i>&nbsp;Messages</button></p>
+    <p><button class="btn btn-large dashboard-left-btns" type="button"> <i class="icon-exclamation-sign"></i>&nbsp;Alerts</button></p>
+    <p><button class="btn btn-large dashboard-left-btns" type="button"><i class="icon-wrench"></i>&nbsp;Settings</button></p>
+
+
+    <!--<div class="interviews">-->
+      <!--<ul >-->
+
+        <!--<li><%#=image_tag("interviews.png",:class => "imageAlign")%></li>-->
+        <!--<li class="interviews-even">Confirmed Interviews</li>-->
+        <!--<li class="interviews-odd"><em><%= @confirmedcount %></em></li>-->
+        <!--<li class="interviews-even">Interview Request</li>-->
+        <!--<li class="interviews-odd"><em><%= @requestedcount %></em></li>-->
+        <!--<li class="interviews-even">Completed Interviews</li>-->
+        <!--<li class="interviews-odd"><em><%= @completecount %></em></li>-->
+        <!--<li class="interviews-even">Incomplete Interviews</li>-->
+        <!--<li class="interviews-odd"><em><%= @incompletecount %></em></li>-->
+      <!--</ul>-->
+    <!--</div>-->
+    <div class="upload">
+      <!--<img src="images/upload-doc.png" width="137" />-->
+      <%=image_tag("upload-doc.png")%>
+      <span class="uploadspan">Upload cover letters, your resume, and letters of recommendation.</span>
+      <%= link_to 'Upload', '',:class => 'btn btn-primary' %>
+    </div>
+  </div>
+    <div class="span7">
+         <div id="content">
+          <div class="middle-c">
+            <div class="dashboard-bg">
+              <div class="dashboard-sticker2">    </div>
+              <%= render 'form' %>
+
+            </div>
+          </div>
+        </div>
+
+    </div>
+    <div class="span3">
+        <div class="live-chat-box">
+
+            <div class="input-prepend"><span class="add-on green-livechat-prepend">Live Chat</span></div>
+            <!--<div class="live-chtoptions">-->
+            <!--<div class="live-contacts"><a href="#"><strong>Contacts</strong></a></div>-->
+            <!--<div class="live-onlin">-->
+            <!--<a href="#">Show Online only</a>-->
+            <!--</div>-->
+            <!--<div class="live-status">-->
+            <!--<div class="dropdown">-->
+            <!--<a class="dropdown-toggle" id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="/page.html">Status<b class="caret"></b></a>-->
+            <!--<ul class="dropdown-menu status-dropdown" role="menu">-->
+            <!--<li><a tabindex="-1" href="#"><%=image_tag("dashboard/online.png")%> Online</a></li>-->
+            <!--<li><a tabindex="-1" href="#"><%=image_tag("dashboard/busy.png")%> Busy</a></li>-->
+            <!--<li><a tabindex="-1" href="#"><%=image_tag("dashboard/away.png")%> Away</a></li>-->
+            <!--<li><a tabindex="-1" href="#"><%=image_tag("dashboard/offline.png")%> Offline</a></li>-->
+            <!--</ul>-->
+            <!--</div>-->
+            <!--</div>-->
+            <!--</div>-->
+            <!--<div class="online-contacts">-->
+            <!--<ul class="no-list-style">-->
+            <!--<li><div class="txt-align">Contact's Name <%=image_tag("dashboard/away.png")%></div></li>-->
+            <!--<li><div class="txt-align">Contact's Name <%=image_tag("dashboard/online.png")%></div></li>-->
+            <!--<li><div class="txt-align">Contact's Name<%=image_tag("dashboard/offline.png")%></div></li>-->
+            <!--<li><div class="txt-align">Contact's Name</div></li>-->
+            <!--<li><div class="txt-align">Contact's Name</div></li>-->
+            <!--<li><div class="txt-align">Contact's Name</div></li>-->
+            <!--<li><div class="txt-align">Contact's Name</div></li>-->
+            <!--<li><div class="txt-align">Contact's Name</div></li>-->
+            <!--</ul>-->
+
+            <!--</div>-->
+            <!--<div class="chatbox">-->
+            <!--<div class="chating-options">-->
+            <!--<div class="chating-pic"><label class="chating-pictxt"><a href="#">Photo</a></label></div>-->
+            <!--<div class="chating-contact"><a href="#">Contact's Name</a></div>-->
+            <!--<div class="chating-clear"><a href="#">Clear</a></div>-->
+            <!--</div>-->
+            <!--<div class="chatbox-txtarea">-->
+            <!--<textarea class="chatbox-area"></textarea>-->
+            <!--<input type="image" src="dashboard/send.png" class="send-chat-btn" align="right" />-->
+            <!--</div>-->
+            <!--</div>-->
+        </div>
+    </div>
+</div>
+
+
+
+

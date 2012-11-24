@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Resume:</b>
+  <%= @resume_job_datum.resume_id %>
+</p>
+
+<p>
+  <b>Objective:</b>
+  <%= @resume_job_datum.objective %>
+</p>
+
+<p>
+  <b>Area of interest:</b>
+  <%= @resume_job_datum.area_of_interest %>
+</p>
+
+<p>
+  <b>Job type:</b>
+  <%= @resume_job_datum.job_type %>
+</p>
+
+<p>
+  <b>Salary:</b>
+  <%= @resume_job_datum.salary %>
+</p>
+
+
+<%= link_to 'Edit', edit_resume_job_datum_path(@resume_job_datum) %> |
+<%= link_to 'Back', resume_job_data_path %>

@@ -1,0 +1,43 @@
+<h1>Listing job_details</h1>
+
+<table>
+  <tr>
+    <th>Job title</th>
+    <th>Category</th>
+    <th>Company</th>
+    <th>Job posted date</th>
+    <th>Direct employee</th>
+    <th>Staffing agency</th>
+    <th>Job type</th>
+    <th>Experience</th>
+    <th>Education level</th>
+    <th>Description</th>
+    <th>Zip code</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @job_details.each do |job_detail| %>
+  <tr>
+    <td><%= job_detail.job_title %></td>
+    <td><%= job_detail.category %></td>
+    <td><%= job_detail.company %></td>
+    <td><%= job_detail.job_posted_date %></td>
+    <td><%= job_detail.direct_employee %></td>
+    <td><%= job_detail.staffing_agency %></td>
+    <td><%= job_detail.job_type %></td>
+    <td><%= job_detail.experience %></td>
+    <td><%= job_detail.education_level %></td>
+    <td><%= job_detail.description %></td>
+    <td><%= job_detail.zip_code %></td>
+    <td><%= link_to 'Show', job_detail %></td>
+    <td><%= link_to 'Edit', edit_job_detail_path(job_detail) %></td>
+    <td><%= link_to 'Destroy', job_detail, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Job detail', new_job_detail_path %>

@@ -1,0 +1,412 @@
+@charset "utf-8";
+/* CSS Document */
+
+.hero-unit {
+    background-image: url(../homepage/bgg.png);
+    color: white;
+    height: 600px;
+    text-align: center;
+    overflow: hidden;
+    background-position: 50% top;
+    background-color: white;
+}
+
+.home-logo {
+    background-image: url(../homepage/logo.png);
+    height: 192px;
+    background-position: 50% top;
+    background-repeat:no-repeat;
+}
+
+.login-panel {
+    width: 500px;
+    height:360px;
+    background-color: #DEDDDD;
+    border: 1px solid #DADADA;
+    padding: 20px;
+    margin-top:30px;
+    margin-bottom: 40px;
+    color: #333;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .075);
+    -moz-box-shadow: 0 1px 2px rgba(0,0,0,.075);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .075);
+}
+
+.sign-in-btns {
+    width: 193px;
+    float:left;
+}
+
+.sign-in-btn {
+    padding:20px;
+}
+
+.sign-in-box {
+    float:left;
+    margin-left:70px;
+    text-align: left;
+}
+
+.sign-btn {
+    float: right;
+}
+
+.signup-btn {
+    width: 250px;
+    margin-top: 10px;
+}
+.accpt-terms {
+    clear:both;
+    padding: 30px 60px 30px 60px;
+}
+
+.feedback-fix {
+    z-index: 22;
+    position: fixed;
+    margin-top: -550px;
+    height: 104px;
+    width: 41px;
+    background-image:url(/homepage/feedback.png);
+    background-repeat:no-repeat;
+    float:right;
+    margin-left: 97%;
+}
+
+.benefits {
+    width:800px;
+    margin:auto;
+
+}
+
+.benefits img {
+    width:30px;
+    height:30px;
+}
+.no-padding {
+    padding: 0px;
+
+}
+
+.no-list-style {
+    list-style: none;
+
+}
+
+.no-list-style li{
+    color: #7F8992;
+    margin-left: -20px;
+    margin-bottom:10px;
+
+}
+
+
+.no-list-style li a:hover {
+    background-color: transparent;
+    text-decoration: none;
+}
+.footermiddle a:hover {
+    background-color: transparent;
+    text-decoration: none;
+
+}
+
+.for-jobseeker {
+    text-align:left;
+    float:left;
+    margin-left:100px;
+}
+
+.for-employeer {
+    text-align:left;
+    float:left;
+}
+
+.benefits-divider {
+    background-color:#7B838C;
+    width:1px;
+    height:160px;
+    float:left;
+    margin: 20px;
+}
+
+.btn-spacing {
+    margin-left: 10px;
+}
+
+.float-left{
+    float:left;
+}
+
+.top-space{
+    margin-top: 30px;
+}
+
+.about-experience{
+    padding-top: 10px;
+    width: 90%;
+    clear:both;
+}
+
+.d-footer-bg{
+    width: 100%;
+    /*background-image: url(../dashboard/footer-bg.png);*/
+    background-image: url(dashboard/footer-bg.png);
+    background-position: absolute;
+    height: 203px;
+    text-align: center;
+
+
+    color: #eee;
+    display:block;
+}
+
+.footerleft{
+    width:30%;
+    float:left;
+}
+.footermiddle{
+    width:50%;
+    float:left;
+}
+
+.dashboard-sticker{
+
+    background-image: url(resume-strip.png);
+    background-repeat:no-repeat;
+    width: 162px;
+    height: 43px;
+    z-index: 33;
+    position:relative;
+    /*margin-top:-70px;*/
+    /*margin-left: -515px;*/
+    margin-top:-30px;
+    margin-left: -13px;
+    padding-bottom: 30px;
+
+}
+
+.dashboard-sticker2
+{
+    background-image: url(dashboard/dashboard-style.png);
+    background-repeat:no-repeat;
+    width: 162px;
+    height: 43px;
+    z-index: 33;
+    position:relative;
+    /*margin-top:-70px;*/
+    /*margin-left: -515px;*/
+    margin-top:-30px;
+    margin-left: -13px;
+    padding-bottom: 30px;
+
+}
+
+.green-prepend{
+    background-color:#007070 !important;
+    color: #fff;
+    width:70px !important;
+}
+
+.green-livechat-prepend{
+    background-color:#007070 !important;
+    color: #fff;
+    width: 95% !important;
+}
+
+.live-chat-box{
+    background-color: #ffffff;
+    width: 100%;
+}
+
+.chatbox{
+    background-image:url(/dashboard/chat-box.png);
+    background-repeat:no-repeat;
+    height:350px;
+    background-size: 98% 98%;
+    margin-left: 5px;
+    clear:both;
+    color:#fff;
+
+}
+.live-chtoptions{
+    margin:5px;
+}
+.live-contacts{
+    font-size:12px;
+    text-align:left;
+    float:left;
+}
+
+.live-status{
+    font-size:10px;
+    text-align:right;
+    float:right;
+}
+
+.status-dropdown{
+    text-align: left;
+    min-width: 50px !important;
+    background-color: #0BAAAA;
+}
+
+.status-dropdown li{
+    color: #fff;
+}
+.live-onlin{
+    font-size:10px;
+    text-align:right;
+    float:right;
+    margin-left: 10px;
+}
+
+.online-contacts{
+    width: 80%;
+    border: 1px solid #555555;
+    border-radius: 10px;
+    background-color: #EDEDED;
+    clear:both;
+    margin-bottom: 30px;
+}
+
+.online-contacts li{
+    background-image:url(dashboard/online-names.png);
+    background-repeat:no-repeat;
+    height:40px;
+    background-size: 100% 90%;
+    margin-left: -25px;
+    margin-bottom: 0px;
+}
+
+
+.txt-align{
+    padding-top: 5px;
+    color: #333;
+    font-size:12px;
+
+}
+
+.dashboard-left-btns{
+    width: 130px;
+    text-align:left;
+
+    font-size: 15px;
+}
+
+.chating-clear{
+    float:right;
+    margin:10px;
+    margin-right: 20px;
+    font-size:10px;
+}
+.chating-clear > a{
+
+    color:#ffffff !important;
+}
+.chating-contact{
+    float:left;
+    margin:10px;
+    margin-left: 10px;
+    font-size:10px;
+}
+.chating-contact > a{
+    color:#ffffff !important;
+}
+.chating-pic{
+    width: 50px;
+    height:40px;
+    border: 1px solid #555555;
+    border-radius: 30px;
+    background-color: #FFFFFF;
+    float:left;
+    margin:5px;
+    margin-left: 10px;
+    font-size:10px;
+}
+.chating-pictxt > a{
+    margin-top:10px;
+    color:#007070 !important;
+}
+.chating-pictxt{
+    margin-top:10px;
+    font-size:10px;
+}
+.chatbox-txtarea{
+
+}
+.chatbox-area{
+    margin-top: 220px;
+    margin-left: -7px;
+    width:80%;
+}
+.send-chat-btn{
+    margin-right: 23px;
+    margin-top: -30px;
+    position:relative;
+}
+
+.margin-header-tabs{
+    padding-top: 20px;
+    background-image:url(/dashboard/header-tab-bg.png);
+}
+
+.header-tabs{
+    width: 1200px !important;
+    margin:auto;
+    border: 1px solid #555555;
+    border-radius: 8px;
+    border: 1px solid #D4D4D4;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    height:42px;
+    padding: 0px;
+    text-align:left;
+    background-color:#E2E2E4;
+
+}
+
+.inline-lising-tabs > li{
+    display:inline-block;
+    margin-left:1px;
+}
+.header-left-tabs{
+    float:left;
+}
+.header-mid-tabs{
+    margin-left:15px;
+    float:left;
+}
+body {
+    background-color: #EBEAEA;
+}
+.footermiddle a:hover {
+    text-decoration: no-underline;
+}
+
+/*.header-searchs{*/
+    /*margin-top:7px;*/
+    /*float:right;*/
+/*}*/
+
+/*.search-icon-left{*/
+    /*margin-left: -30px;*/
+/*}*/
+
+/*.notify{*/
+    /*vertical-align:super;*/
+    /*margin-left:-12px;*/
+    /*margin-top:-200px;*/
+    /*background-color:#09B0E8 !important;*/
+/*}*/
+
+/*.inbox-notify{*/
+    /*vertical-align:super;*/
+    /*margin-left:-12px;*/
+    /*padding-top:-200px;*/
+    /*background-color:#EDEDED !important;*/
+    /*color:#09B0E8 !important;*/
+/*}*/
+

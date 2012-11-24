@@ -1,0 +1,27 @@
+<h1>Listing linkedin_details</h1>
+
+<table>
+  <tr>
+    <th>User</th>
+    <th>Email</th>
+    <th>Profile</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @linkedin_details.each do |linkedin_detail| %>
+  <tr>
+    <td><%= linkedin_detail.user_id %></td>
+    <td><%= linkedin_detail.email %></td>
+    <td><%= linkedin_detail.profile_id %></td>
+    <td><%= link_to 'Show', linkedin_detail %></td>
+    <td><%= link_to 'Edit', edit_linkedin_detail_path(linkedin_detail) %></td>
+    <td><%= link_to 'Destroy', linkedin_detail, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Linkedin detail', new_linkedin_detail_path %>

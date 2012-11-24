@@ -1,0 +1,27 @@
+<h1>Listing certifications</h1>
+
+<table>
+  <tr>
+    <th>Resume</th>
+    <th>Certification name</th>
+    <th>Certification year</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @certifications.each do |certification| %>
+  <tr>
+    <td><%= certification.resume_id %></td>
+    <td><%= certification.certification_name %></td>
+    <td><%= certification.certification_year %></td>
+    <td><%= link_to 'Show', certification %></td>
+    <td><%= link_to 'Edit', edit_certification_path(certification) %></td>
+    <td><%= link_to 'Destroy', certification, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Certification', new_certification_path %>

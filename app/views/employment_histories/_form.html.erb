@@ -1,0 +1,31 @@
+<div class="row-fluid">
+  <div class="span10">
+
+  <h3>Employment History</h3>
+<%= simple_form_for(@employment_history) do |f| %>
+  <%= f.error_notification %>
+
+  <!--<div class="form-inputs">-->
+    <!--<%= f.input :resume_id %>-->
+    <%= f.input :company_name %>
+    <%= f.input :start_date,:as => :date,:discard_day => true,:order => [:month, :year] %>
+    <%= f.input :end_date, :as => :date,:discard_day => true,:order => [:month, :year] %>
+    <%= f.input :job_title %>
+    <%= f.input :job_description, :input_html => { :rows => 5 } %>
+  <!--</div>-->
+
+  <!--<div class="form-actions">-->
+    <%= f.button :submit, 'Add',:class=> "btn btn-primary" %>
+  <!--</div>-->
+<% end %>
+    <%= link_to 'Next', new_education_path,:class => 'btn btn-primary pull-right' %>
+
+  </div>
+  <div class="span2">
+
+    <div class="dashboard-photo">
+      <%=image_tag("profile-pic.png")%>
+    </div>
+
+  </div>
+</div>

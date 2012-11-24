@@ -1,0 +1,32 @@
+<div class="row-fluid">
+  <div class="span10">
+
+  <h3>Education History</h3>
+<%= simple_form_for(@education) do |f| %>
+  <%= f.error_notification %>
+
+  <!--<div class="form-inputs">-->
+    <!--<%= f.input :resume_id %>-->
+    <%= f.input :school_name %>
+    <%= f.input :school_type %>
+    <%= f.input :state %>
+    <%= f.input :country %>
+    <%= f.input :start_date,:as => :date,:discard_day => true,:order => [:month, :year] %>
+    <%= f.input :end_date,:as => :date,:discard_day => true,:order => [:month, :year] %>
+    <%= f.input :course %>
+    <%= f.input :level %>
+  <!--</div>-->
+
+  <!--<div class="form-actions">-->
+    <%= f.button :submit, 'Add Education',:class=> "btn btn-primary" %>
+  <!--</div>-->
+<% end %>
+</div>
+<div class="span2">
+
+  <div class="dashboard-photo">
+    <%=image_tag("profile-pic.png")%>
+  </div>
+
+</div>
+</div>

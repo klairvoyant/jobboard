@@ -1,0 +1,27 @@
+<h1>Listing languages</h1>
+
+<table>
+  <tr>
+    <th>Resume</th>
+    <th>Language name</th>
+    <th>Language proficiency</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @languages.each do |language| %>
+  <tr>
+    <td><%= language.resume_id %></td>
+    <td><%= language.language_name %></td>
+    <td><%= language.language_proficiency %></td>
+    <td><%= link_to 'Show', language %></td>
+    <td><%= link_to 'Edit', edit_language_path(language) %></td>
+    <td><%= link_to 'Destroy', language, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Language', new_language_path %>

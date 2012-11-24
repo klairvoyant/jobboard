@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User:</b>
+  <%= @personal_datum.user_id %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @personal_datum.name %>
+</p>
+
+<p>
+  <b>School:</b>
+  <%= @personal_datum.school %>
+</p>
+
+<p>
+  <b>Area of study:</b>
+  <%= @personal_datum.area_of_study %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @personal_datum.email %>
+</p>
+
+<p>
+  <b>Phone:</b>
+  <%= @personal_datum.phone %>
+</p>
+
+<p>
+  <b>Photo:</b>
+  <%= @personal_datum.photo %>
+</p>
+
+<p>
+  <b>Video:</b>
+  <%= @personal_datum.video %>
+</p>
+
+<p>
+  <b>About me:</b>
+  <%= @personal_datum.about_me %>
+</p>
+
+<p>
+  <b>Experience:</b>
+  <%= @personal_datum.experience %>
+</p>
+
+
+<%= link_to 'Edit', edit_personal_datum_path(@personal_datum) %> |
+<%= link_to 'Back', personal_data_path %>

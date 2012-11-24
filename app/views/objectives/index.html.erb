@@ -1,0 +1,29 @@
+<h1>Listing objectives</h1>
+
+<table>
+  <tr>
+    <th>Objective</th>
+    <th>Area of interest</th>
+    <th>Job type</th>
+    <th>Salary range</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @objectives.each do |objective| %>
+  <tr>
+    <td><%= objective.objective %></td>
+    <td><%= objective.area_of_interest %></td>
+    <td><%= objective.job_type %></td>
+    <td><%= objective.salary_range %></td>
+    <td><%= link_to 'Show', objective %></td>
+    <td><%= link_to 'Edit', edit_objective_path(objective) %></td>
+    <td><%= link_to 'Destroy', objective, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Objective', new_objective_path %>

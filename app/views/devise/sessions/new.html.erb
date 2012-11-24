@@ -1,0 +1,44 @@
+
+  <section class="content_body">
+    <article class="main_logo">
+      <%=image_tag("main_logo2.png")%>
+ </article>
+    <article class="form_box">
+      <div class="left_side">
+        <%=image_tag("facebook.png")%>
+        <%=image_tag("linkedin.png")%>
+        <%=image_tag("google.png")%>
+      </div>
+      <div class="right_side">
+        <p class="header"><span>Register</span>or    <span>Log in</span></p>
+        <%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+            <p class="notice"><%= notice %></p>
+            <%= f.error_notification %>
+            <!--<div><%#= f.label :email %>   -->
+              <!--<%#= f.email_field :email,:class=>"email" %></div> -->
+            <%= f.input :email, :autofocus => true %>
+            <!--<div><%#= f.label :password %>
+              <%#= f.password_field :password,:class=>"password" %></div> -->
+            <%= f.input :password %>
+            <!--<div><#%= f.submit "Log in",:class=>"form_button" %></div>-->
+            <%= f.button :submit, "Log in",:class=> "btn btn-primary" %>
+        <% end %>
+        <%= link_to "Sign in with Twitter", user_omniauth_authorize_path(:twitter) %>
+      </div>
+      <!--<div class="clear"></div>-->
+      <!--<div class="form_footer">-->
+        <!--<input type="checkbox" name="vehicle" value="Car" /> I accept the <span> Privacy Policy </span>-->
+        <!--and <span> Terms and Conditions </span> of CLOUXIFY.-->
+
+        <!--<div class="gap1">-->
+             <!--<%#= link_to "Sign up now for free",welcome_signup_path,:class=>"btn btn-primary" %>  <%#- if devise_mapping.registerable? && controller_name != 'registrations' %>-->
+              <%#= link_to "Sign up", new_registration_path(resource_name) %><br />
+
+
+          <%# end -%>
+          <%= render :partial => "users/shared/links" %>
+
+        <!--</div>-->
+    <!--</div>-->
+    </article>
+  </section>

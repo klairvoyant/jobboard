@@ -1,0 +1,83 @@
+<div class="row-fluid">
+  <div class="span10">
+
+        <h3>Post Your Resume</h3>
+
+        <strong>Lets get started. Select one of these four options:</strong><br>
+
+        <%= simple_form_for(@resume,:html => {:multipart => true} ) do |f| %>
+
+           <p class="notice"><%= notice %></p>
+
+           <%= f.collection_radio_buttons(:option_no, [['1', "Create Resume manually"]],:first, :last,:item_wrapper_tag=>'label',:item_wrapper_class=>'bigSize', :checked=> '1' ) do |b|
+              b.label { b.radio_button + " " +  b.text }
+            end %>
+            <div class="gap1">
+                Don't worry, we'll help along the way.
+            </div>
+
+             <div class="row-fluid">
+                <div class="span6">
+                  <%= f.collection_radio_buttons(:option_no, [['2', 'import my information from linkedin']],:first, :last,:item_wrapper_tag=>'label',:item_wrapper_class=>'bigSize' ) do |b|
+                    b.label {
+
+                      b.radio_button + " " + b.text
+                    }
+                  end %>
+              </div>
+                <div class="span6 bigSize">
+                   <%=  link_to "In",linkedinconnect_linkedin_details_path,:class=>"btn btn-primary" %>
+                </div>
+
+             </div>
+
+               <div class="row-fluid">
+                <div class="span3">
+                  <%= f.collection_radio_buttons(:option_no, [['3', 'upload resume']],:first, :last,:item_wrapper_tag=>'label',:item_wrapper_class=>'bigSize', :checked=> '1' ) do |b|
+                    b.label {
+
+                      b.radio_button + " " + b.text
+                    }
+                  end
+                  %>
+
+                </div>
+                <div class="span9 bigSize">
+
+                  <%= f.input :file_name, :as => :file,:label=>false  %>
+                </div>
+              </div>
+
+              <div class="gap1">
+                Your resume will automatically populate fields found on the next page.
+              </div>
+              <div class="gap1">
+                We will automatically populate the fields on the next page with content from your resume( in PDF,DOC,DOCX,RTF or TXT format.)
+              </div>
+
+
+              <%= f.collection_radio_buttons(:option_no, [['4', 'cut and paste your resume']],:first, :last,:item_wrapper_tag=>'label',:item_wrapper_class=>'bigSize', :checked=> '1' ) do |b|
+                b.label {
+
+                  b.radio_button + " " + b.text
+                }
+              end
+              %>
+
+              <div class="gap1">
+
+              <%= f.input :data,:as => :text,:label=>false,:input_html => { :cols => 150, :rows => 10}  %>
+              </div>
+
+              <%= f.button :submit, 'Next',:class=> "btn btn-primary pull-right" %>
+        <% end %>
+
+  </div>
+  <div class="span2">
+
+    <div class="dashboard-photo">
+        <%=image_tag("profile-pic.png")%>
+    </div>
+
+  </div>
+</div>
