@@ -36,4 +36,16 @@ Jobboard::Application.configure do
   config.assets.debug = true
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
   #Paperclip.options[:command_path] = "/usr/bin/"
+
+  TWITTER_CONSUMER_KEY='R2dOmCCtBWnzj3rwFHOskg'
+  TWITTER_CONSUMER_SECRET='NprlT65NTDjaAcqKH0pJ9gNL7cX2YqZJqyoJkqpovI'
+
+  GOOGLE_CONSUMER_KEY='927282652569.apps.googleusercontent.com'
+  GOOGLE_CONSUMER_SECRET='pe1forNU12_T_A7VGkW6gv1F'
+
+  LINKEDIN_CONSUMER_KEY='dn03xwa9eao6'
+  LINKEDIN_CONSUMER_SECRET='pOud139uvFMKw2jp'
+
+  FACEBOOK_CONSUMER_KEY='114640128698681'
+  FACEBOOK_CONSUMER_SECRET='cab57c5646359154ade1e0e80864707e'
 end

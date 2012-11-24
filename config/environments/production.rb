@@ -68,5 +68,17 @@ Jobboard::Application.configure do
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
 
-  config.action_mailer.default_url_options = { :host => 'warm-chamber-2341.herokuapp.com' }
+  config.action_mailer.default_url_options = { :host => 'warm-mountain-6811.herokuapp.com' }
+
+  TWITTER_CONSUMER_KEY='EAOrWkBgfpj3sbo9CKkdiA'
+  TWITTER_CONSUMER_SECRET='jpbDzxtkdZP8nJM3S8DunLfnMr686aWrsw5KaXp46JE'
+
+  GOOGLE_CONSUMER_KEY='927282652569-e9brcca45gi51db5khkdb3fd07s7ru4m.apps.googleusercontent.com'
+  GOOGLE_CONSUMER_SECRET='SNN1F24ZvCxyKle2d3IYMb9q'
+
+  LINKEDIN_CONSUMER_KEY='cwb3105pnjc4'
+  LINKEDIN_CONSUMER_SECRET='G28nnIsOOACP5BsG'
+
+  FACEBOOK_CONSUMER_KEY='114640128698681'
+  FACEBOOK_CONSUMER_SECRET='cab57c5646359154ade1e0e80864707e'
 end

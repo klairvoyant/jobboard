@@ -206,11 +206,19 @@ Devise.setup do |config|
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', :scope => 'user,public_repo'
-  config.omniauth  :twitter, "R2dOmCCtBWnzj3rwFHOskg", "NprlT65NTDjaAcqKH0pJ9gNL7cX2YqZJqyoJkqpovI"
-  config.omniauth :linkedin, 'dn03xwa9eao6', 'pOud139uvFMKw2jp', :scope => "r_basicprofile r_emailaddress"
-  config.omniauth :facebook, '114640128698681', 'cab57c5646359154ade1e0e80864707e',
-           :scope => 'email', :display => 'popup'
-  config.omniauth :google_oauth2, "927282652569.apps.googleusercontent.com", "pe1forNU12_T_A7VGkW6gv1F", { access_type: "offline", approval_prompt: "" }
+
+  config.omniauth :twitter, TWITTER_CONSUMER_KEY, TWITTER_CONSUMER_SECRET
+  config.omniauth :linkedin, LINKEDIN_CONSUMER_KEY, LINKEDIN_CONSUMER_SECRET, :scope => "r_basicprofile r_emailaddress"
+  config.omniauth :facebook, FACEBOOK_CONSUMER_KEY, FACEBOOK_CONSUMER_SECRET,
+                  :scope => 'email', :display => 'popup'
+  config.omniauth :google_oauth2, GOOGLE_CONSUMER_KEY, GOOGLE_CONSUMER_SECRET, { access_type: "offline", approval_prompt: "" }
+
+
+  #config.omniauth  :twitter, "R2dOmCCtBWnzj3rwFHOskg", "NprlT65NTDjaAcqKH0pJ9gNL7cX2YqZJqyoJkqpovI"
+  #config.omniauth :linkedin, 'dn03xwa9eao6', 'pOud139uvFMKw2jp', :scope => "r_basicprofile r_emailaddress"
+  #config.omniauth :facebook, '114640128698681', 'cab57c5646359154ade1e0e80864707e',
+  #         :scope => 'email', :display => 'popup'
+  #config.omniauth :google_oauth2, "927282652569.apps.googleusercontent.com", "pe1forNU12_T_A7VGkW6gv1F", { access_type: "offline", approval_prompt: "" }
 
 
 
