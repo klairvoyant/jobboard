@@ -28,6 +28,7 @@ class EmploymentHistoriesController < ApplicationController
   # GET /employment_histories/new.json
   def new
     #@employment_history = EmploymentHistory.new
+    @person=PersonalDatum.find_last_by_user_id(current_user.id)
 
     respond_to do |format|
       format.html # new.html.erb

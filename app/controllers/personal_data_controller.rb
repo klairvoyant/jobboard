@@ -1,7 +1,7 @@
 class PersonalDataController < ApplicationController
   layout "dashboard"
-  before_filter :authenticate_user!,  :except=>'preview'
-  load_and_authorize_resource  :except=> ['index','preview']
+  before_filter :authenticate_user! #,  :except=>'preview'
+  load_and_authorize_resource  :except=> ['index']
 
   # GET /personal_data
   # GET /personal_data.json
@@ -31,6 +31,10 @@ class PersonalDataController < ApplicationController
     #@personal_data = PersonalDatum.find_all_by_user_id(current_user.id)
 
     @personal_datum=PersonalDatum.find_last_by_user_id(current_user.id)
+
+    if  @personal_datum.register==true
+
+
     @confirmed= Interview.where("user_id= ?  and interview_type= ? ",current_user.id,1)
     @requested= Interview.where("user_id= ?  and interview_type= ? ",current_user.id,2)
     @complete=Interview.where("user_id= ?  and interview_type= ? ",current_user.id,3)
@@ -64,8 +68,11 @@ class PersonalDataController < ApplicationController
       format.html # index.html.erb
       format.json { render json: @personal_data }
     end
-    end
+   end
    return
+      else
+        format.html { render action: "new" }
+      end
   end
 
   # GET /personal_data/1
@@ -101,6 +108,7 @@ class PersonalDataController < ApplicationController
   def create
     #@personal_datum = PersonalDatum.new(params[:personal_datum])
     @personal_datum.user_id=current_user.id
+    @personal_datum.register=true   # to check first time registration
 
     respond_to do |format|
       if @personal_datum.save
@@ -146,7 +154,7 @@ class PersonalDataController < ApplicationController
     end
   end
 
-  def preview
-
-  end
+  #def preview
+  #
+  #end
 end

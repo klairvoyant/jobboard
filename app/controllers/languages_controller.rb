@@ -29,6 +29,7 @@ class LanguagesController < ApplicationController
   # GET /languages/new.json
   def new
     #@language = Language.new
+    @person=PersonalDatum.find_last_by_user_id(current_user.id)
     @certification = Certification.new
     @privacy = Privacy.new
 

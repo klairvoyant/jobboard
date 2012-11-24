@@ -49,8 +49,8 @@ class PrivaciesController < ApplicationController
        respond_to do |format|
       if @privacy.save
 
-        format.html { redirect_to new_personal_datum_path}
-
+        #format.html { redirect_to new_personal_datum_path}
+        format.html { redirect_to personal_data_path}
 
 
         #format.html { redirect_to @privacy, notice: 'Privacy was successfully created.' }

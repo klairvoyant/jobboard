@@ -117,7 +117,8 @@ class LinkedinDetailsController < ApplicationController
     @resume.user_id=current_user.id
     @resume.option_no=2
     @resume.save
-    redirect_to new_personal_datum_path
+    #redirect_to new_personal_datum_path
+    redirect_to personal_data_path
 
 
   end

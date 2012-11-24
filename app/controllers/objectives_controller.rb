@@ -28,6 +28,7 @@ class ObjectivesController < ApplicationController
   # GET /objectives/new.json
   def new
     #@objective = Objective.new
+    @person=PersonalDatum.find_last_by_user_id(current_user.id)
 
     respond_to do |format|
       format.html # new.html.erb

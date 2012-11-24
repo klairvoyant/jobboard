@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121123170840) do
+ActiveRecord::Schema.define(:version => 20121124162123) do
 
   create_table "alerts", :force => true do |t|
     t.integer  "user_id"
@@ -130,6 +130,7 @@ ActiveRecord::Schema.define(:version => 20121123170840) do
     t.text     "experience"
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
+    t.boolean  "register"
   end
 
   create_table "post3s", :force => true do |t|

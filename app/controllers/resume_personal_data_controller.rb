@@ -28,6 +28,7 @@ class ResumePersonalDataController < ApplicationController
   # GET /resume_personal_data/new.json
   def new
     #@resume_personal_datum = ResumePersonalDatum.new
+    @person=PersonalDatum.find_last_by_user_id(current_user.id)
 
     respond_to do |format|
       format.html # new.html.erb

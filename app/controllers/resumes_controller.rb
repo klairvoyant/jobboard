@@ -38,6 +38,10 @@ class ResumesController < ApplicationController
   # GET /resumes/new
   # GET /resumes/new.json
   def new
+
+    #@personal_datum = PersonalDatum.new
+    #@person= @personal_datum.find_last_by_user_id(current_user.id)
+    @person=PersonalDatum.find_last_by_user_id(current_user.id)
     #@resume = Resume.new
 
     #if current_user.role==2

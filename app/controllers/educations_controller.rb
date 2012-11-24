@@ -28,6 +28,7 @@ class EducationsController < ApplicationController
   # GET /educations/new.json
   def new
     #@education = Education.new
+    @person=PersonalDatum.find_last_by_user_id(current_user.id)
     @skill = Skill.new
     respond_to do |format|
       format.html # new.html.erb
