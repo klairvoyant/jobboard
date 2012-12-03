@@ -38,13 +38,16 @@ class ResumePersonalDataController < ApplicationController
 
   # GET /resume_personal_data/1/edit
   def edit
+
     #@resume_personal_datum = ResumePersonalDatum.find(params[:id])
+
   end
 
   # POST /resume_personal_data
   # POST /resume_personal_data.json
   def create
     #@resume_personal_datum = ResumePersonalDatum.new(params[:resume_personal_datum])
+    @person=PersonalDatum.find_last_by_user_id(current_user.id)
     @resume_personal_datum.resume_id=session[:resume_id]
 
     respond_to do |format|
@@ -65,6 +68,7 @@ class ResumePersonalDataController < ApplicationController
   # PUT /resume_personal_data/1.json
   def update
     #@resume_personal_datum = ResumePersonalDatum.find(params[:id])
+
 
     respond_to do |format|
       if @resume_personal_datum.update_attributes(params[:resume_personal_datum])

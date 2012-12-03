@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121124162123) do
+ActiveRecord::Schema.define(:version => 20121202161603) do
 
   create_table "alerts", :force => true do |t|
     t.integer  "user_id"
@@ -62,6 +62,12 @@ ActiveRecord::Schema.define(:version => 20121124162123) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "interest_areas", :force => true do |t|
+    t.string   "interest"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "interviews", :force => true do |t|
     t.integer  "resume_id"
     t.integer  "interview_type"
@@ -87,6 +93,12 @@ ActiveRecord::Schema.define(:version => 20121124162123) do
     t.datetime "updated_at",      :null => false
   end
 
+  create_table "job_types", :force => true do |t|
+    t.string   "job_type"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "languages", :force => true do |t|
     t.integer  "resume_id"
     t.string   "language_name"
@@ -109,9 +121,9 @@ ActiveRecord::Schema.define(:version => 20121124162123) do
 
   create_table "objectives", :force => true do |t|
     t.text     "objective"
-    t.string   "area_of_interest"
-    t.string   "job_type"
-    t.string   "salary_range"
+    t.string   "interest_area_id"
+    t.string   "job_type_id"
+    t.string   "salary_range_id"
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
     t.integer  "resume_id"
@@ -190,12 +202,35 @@ ActiveRecord::Schema.define(:version => 20121124162123) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "salary_ranges", :force => true do |t|
+    t.string   "salary_range"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
+  create_table "search_preferences", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "category_id"
+    t.string   "city"
+    t.string   "state"
+    t.string   "zipcode"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
   create_table "skills", :force => true do |t|
     t.integer  "resume_id"
     t.string   "skill_name"
     t.integer  "skill_years"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+  end
+
+  create_table "time_zones", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "time_zone"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "users", :force => true do |t|

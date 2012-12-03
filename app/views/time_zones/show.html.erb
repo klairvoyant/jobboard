@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User:</b>
+  <%= @time_zone.user_id %>
+</p>
+
+<p>
+  <b>Time zone:</b>
+  <%= @time_zone.time_zone %>
+</p>
+
+
+<%= link_to 'Edit', edit_time_zone_path(@time_zone) %> |
+<%= link_to 'Back', time_zones_path %>

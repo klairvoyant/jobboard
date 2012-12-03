@@ -1,0 +1,25 @@
+<div class="row-fluid" xmlns="http://www.w3.org/1999/html">
+<div class="span8">
+<%= simple_form_for(@search_preference) do |f| %>
+  <%= f.error_notification %>
+    <%#= f.input :user_id %>
+    <%= f.input :category_id %>
+    <%= f.input :city %>
+    <%= f.input :state %>
+    <%= f.input :zipcode %>
+    <%= f.button :submit, 'Save',:class=> "btn btn-primary" %>
+
+<% end %>
+</div>
+<div class="span4">
+  <ul>
+    <li><%= link_to "My search preference",edit_search_preference_path(:user_id=> current_user.id),:class=>"btn-link" %> </li>
+    <li><%= link_to "Time zone settings",edit_time_zone_path(:user_id=> current_user.id),:class=>"btn-link" %></li>
+    <li><%= link_to "privacy settings",edit_privacy_path(:user_id=> current_user.id),:class=>"btn-link" %></li>
+    <!--<li><%= link_to "Change Username",job_details_path,:class=>"btn-link" %></li>-->
+    <!--<li> <%= link_to "Reset password", new_password_path(User) %> </li>-->
+    <li> <%= link_to "Cancel Account",job_details_path,:class=>"btn-link" %></li>
+  </ul>
+
+</div>
+</div>

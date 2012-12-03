@@ -1,45 +1,45 @@
 <section class="content_body" xmlns="http://www.w3.org/1999/html">
+
   <article class="main_logo">
     <%=image_tag("main_logo2.png")%>
 
   </article>
-  <article class="form_box2">
+
+  <article class="form_box2" >
     <div align="center">
-      <label class="connect"> Connect with:<a href="#"><%=image_tag("fb-signin-icon.png",:class=>"connect-icon") %></a><a href="#"><%=image_tag("lnkin-signin-icon.png",:class=>"connect-icon") %></a><a href="#"><%=image_tag("g-signin-icon.png",:class=>"connect-icon") %></a>    OR:</label>
+       <label class="connect"> Connect with:<%= link_to image_tag("fb-signin-icon.png"), user_omniauth_authorize_path(:facebook),:class=>"connect-icon" %><%= link_to image_tag("lnkin-signin-icon.png"), user_omniauth_authorize_path(:linkedin),:class=>"connect-icon" %><%= link_to image_tag("g-signin-icon.png"), user_omniauth_authorize_path(:google_oauth2),:class=>"connect-icon" %>    OR:</label>
     </div>
-    <%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+     <%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name),:html => {:class => 'form-horizontal' }) do |f| %>
 
         <p class="notice"><%= notice %></p>
         <%= f.error_notification %>
+
         <%= f.collection_radio_buttons(
-                    :role, [['1', 'Student'],['2','Alumni'],['3','HR'],['4','Recruiter']], :first, :last,:checked=> '1', :collection_wrapper_tag=>'label',:collection_wrapper_class=>'bigSize'
+                    :role, [['1', 'Student'],['2','Alumni'],['3','HR'],['4','Recruiter']], :first, :last,:checked=> '1' #, :collection_wrapper_tag=>'label',:collection_wrapper_class=>'bigSize'
             ) do |b|
           b.label(:class => 'my_class') { b.radio_button + "    " + b.text.html_safe }
         end %>
+        <div class="gap4">
         <%= f.input :first_name, :required => true,:autofocus => true, :label=>"First Name" %>
+        </div>
         <%= f.input :second_name,  :label=>"Last Name" %>
         <%= f.input :email, :required => true, :label=>"email" %>
         <% if f.object.password_required? %>
             <%= f.input :password, :required => true %>
             <%= f.input :password_confirmation, :required => true %>
          <% end %>
-
-
-        <div class="row-fluid">
-          <div class="span1">
+        <div class="gap5">I accept the <strong>Privacy Policy</strong> and <strong> Terms and conditions.</strong> </div>
             <%= f.input :policy,:required => true, :label=>false%>
-          </div>
-          <div class="span11">
-            I accept the <strong>Privacy Policy</strong> and <strong> Terms and conditions.</strong>
-            <div>
-            </div>
 
+        <div class="gap6">
             <%= f.button :submit, "Start searching",:class=> "btn btn-primary" %>
 
     <% end %>
-    <div class="form_footer gap3">
-      <%= render :partial => "users/shared/links" %>
-    </div>
+            <div class="form_footer">
+              <%= render :partial => "users/shared/links" %>
+            </div>
+
+       </div>
 
   </article>
 </section>

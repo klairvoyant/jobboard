@@ -1,6 +1,7 @@
 class PrivaciesController < ApplicationController
   before_filter :authenticate_user!
   load_and_authorize_resource
+  layout "default"
   # GET /privacies
   # GET /privacies.json
   def index
@@ -37,6 +38,7 @@ class PrivaciesController < ApplicationController
   # GET /privacies/1/edit
   def edit
     #@privacy = Privacy.find(params[:id])
+    @person=PersonalDatum.find_last_by_user_id(current_user.id)
   end
 
   # POST /privacies
@@ -69,7 +71,8 @@ class PrivaciesController < ApplicationController
 
     respond_to do |format|
       if @privacy.update_attributes(params[:privacy])
-        format.html { redirect_to @privacy, notice: 'Privacy was successfully updated.' }
+        #format.html { redirect_to @privacy, notice: 'Privacy was successfully updated.' }
+        format.html { redirect_to edit_privacy_path, notice: 'Privacy was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

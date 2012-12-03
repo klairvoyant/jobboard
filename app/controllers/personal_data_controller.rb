@@ -91,6 +91,9 @@ class PersonalDataController < ApplicationController
   def new
 
     #@personal_datum = PersonalDatum.new
+
+    @preferedplace=SearchPreference.new
+    @timezone=TimeZone.new
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @personal_datum }
@@ -109,6 +112,14 @@ class PersonalDataController < ApplicationController
     #@personal_datum = PersonalDatum.new(params[:personal_datum])
     @personal_datum.user_id=current_user.id
     @personal_datum.register=true   # to check first time registration
+
+    @preferedplace.user_id=current_user.id
+    @preferedplace.save
+
+    @timezone.user_id=current_user.id
+    @timezone.save
+
+
 
     respond_to do |format|
       if @personal_datum.save

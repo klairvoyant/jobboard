@@ -1,11 +1,12 @@
 class JobDetailsController < ApplicationController
   before_filter :authenticate_user!
   load_and_authorize_resource
+  layout "default"
   # GET /job_details
   # GET /job_details.json
   def index
     #@job_details = JobDetail.all
-
+    @person=PersonalDatum.find_last_by_user_id(current_user.id)
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @job_details }
@@ -81,5 +82,10 @@ class JobDetailsController < ApplicationController
       format.html { redirect_to job_details_url }
       format.json { head :no_content }
     end
+  end
+
+  def apprentice
+    @person=PersonalDatum.find_last_by_user_id(current_user.id)
+
   end
 end

@@ -12,10 +12,15 @@
         </div>
       </li>
     </ul>
-    <p><button class="btn btn-large dashboard-left-btns" type="button"><i class="icon-user"></i>&nbsp;Apprentice</button></p>
-    <p><button class="btn btn-large dashboard-left-btns" type="button"><i class="icon-envelope"></i>&nbsp;Messages</button></p>
-    <p><button class="btn btn-large dashboard-left-btns" type="button"> <i class="icon-exclamation-sign"></i>&nbsp;Alerts</button></p>
-    <p><button class="btn btn-large dashboard-left-btns" type="button"><i class="icon-wrench"></i>&nbsp;Settings</button></p>
+    <!--<p><button class="btn btn-large dashboard-left-btns" type="button"><i class="icon-user"></i>&nbsp;Apprentice</button></p>-->
+    <!--<p><button class="btn btn-large dashboard-left-btns" type="button"><i class="icon-envelope"></i>&nbsp;Messages</button></p>-->
+    <!--<p><button class="btn btn-large dashboard-left-btns" type="button"> <i class="icon-exclamation-sign"></i>&nbsp;Alerts</button></p>-->
+    <!--<p><button class="btn btn-large dashboard-left-btns" type="button"><i class="icon-wrench"></i>&nbsp;Settings</button></p>-->
+
+    <p><a href= <%=apprentice_job_details_path%> class="btn buttonwidth"> <i class="icon-user"></i> Apprentice </a> </p>
+    <p><a href= "" class="btn buttonwidth"> <i class="icon-envelope"></i> Messages </a> </p>
+    <p><a href= "" class="btn buttonwidth"> <i class="icon-exclamation-sign"></i> Alerts </a> </p>
+    <p><a href= <%= edit_privacy_path(:id=> current_user.id) %> class="btn buttonwidth"> <i class="icon-wrench"></i> Settings </a> </p>
 
 
     <div class="interviews">

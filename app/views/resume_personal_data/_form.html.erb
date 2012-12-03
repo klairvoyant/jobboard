@@ -17,10 +17,10 @@
 
     <div class="row-fluid">
           <div class="span5">
-            <%= f.input :linkedin_profile_path,:label=>false %>
+            <%= f.input :linkedin_profile_path,:label=>false, :input_html => { :value => session[:profile_link]} %>
           </div>
           <div class="span7 moveLeft">
-            <%=  link_to "In","",:class=>"btn btn-info" %>
+            <%=  link_to "In",linkedinconnecsecond_linkedin_details_path,:class=>"btn btn-primary" %>
 
           </div>
     </div>
@@ -48,8 +48,9 @@
         <ul class="thumbnails">
           <li class="span12">
             <div class="thumbnail">
-              <!--<img src="http://placehold.it/200x180" alt="">-->
+
               <% if  @person.nil? %>
+                  <img src="http://placehold.it/200x180" alt="">
               <%else %>
 
                   <%= image_tag (@person.photo.to_s) %>

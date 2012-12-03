@@ -1,0 +1,27 @@
+<div class="row-fluid" xmlns="http://www.w3.org/1999/html">
+  <div class="span8">
+<%= simple_form_for(@time_zone) do |f| %>
+  <%= f.error_notification %>
+
+
+    <%#= f.input :user_id %>
+    <%= f.input :time_zone %>
+
+
+
+        <%= f.button :submit, 'Save',:class=> "btn btn-primary" %>
+
+<% end %>
+  </div>
+  <div class="span4">
+    <ul>
+      <li><%= link_to "My search preference",edit_search_preference_path(:user_id=> current_user.id),:class=>"btn-link" %> </li>
+      <li><%= link_to "Time zone settings",edit_time_zone_path(:user_id=> current_user.id),:class=>"btn-link" %></li>
+      <li><%= link_to "privacy settings",edit_privacy_path(:user_id=> current_user.id),:class=>"btn-link" %></li>
+      <!--<li><%= link_to "Change Username",job_details_path,:class=>"btn-link" %></li>-->
+      <!--<li><%= link_to "Reset password",new_user_password_path,:class=>"btn-link" %></li>-->
+      <li> <%= link_to "Cancel Account",job_details_path,:class=>"btn-link" %></li>
+    </ul>
+
+  </div>
+</div>

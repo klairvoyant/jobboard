@@ -1,3 +1,4 @@
+
 <div class="row-fluid">
   <div class="span9">
 
@@ -33,18 +34,19 @@
 
                <div class="row-fluid">
                 <div class="span3">
-                  <%= f.collection_radio_buttons(:option_no, [['3', 'upload resume']],:first, :last,:item_wrapper_tag=>'label',:item_wrapper_class=>'bigSize', :checked=> '1' ) do |b|
+                  <%= f.collection_radio_buttons(:option_no, [['3', 'upload resume']],:first, :last,:item_wrapper_tag=>'label',:item_wrapper_class=>'bigSize', :wrapper_html => { :id => 'jo' } ) do |b|
                     b.label {
+                       b.radio_button + " " + b.text
 
-                      b.radio_button + " " + b.text
                     }
+
                   end
                   %>
 
                 </div>
                 <div class="span9 bigSize">
 
-                  <%= f.input :file_name, :as => :file,:label=>false  %>
+                  <%= f.input :file_name, :as => :file,:label=>false %>
                 </div>
               </div>
 
@@ -66,7 +68,9 @@
 
               <div class="gap1">
 
-              <%= f.input :data,:as => :text,:label=>false,:input_html => { :cols => 150, :rows => 10}  %>
+              <%= f.input :data,:as => :text,:label=>false,:input_html => { :cols => "1", :rows => "15"}  %>
+
+
               </div>
 
               <%= f.button :submit, 'Next',:class=> "btn btn-primary pull-right" %>

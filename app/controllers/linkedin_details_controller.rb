@@ -83,7 +83,6 @@ class LinkedinDetailsController < ApplicationController
   end
 
   def linkedinconnect
-
     client = LinkedIn::Client.new("dn03xwa9eao6", "pOud139uvFMKw2jp")
     request_token = client.request_token(:oauth_callback =>"http://#{request.host_with_port}/linkedin_details/callback")
     session[:rtoken] = request_token.token
@@ -97,29 +96,69 @@ class LinkedinDetailsController < ApplicationController
     session[:user_id]=current_user.id
     client = LinkedIn::Client.new("dn03xwa9eao6", "pOud139uvFMKw2jp")
     if session[:atoken].nil?
+      if params[:oauth_verifier].nil?
+        redirect_to new_resume_personal_datum_path
+        return
+      else
       pin = params[:oauth_verifier]
       atoken, asecret = client.authorize_from_request(session[:rtoken], session[:rsecret], pin)
       session[:atoken] = atoken
       session[:asecret] = asecret
+      end
     else
       client.authorize_from_access(session[:atoken], session[:asecret])
     end
      @profile= client.profile(:fields => %w(first_name last_name headline public_profile_url))
 
-     @linkedin_detail = LinkedinDetail.new
-     @linkedin_detail.first_name=@profile.first_name
-     @linkedin_detail.lastName=@profile.last_name
-     @linkedin_detail.headline=@profile.headline
-     @linkedin_detail.public_profile_url=@profile.public_profile_url
-     @linkedin_detail.save
 
-    @resume = Resume.new
-    @resume.user_id=current_user.id
-    @resume.option_no=2
-    @resume.save
-    #redirect_to new_personal_datum_path
-    redirect_to personal_data_path
 
+      @linkedin_detail = LinkedinDetail.new
+      @linkedin_detail.first_name=@profile.first_name
+      @linkedin_detail.lastName=@profile.last_name
+      @linkedin_detail.headline=@profile.headline
+      @linkedin_detail.public_profile_url=@profile.public_profile_url
+      @linkedin_detail.save
+
+      @resume = Resume.new
+      @resume.user_id=current_user.id
+      @resume.option_no=2
+      @resume.save
+      redirect_to personal_data_path
+
+
+  end
+
+  def linkedinconnecsecond
+    client = LinkedIn::Client.new("dn03xwa9eao6", "pOud139uvFMKw2jp")
+    request_token = client.request_token(:oauth_callback =>"http://#{request.host_with_port}/linkedin_details/callbacksecond")
+    session[:rtoken] = request_token.token
+    session[:rsecret] = request_token.secret
+    redirect_to client.request_token.authorize_url
+
+  end
+  def callbacksecond
+
+    session[:user_id]=current_user.id
+    client = LinkedIn::Client.new("dn03xwa9eao6", "pOud139uvFMKw2jp")
+    if session[:atoken].nil?
+       if params[:oauth_verifier].nil?
+         redirect_to new_resume_personal_datum_path
+         return
+
+       else
+         pin = params[:oauth_verifier]
+         atoken, asecret = client.authorize_from_request(session[:rtoken], session[:rsecret], pin)
+         session[:atoken] = atoken
+         session[:asecret] = asecret
+       end
+
+    else
+      client.authorize_from_access(session[:atoken], session[:asecret])
+
+    end
+    @profile= client.profile(:fields => %w(first_name last_name headline public_profile_url))
+    session[:profile_link]=@profile.public_profile_url
+    redirect_to new_resume_personal_datum_path
 
   end
 end

@@ -172,6 +172,53 @@
     float:left;
 }
 
+.dashboard-sticker5
+{
+    background-image: url(settings.png);
+    background-repeat:no-repeat;
+    width: 162px;
+    height: 43px;
+    z-index: 33;
+    position:relative;
+    /*margin-top:-70px;*/
+    /*margin-left: -515px;*/
+    margin-top:-30px;
+    margin-left: -13px;
+    padding-bottom: 30px;
+
+}
+
+.dashboard-sticker4
+{
+    background-image: url(apprentice.png);
+    background-repeat:no-repeat;
+    width: 162px;
+    height: 43px;
+    z-index: 33;
+    position:relative;
+    /*margin-top:-70px;*/
+    /*margin-left: -515px;*/
+    margin-top:-30px;
+    margin-left: -13px;
+    padding-bottom: 30px;
+
+}
+
+.dashboard-sticker3
+{
+    background-image: url(jobs.png);
+    background-repeat:no-repeat;
+    width: 162px;
+    height: 43px;
+    z-index: 33;
+    position:relative;
+    /*margin-top:-70px;*/
+    /*margin-left: -515px;*/
+    margin-top:-30px;
+    margin-left: -13px;
+    padding-bottom: 30px;
+}
+
 .dashboard-sticker{
 
     background-image: url(resume-strip.png);
@@ -385,6 +432,12 @@ body {
 .footermiddle a:hover {
     text-decoration: no-underline;
 }
+
+.buttonwidth {
+    width: 100px;
+}
+
+
 
 /*.header-searchs{*/
     /*margin-top:7px;*/

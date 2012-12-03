@@ -13,22 +13,24 @@ gem 'twitter-bootstrap-rails'
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
-
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   gem 'therubyracer', :platforms => :ruby
-
   gem 'uglifier', '>= 1.0.3'
-  #gem 'twitter-bootstrap-rails'
 end
 
-group :development,:test do
-
+#group :development,:test do
+#  gem "rspec-rails"
+#  gem "webrat"
+#  gem 'database_cleaner'
+#end
+group :test do
+  gem "rspec"
   gem "rspec-rails"
   gem "webrat"
+  gem "cucumber-rails",   :require => false
   gem 'database_cleaner'
-end
-group :test do
-  gem "cucumber-rails"
+  gem 'ZenTest'
+  gem 'autotest-rails'
 end
 gem 'jquery-rails'
 gem 'simple_form'
@@ -41,7 +43,6 @@ gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
 gem 'less-rails'
 gem 'linkedin'
-#gem 'rmagick'
 gem "carrierwave"
 
 

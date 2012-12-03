@@ -38,7 +38,7 @@
                   <li><%=image_tag("dashboard/seperator.png")%></li>
                   <li><%= link_to "Resume",new_resume_path,:class=>"btn-link" %></li>
                   <li><%=image_tag("dashboard/seperator.png")%></li>
-                  <li><a href="#">Jobs</a></li>
+                  <li><%= link_to "Jobs",job_details_path,:class=>"btn-link" %></li>
                   <li><%=image_tag("dashboard/seperator.png")%></li>
                   <li><a href="#">Network</a></li>
                   <li><%=image_tag("dashboard/seperator.png")%></li>
@@ -56,7 +56,7 @@
                 </div>
               </div>
               <form class="navbar-search pull-right">
-                <i class="icon-search"></i> <span class="gap2"><input type="text" class="search-query" placeholder="Search text, documents and people "> </span>
+                <i class="icon-search"></i> <input type="text" class="search-query" placeholder="Search text, documents and people ">
               </form>
             </div>
                          </div>

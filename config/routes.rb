@@ -1,4 +1,14 @@
 Jobboard::Application.routes.draw do
+  resources :salary_ranges
+
+  resources :job_types
+
+  resources :interest_areas
+
+  resources :time_zones
+
+  resources :search_preferences
+
   resources :file_uploads
 
   get "dash_board_for_recruiter/index"
@@ -29,7 +39,11 @@ Jobboard::Application.routes.draw do
 
   get "home/index"
 
-  resources :job_details
+  resources :job_details    do
+    collection do
+      get 'apprentice'
+    end
+  end
 
   resources :interviews
 
@@ -54,6 +68,8 @@ Jobboard::Application.routes.draw do
     collection do
       get 'linkedinconnect'
       get 'callback'
+      get 'linkedinconnecsecond'
+      get 'callbacksecond'
     end
   end
 

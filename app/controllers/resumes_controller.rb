@@ -73,7 +73,22 @@ class ResumesController < ApplicationController
 
     session[:user_id]=current_user.id
     @resume.user_id=current_user.id
-    @resume.type=1
+
+
+     if @resume.file_name.blank?
+       @resume.type=0
+     else
+       @resume.type=1
+       @resume.option_no=3
+     end
+
+    if @resume.data.blank?
+      @resume.type=0
+    else
+      @resume.type=0
+      @resume.option_no=4
+    end
+
 
 
     respond_to do |format|
