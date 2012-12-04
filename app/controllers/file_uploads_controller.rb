@@ -3,6 +3,8 @@ class FileUploadsController < ApplicationController
   # GET /file_uploads.json
   def index
     @file_uploads = FileUpload.all
+    @resume=Resume.find_all_by_option_no_and_user_id(3,current_user.id)   # for refresh the data
+
 
     respond_to do |format|
       format.html # index.html.erb
@@ -78,7 +80,9 @@ class FileUploadsController < ApplicationController
     @file_upload.destroy
 
     respond_to do |format|
-      format.html { redirect_to file_uploads_url }
+      #format.html { redirect_to file_uploads_url }
+      format.html { redirect_to personal_data_path }
+
       format.json { head :no_content }
     end
   end

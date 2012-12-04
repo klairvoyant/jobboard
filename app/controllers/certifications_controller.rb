@@ -1,6 +1,7 @@
 class CertificationsController < ApplicationController
   before_filter :authenticate_user!
   load_and_authorize_resource
+  layout "default"
   # GET /certifications
   # GET /certifications.json
   def index
@@ -44,10 +45,13 @@ class CertificationsController < ApplicationController
   def create
     #@certification = Certification.new(params[:certification])
     @certification.resume_id=session[:resume_id]
+    @person=PersonalDatum.find_last_by_user_id(current_user.id)
+    @language = Language.new
+    @privacy = Privacy.new
 
     respond_to do |format|
       if @certification.save
-        format.html { redirect_to new_language_path}
+        format.html { redirect_to new_language_path,notice: @certification.certification_name + ' was successfully added'}
 
 
         #format.html { redirect_to @certification, notice: 'Certification was successfully created.' }

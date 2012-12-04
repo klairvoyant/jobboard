@@ -110,18 +110,18 @@ class LinkedinDetailsController < ApplicationController
     end
      @profile= client.profile(:fields => %w(first_name last_name headline public_profile_url))
 
-
-
       @linkedin_detail = LinkedinDetail.new
       @linkedin_detail.first_name=@profile.first_name
       @linkedin_detail.lastName=@profile.last_name
       @linkedin_detail.headline=@profile.headline
       @linkedin_detail.public_profile_url=@profile.public_profile_url
+      @linkedin_detail.user_id=current_user.id
+
       @linkedin_detail.save
 
       @resume = Resume.new
       @resume.user_id=current_user.id
-      @resume.option_no=2
+      @resume.option_no=0
       @resume.save
       redirect_to personal_data_path
 

@@ -9,9 +9,11 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me,:role,:first_name,:second_name,:policy
   # attr_accessible :title, :body
 
-  has_many  :resumes
+  has_many :resumes
+  has_one  :linkedin_detail
+  has_many :file_uploads
 
-  validates :policy, :acceptance => true
+  #validates :policy, :acceptance => true
 
   def self.from_omniauth(auth)
     where(auth.slice(:provider,:uid)).first_or_create do |user |

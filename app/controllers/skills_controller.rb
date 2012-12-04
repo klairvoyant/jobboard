@@ -1,6 +1,7 @@
 class SkillsController < ApplicationController
   before_filter :authenticate_user!
   load_and_authorize_resource
+  layout "default"
   # GET /skills
   # GET /skills.json
   def index
@@ -28,6 +29,7 @@ class SkillsController < ApplicationController
   def new
     #@skill = Skill.new
 
+
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @skill }
@@ -44,14 +46,17 @@ class SkillsController < ApplicationController
   def create
     #@skill = Skill.new(params[:skill])
     @skill.resume_id=session[:resume_id]
+    @person=PersonalDatum.find_last_by_user_id(current_user.id)
+    @education = Education.new
 
     respond_to do |format|
       if @skill.save
-        format.html { redirect_to new_education_path}
+        format.html { redirect_to new_education_path,notice: @skill.skill_name + ' was successfully added.'}
         #format.html { redirect_to @skill, notice: 'Skill was successfully created.' }
         #format.json { render json: @skill, status: :created, location: @skill }
       else
         format.html { render action: "new" }
+        #format.html { redirect_to new_education_path }
 
 
         format.json { render json: @skill.errors, status: :unprocessable_entity }

@@ -45,6 +45,7 @@ class EmploymentHistoriesController < ApplicationController
   # POST /employment_histories.json
   def create
     #@employment_history = EmploymentHistory.new(params[:employment_history])
+    @person=PersonalDatum.find_last_by_user_id(current_user.id)
     @employment_history.resume_id=session[:resume_id]
 
     respond_to do |format|

@@ -49,10 +49,13 @@ class LanguagesController < ApplicationController
   def create
     #@language = Language.new(params[:language])
     @language.resume_id=session[:resume_id]
+    @person=PersonalDatum.find_last_by_user_id(current_user.id)
+    @certification = Certification.new
+    @privacy = Privacy.new
 
     respond_to do |format|
       if @language.save
-        format.html { redirect_to new_language_path}
+        format.html { redirect_to new_language_path ,notice: @language.language_name + ' was successfully updated.'}
         #format.html { redirect_to new_user_registration_path}
         #format.html { redirect_to @language, notice: 'Language was successfully created.' }
         #format.json { render json: @language, status: :created, location: @language }

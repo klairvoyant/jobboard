@@ -1,15 +1,7 @@
 <h3>Certifications</h3>
 <%= simple_form_for(@certification) do |f| %>
   <%= f.error_notification %>
-
-  <!--<div class="form-inputs">-->
-    <!--<%= f.input :resume_id %>-->
     <%= f.input :certification_name %>
-    <%= f.input :certification_year,:as => :date,:discard_day => true,:discard_month => true %>
-
-  <!--</div>-->
-
-  <!--<div class="form-actions">-->
+    <%= f.input :certification_year,:as => :date,:discard_day => true,:start_year => Date.today.year - 35,:end_year => Date.today.year,:discard_month => true %>
     <%= f.button :submit, 'Add Certifications',:class=> "btn btn-primary" %>
-  <!--</div>-->
 <% end %>

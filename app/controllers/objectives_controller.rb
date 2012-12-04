@@ -45,6 +45,7 @@ class ObjectivesController < ApplicationController
   # POST /objectives.json
   def create
     #@objective = Objective.new(params[:objective])
+    @person=PersonalDatum.find_last_by_user_id(current_user.id)
     @objective.resume_id=session[:resume_id]
 
 

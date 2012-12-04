@@ -9,6 +9,7 @@ class PersonalDataController < ApplicationController
 
     @file_uploads = FileUpload.all
     @file_upload = FileUpload.new
+    @resume=Resume.find_all_by_option_no_and_user_id(3,current_user.id)
     #if current_user.role
       if current_user.role==2
 
@@ -32,7 +33,9 @@ class PersonalDataController < ApplicationController
 
     @personal_datum=PersonalDatum.find_last_by_user_id(current_user.id)
 
-    if  @personal_datum.register==true
+
+
+     if @personal_datum.register==true
 
 
     @confirmed= Interview.where("user_id= ?  and interview_type= ? ",current_user.id,1)

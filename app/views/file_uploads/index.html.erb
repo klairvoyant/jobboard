@@ -1,34 +1,43 @@
 
-
 <!--<table>-->
+Resume </br>
+-------------- </br>
+
+ <% @resume.each do |resume| %>
+
+    <% if resume.file_name.blank? %>
+    <% else %>
+    <%= ((resume.file_name).to_s).split("/").last %> -------<%= link_to 'Delete', resume, method: :delete, data: { confirm: 'Are you sure?' } %></br>
+    <% end %>
+
+ <% end %>
+
 
 <% @file_uploads.each do |file_upload| %>
      <% @value= file_upload.file_type %>
-  <!--<tr>-->
-     <!--<td>-->
+
       <% if @value==1  %>
-         Resume-
-      <%  elsif @value==2 %>
-         Cover letter-
-      <%  elsif @value==3 %>
-         Recommendation-
+        <%= ((file_upload.file_path).to_s).split("/").last %> -------<%= link_to 'Delete', file_upload, method: :delete, data: { confirm: 'Are you sure?' } %></br>
+
       <% end %>
-
-
-    <!--</td>-->
-    <!--<td>-->
-    <!--<%# @filename= file_upload.file_path %>-->
-      <!--<%#= (@filename).split("/").last %>-->
-    <%= ((file_upload.file_path).to_s).split("/").last %> </br>
-
-    <!--</td>-->
-    <!--<td><%#= link_to 'Show', file_upload %></td>-->
-    <!--<td><%#= link_to 'Edit', edit_file_upload_path(file_upload) %></td>-->
-    <!--<td><%#= link_to 'Destroy', file_upload, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
-  <!--</tr>-->
 <% end %>
-<!--</table>-->
 
-<!--<br />-->
+</br>Cover Letter  </br>
+------------------- </br>
+<% @file_uploads.each do |file_upload| %>
+    <% @value= file_upload.file_type %>
 
-<!--<%#= link_to 'New File upload', new_file_upload_path %>-->
+    <% if @value==2  %>
+        <%= ((file_upload.file_path).to_s).split("/").last %> -------<%= link_to 'Delete', file_upload, method: :delete, data: { confirm: 'Are you sure?' } %></br>
+    <% end %>
+<% end %>
+
+</br>Recommendation </br>
+--------------------</br>
+<% @file_uploads.each do |file_upload| %>
+    <% @value= file_upload.file_type %>
+
+    <% if @value==3  %>
+        <%= ((file_upload.file_path).to_s).split("/").last %> -------<%= link_to 'Delete', file_upload, method: :delete, data: { confirm: 'Are you sure?' } %></br>
+    <% end %>
+<% end %>

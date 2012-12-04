@@ -46,10 +46,12 @@ class EducationsController < ApplicationController
   def create
     #@education = Education.new(params[:education])
     @education.resume_id=session[:resume_id]
+    @skill = Skill.new
+    @person=PersonalDatum.find_last_by_user_id(current_user.id)
 
     respond_to do |format|
       if @education.save
-        format.html { redirect_to new_education_path}
+        format.html { redirect_to new_education_path,notice: @education.course + " was successfully added."}
         #format.html { redirect_to @education, notice: 'Education was successfully created.' }
         #format.json { render json: @education, status: :created, location: @education }
       else

@@ -4,16 +4,10 @@
   <h3>Career Objectives</h3>
 <%= simple_form_for(@objective) do |f| %>
   <%= f.error_notification %>
-
-  <!--<div class="form-inputs">-->
     <%= f.input :objective, :input_html => { :rows => 5 } %>
     <%= f.association :interest_area  %>
     <%= f.association :job_type  %>
     <%= f.association :salary_range  %>
-
-  <!--</div>-->
-
-  <!--<div class="form-actions">-->
     <%= f.button :submit, 'Next',:class=> "btn btn-primary pull-right" %>
   <!--</div>-->
 <% end %>

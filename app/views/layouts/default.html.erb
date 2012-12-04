@@ -77,6 +77,7 @@
             <div class="thumbnail">
               <!--<img src="http://placehold.it/160x120" alt="">-->
               <% if  @person.nil? %>
+                  <img src="http://placehold.it/160x120" alt="">
               <%else %>
 
                   <%= image_tag (@person.photo.to_s) %>

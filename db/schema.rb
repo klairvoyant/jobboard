@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121202161603) do
+ActiveRecord::Schema.define(:version => 20121204032002) do
 
   create_table "alerts", :force => true do |t|
     t.integer  "user_id"
@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(:version => 20121202161603) do
   create_table "certifications", :force => true do |t|
     t.integer  "resume_id"
     t.string   "certification_name"
-    t.integer  "certification_year"
+    t.date     "certification_year"
     t.datetime "created_at",         :null => false
     t.datetime "updated_at",         :null => false
   end
@@ -109,8 +109,6 @@ ActiveRecord::Schema.define(:version => 20121202161603) do
 
   create_table "linkedin_details", :force => true do |t|
     t.integer  "user_id"
-    t.string   "email"
-    t.string   "profile_id"
     t.datetime "created_at",         :null => false
     t.datetime "updated_at",         :null => false
     t.string   "first_name"
@@ -196,10 +194,10 @@ ActiveRecord::Schema.define(:version => 20121202161603) do
     t.integer  "user_id"
     t.integer  "option_no"
     t.string   "file_name"
-    t.integer  "type"
+    t.integer  "resume_type"
     t.text     "data"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "salary_ranges", :force => true do |t|

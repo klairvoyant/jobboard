@@ -76,16 +76,16 @@ class ResumesController < ApplicationController
 
 
      if @resume.file_name.blank?
-       @resume.type=0
+       @resume.resume_type=0
      else
-       @resume.type=1
+       @resume.resume_type=1
        @resume.option_no=3
      end
 
     if @resume.data.blank?
-      @resume.type=0
+
     else
-      @resume.type=0
+      @resume.resume_type=0
       @resume.option_no=4
     end
 
@@ -131,7 +131,8 @@ class ResumesController < ApplicationController
     @resume.destroy
 
     respond_to do |format|
-      format.html { redirect_to resumes_url }
+      #format.html { redirect_to resumes_url }
+      format.html { redirect_to personal_data_path }
       format.json { head :no_content }
     end
   end
