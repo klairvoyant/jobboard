@@ -28,7 +28,7 @@
       <ul >
 
         <li><%=image_tag("interviews.png",:class => "imageAlign")%></li>
-        <li class="interviews-even">Confirmed john Interviews</li>
+        <li class="interviews-even">Confirmed Interviews</li>
         <li class="interviews-odd"><em><%= @confirmedcount %></em></li>
         <li class="interviews-even">Interview Request</li>
         <li class="interviews-odd"><em><%= @requestedcount %></em></li>
@@ -44,6 +44,7 @@
       <span class="uploadspan">Upload cover letters, your resume, and letters of recommendation.</span>
 
       <%=render :template=>'file_uploads/index'%>
+
       --------------------------------------------------
       <%=render :template=>'file_uploads/new'%>
 

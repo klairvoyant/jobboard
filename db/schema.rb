@@ -11,12 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121204032002) do
+ActiveRecord::Schema.define(:version => 20121204064010) do
 
   create_table "alerts", :force => true do |t|
     t.integer  "user_id"
     t.integer  "alert_type"
     t.text     "message"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "categories", :force => true do |t|
+    t.string   "category"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

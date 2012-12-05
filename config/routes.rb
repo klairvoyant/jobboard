@@ -1,4 +1,6 @@
 Jobboard::Application.routes.draw do
+  resources :categories
+
   resources :salary_ranges
 
   resources :job_types

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><component name="dataSourceStorage">
-  <data-source source="LOCAL" name="Data Source" product="MySQL" version="5.1.63-0+squeeze1" jdbc-version="4.0" driver-name="MySQL-AB JDBC Driver" driver-version="mysql-connector-java-5.1.18 ( Revision: tonci.grgin@oracle.com-20110930151701-jfj14ddfq48ifkfq )" uuid="2ad0542e-3549-41ab-9288-8f20dbad59d7" case-sensitive="true">
+  <data-source source="LOCAL" name="Data Source" product="MySQL" version="5.1.66-0+squeeze1" jdbc-version="4.0" driver-name="MySQL-AB JDBC Driver" driver-version="mysql-connector-java-5.1.18 ( Revision: tonci.grgin@oracle.com-20110930151701-jfj14ddfq48ifkfq )" uuid="2ad0542e-3549-41ab-9288-8f20dbad59d7" case-sensitive="true">
     <extra-name-characters>#@</extra-name-characters>
     <identifier-quote-string>`</identifier-quote-string>
     <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
@@ -669,7 +669,6 @@
       <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
       <column name="resume_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
       <column name="resume_name" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
-      <column name="user_photo" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
       <column name="city" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
       <column name="state" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
       <column name="country" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />

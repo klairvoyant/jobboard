@@ -3,8 +3,7 @@ class PersonalDataController < ApplicationController
   before_filter :authenticate_user! #,  :except=>'preview'
   load_and_authorize_resource  :except=> ['index']
 
-  # GET /personal_data
-  # GET /personal_data.json
+
   def index
 
     @file_uploads = FileUpload.all

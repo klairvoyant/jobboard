@@ -2,7 +2,27 @@
   <div class="middle-c">
     <div class="dashboard-bg">
       <div class="dashboard-sticker5">    </div>
-      <%= render 'form' %>
+
+      <div class="row-fluid">
+        <div class="span8">
+            <%= render 'form' %>
+        </div>
+        <div class="span4">
+
+        <ul>
+        <ul>
+        <li><%= link_to "My search preference",edit_search_preference_path(:user_id=> current_user.id),:class=>"btn-link" %> </li>
+        <li><%= link_to "Time zone settings",edit_time_zone_path(:user_id=> current_user.id),:class=>"btn-link" %></li>
+        <li><%= link_to "privacy settings",edit_privacy_path(:user_id=> current_user.id),:class=>"btn-link" %></li>
+        <!--<li><%#= link_to "Change Username",job_details_path,:class=>"btn-link" %></li>-->
+        <!--<li><%#= link_to "Reset password",new_user_password_path,:class=>"btn-link" %></li>-->
+        <li> <%= link_to "Cancel Account",job_details_path,:class=>"btn-link" %></li>
+        </ul>
+        </ul>
+
+
+        </div>
+      </div>
     </div>
   </div>
 </div>

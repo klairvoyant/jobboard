@@ -2,8 +2,8 @@ class ObjectivesController < ApplicationController
   # GET /objectives
   # GET /objectives.json
   layout "default"
-  before_filter :authenticate_user!
-  load_and_authorize_resource
+  #before_filter :authenticate_user!
+  #load_and_authorize_resource
   def index
     #@objectives = Objective.all
 
@@ -28,7 +28,8 @@ class ObjectivesController < ApplicationController
   # GET /objectives/new.json
   def new
     #@objective = Objective.new
-    @person=PersonalDatum.find_last_by_user_id(current_user.id)
+    #@person=PersonalDatum.find_last_by_user_id(current_user.id) dec 5
+    @person=PersonalDatum.find_last_by_user_id(7)
 
     respond_to do |format|
       format.html # new.html.erb
@@ -45,8 +46,10 @@ class ObjectivesController < ApplicationController
   # POST /objectives.json
   def create
     #@objective = Objective.new(params[:objective])
-    @person=PersonalDatum.find_last_by_user_id(current_user.id)
-    @objective.resume_id=session[:resume_id]
+    #@person=PersonalDatum.find_last_by_user_id(current_user.id) dec 5
+    @person=PersonalDatum.find_last_by_user_id(7)
+    #@objective.resume_id=session[:resume_id] dec 5
+    @objective.resume_id=3
 
 
     respond_to do |format|

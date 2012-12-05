@@ -2,8 +2,7 @@
 <div class="span8">
 <%= simple_form_for(@search_preference) do |f| %>
   <%= f.error_notification %>
-    <%#= f.input :user_id %>
-    <%= f.input :category_id %>
+    <%= f.association :category %>
     <%= f.input :city %>
     <%= f.input :state %>
     <%= f.input :zipcode %>

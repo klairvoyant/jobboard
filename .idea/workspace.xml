@@ -2,66 +2,46 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4b1ccaff-1360-4888-bf3e-fd58eaa75bd7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20121203102221_rename_certification_year_field.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20121203171635_remove_email_profile_id_from_linkedin_detail.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20121204032002_rename_type_in_resume.rb" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/file_upload/file_path/1/jk.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/file_upload/file_path/2/Austin_CV_2_.doc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/resume/file_name/11/in.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/resume/file_name/21/rigyjyce.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/resume/file_name/22/rigyjyce.JPG" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/categories.js.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/stylesheets/categories.css.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/categories_controller.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/helpers/categories_helper.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/category.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/categories/_form.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/categories/edit.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/categories/index.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/categories/new.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/categories/show.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20121204064010_create_categories.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20121205084144_remove_two_columns_from_resume_personal_datum.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/certifications_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/certifications_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/educations_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/educations_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/employment_histories_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/employment_histories_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/file_uploads_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/file_uploads_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/languages_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/languages_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/linkedin_details_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/linkedin_details_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/dashboard_for_alumni_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/dashboard_for_alumni_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/objectives_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/objectives_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/personal_data_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/personal_data_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/resume_personal_data_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/resume_personal_data_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/resumes_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/resumes_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/skills_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/skills_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/certification.rb" afterPath="$PROJECT_DIR$/app/models/certification.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/education.rb" afterPath="$PROJECT_DIR$/app/models/education.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/employment_history.rb" afterPath="$PROJECT_DIR$/app/models/employment_history.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/file_upload.rb" afterPath="$PROJECT_DIR$/app/models/file_upload.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/interview.rb" afterPath="$PROJECT_DIR$/app/models/interview.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/language.rb" afterPath="$PROJECT_DIR$/app/models/language.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/linkedin_detail.rb" afterPath="$PROJECT_DIR$/app/models/linkedin_detail.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/objective.rb" afterPath="$PROJECT_DIR$/app/models/objective.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/personal_datum.rb" afterPath="$PROJECT_DIR$/app/models/personal_datum.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/privacy.rb" afterPath="$PROJECT_DIR$/app/models/privacy.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/resume.rb" afterPath="$PROJECT_DIR$/app/models/resume.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/skill.rb" afterPath="$PROJECT_DIR$/app/models/skill.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/user.rb" afterPath="$PROJECT_DIR$/app/models/user.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/certifications/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/certifications/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/certifications/new.html.erb" afterPath="$PROJECT_DIR$/app/views/certifications/new.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/employment_histories/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/employment_histories/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/file_uploads/index.html.erb" afterPath="$PROJECT_DIR$/app/views/file_uploads/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/languages/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/languages/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/default.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/default.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/objectives/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/objectives/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/personal_data/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/personal_data/_form.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/resume_personal_datum.rb" afterPath="$PROJECT_DIR$/app/models/resume_personal_datum.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/search_preference.rb" afterPath="$PROJECT_DIR$/app/models/search_preference.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/time_zone.rb" afterPath="$PROJECT_DIR$/app/models/time_zone.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/personal_data/index.html.erb" afterPath="$PROJECT_DIR$/app/views/personal_data/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/personal_data/new.html.erb" afterPath="$PROJECT_DIR$/app/views/personal_data/new.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/privacies/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/privacies/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/resumes/index.html.erb" afterPath="$PROJECT_DIR$/app/views/resumes/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/resumes/show.html.erb" afterPath="$PROJECT_DIR$/app/views/resumes/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/skills/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/skills/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/skills/new.html.erb" afterPath="$PROJECT_DIR$/app/views/skills/new.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/privacies/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/privacies/edit.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/search_preferences/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/search_preferences/_form.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/sessions/new.html.erb" afterPath="$PROJECT_DIR$/app/views/users/sessions/new.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/development.log" afterPath="$PROJECT_DIR$/log/development.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/test.log" afterPath="$PROJECT_DIR$/log/test.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/models/certification_spec.rb" afterPath="$PROJECT_DIR$/spec/models/certification_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/models/education_spec.rb" afterPath="$PROJECT_DIR$/spec/models/education_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/models/employment_history_spec.rb" afterPath="$PROJECT_DIR$/spec/models/employment_history_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/models/language_spec.rb" afterPath="$PROJECT_DIR$/spec/models/language_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/models/objective_spec.rb" afterPath="$PROJECT_DIR$/spec/models/objective_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/models/personal_datum_spec.rb" afterPath="$PROJECT_DIR$/spec/models/personal_datum_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/models/privacy_spec.rb" afterPath="$PROJECT_DIR$/spec/models/privacy_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/models/skill_spec.rb" afterPath="$PROJECT_DIR$/spec/models/skill_spec.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/controllers/resume_personal_data_controller_spec.rb" afterPath="$PROJECT_DIR$/spec/controllers/resume_personal_data_controller_spec.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/controllers/resumes_controller_spec.rb" afterPath="$PROJECT_DIR$/spec/controllers/resumes_controller_spec.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/helpers/resumes_helper_spec.rb" afterPath="$PROJECT_DIR$/spec/helpers/resumes_helper_spec.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/models/file_upload_spec.rb" afterPath="$PROJECT_DIR$/spec/models/file_upload_spec.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/models/resume_personal_datum_spec.rb" afterPath="$PROJECT_DIR$/spec/models/resume_personal_datum_spec.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/models/resume_spec.rb" afterPath="$PROJECT_DIR$/spec/models/resume_spec.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/models/search_preference_spec.rb" afterPath="$PROJECT_DIR$/spec/models/search_preference_spec.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/models/time_zone_spec.rb" afterPath="$PROJECT_DIR$/spec/models/time_zone_spec.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/spec_helper.rb" afterPath="$PROJECT_DIR$/spec/spec_helper.rb" />
     </list>
     <ignored path="jobboard.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -84,100 +64,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="personal_data_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/personal_data_controller.rb">
+      <file leaf-file-name="objectives_controller.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/controllers/objectives_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="71" selection-start="322" selection-end="389" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/file_uploads/index.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="62" selection-start="198" selection-end="198" vertical-scroll-proportion="-5.625">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_form.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/resumes/_form.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
-              <folding>
-                <marker date="1354366637000" expanded="true" signature="23:3217" placeholder="..." />
-                <marker date="1354366637000" expanded="true" signature="45:2813" placeholder="..." />
-                <marker date="1354366637000" expanded="true" signature="582:656" placeholder="..." />
-                <marker date="1354366637000" expanded="true" signature="694:1262" placeholder="..." />
-                <marker date="1354366637000" expanded="true" signature="730:1070" placeholder="..." />
-                <marker date="1354366637000" expanded="true" signature="1114:1241" placeholder="..." />
-                <marker date="1354366637000" expanded="true" signature="1302:1874" placeholder="..." />
-                <marker date="1354366637000" expanded="true" signature="1338:1713" placeholder="..." />
-                <marker date="1354366637000" expanded="true" signature="1757:1853" placeholder="..." />
-                <marker date="1354366637000" expanded="true" signature="1908:2016" placeholder="..." />
-                <marker date="1354366637000" expanded="true" signature="2049:2212" placeholder="..." />
-                <marker date="1354366637000" expanded="true" signature="2567:2700" placeholder="..." />
-                <marker date="1354366637000" expanded="true" signature="2835:3210" placeholder="..." />
-                <marker date="1354366637000" expanded="true" signature="2870:3200" placeholder="..." />
-                <marker date="1354366637000" expanded="true" signature="2901:3189" placeholder="..." />
-                <marker date="1354366637000" expanded="true" signature="2929:3177" placeholder="..." />
-                <marker date="1354366637000" expanded="true" signature="2963:3163" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/resumes/index.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="30" selection-start="370" selection-end="370" vertical-scroll-proportion="-11.875">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="new.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/resumes/new.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/resumes/show.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="21" selection-start="238" selection-end="238" vertical-scroll-proportion="-11.875">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="edit.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/resumes/edit.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="file_uploads_controller.rb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/controllers/file_uploads_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="94" selection-start="308" selection-end="308" vertical-scroll-proportion="0.5113636">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="user.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/user.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="24" selection-start="589" selection-end="589" vertical-scroll-proportion="0.0">
+            <state line="79" column="39" selection-start="2281" selection-end="2281" vertical-scroll-proportion="0.7281796">
               <folding />
             </state>
           </provider>
@@ -205,22 +95,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/models/language.rb" />
-        <option value="$PROJECT_DIR$/app/models/certification.rb" />
-        <option value="$PROJECT_DIR$/app/models/privacy.rb" />
-        <option value="$PROJECT_DIR$/app/models/interview.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/linkedin_details_controller.rb" />
-        <option value="$PROJECT_DIR$/app/models/resume.rb" />
-        <option value="$PROJECT_DIR$/app/models/linkedin_detail.rb" />
-        <option value="$PROJECT_DIR$/app/models/file_upload.rb" />
-        <option value="$PROJECT_DIR$/app/models/user.rb" />
-        <option value="$PROJECT_DIR$/db/migrate/20121204032002_rename_type_in_resume.rb" />
+        <option value="$PROJECT_DIR$/spec/helpers/resumes_helper_spec.rb" />
+        <option value="$PROJECT_DIR$/spec/support/devise.rb" />
+        <option value="$PROJECT_DIR$/spec/support/controller_macros.rb" />
+        <option value="$PROJECT_DIR$/spec/spec_helper.rb" />
+        <option value="$PROJECT_DIR$/app/views/users/sessions/new.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/dashboard_for_alumni_controller.rb" />
+        <option value="$PROJECT_DIR$/spec/models/resume_spec.rb" />
         <option value="$PROJECT_DIR$/app/controllers/personal_data_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/file_uploads/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/resumes/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/resumes/show.html.erb" />
+        <option value="$PROJECT_DIR$/spec/controllers/resumes_controller_spec.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20121205084144_remove_two_columns_from_resume_personal_datum.rb" />
+        <option value="$PROJECT_DIR$/app/models/resume_personal_datum.rb" />
+        <option value="$PROJECT_DIR$/spec/models/resume_personal_datum_spec.rb" />
+        <option value="$PROJECT_DIR$/spec/controllers/resume_personal_data_controller_spec.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/resume_personal_data_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/resumes_controller.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/file_uploads_controller.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/objectives_controller.rb" />
       </list>
     </option>
   </component>
@@ -262,6 +152,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="RailsProjectView" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -322,51 +213,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jobboard" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jobboard" />
+              <option name="myItemId" value="spec" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="uploads" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jobboard" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jobboard" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="uploads" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resume" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="file_name" />
+              <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -384,9 +235,26 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jobboard" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jobboard" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="RailsProjectView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -408,7 +276,40 @@
       <recent name="$PROJECT_DIR$/app/assets/images" />
     </key>
   </component>
-  <component name="RunManager" selected="Rake.db:migrate">
+  <component name="RunManager" selected="RSpec.resume_personal_data_controller_spec">
+    <configuration default="false" name="resumes_controller_spec" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
+      <predefined_log_file id="RUBY_RSPEC" enabled="true" />
+      <module name="jobboard" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$PROJECT_DIR$" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs>
+        <env name="RAILS_ENV" value="test" />
+        <env name="JRUBY_OPTS" value="-X+O" />
+      </envs>
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="true" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$PROJECT_DIR$/spec/controllers/resumes_controller_spec.rb" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*_spec.rb" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_ARGS" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_SPEC_RUNNER" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
+      <RunnerSettings RunnerId="RubyRunner" />
+      <ConfigurationWrapper RunnerId="RubyRunner" />
+      <method />
+    </configuration>
     <configuration default="false" name="db:migrate" type="RakeRunConfigurationType" factoryName="Rake" temporary="true">
       <module name="jobboard" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
@@ -435,7 +336,7 @@
       <ConfigurationWrapper RunnerId="RubyRunner" />
       <method />
     </configuration>
-    <configuration default="false" name="certification_spec" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
+    <configuration default="false" name="resume_personal_datum_spec" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
       <predefined_log_file id="RUBY_RSPEC" enabled="true" />
       <module name="jobboard" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
@@ -454,7 +355,7 @@
         </COVERAGE_PATTERN>
       </EXTENSION>
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$PROJECT_DIR$/spec/models/certification_spec.rb" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$PROJECT_DIR$/spec/models/resume_personal_datum_spec.rb" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*_spec.rb" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="" />
@@ -468,7 +369,7 @@
       <ConfigurationWrapper RunnerId="RubyRunner" />
       <method />
     </configuration>
-    <configuration default="false" name="privacy_spec" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
+    <configuration default="false" name="resume_job_data_controller_spec" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
       <predefined_log_file id="RUBY_RSPEC" enabled="true" />
       <module name="jobboard" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
@@ -487,7 +388,7 @@
         </COVERAGE_PATTERN>
       </EXTENSION>
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$PROJECT_DIR$/spec/models/privacy_spec.rb" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$PROJECT_DIR$/spec/controllers/resume_job_data_controller_spec.rb" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*_spec.rb" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="" />
@@ -501,7 +402,7 @@
       <ConfigurationWrapper RunnerId="RubyRunner" />
       <method />
     </configuration>
-    <configuration default="false" name="personal_datum_spec" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
+    <configuration default="false" name="resume_personal_data_controller_spec" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
       <predefined_log_file id="RUBY_RSPEC" enabled="true" />
       <module name="jobboard" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
@@ -520,7 +421,7 @@
         </COVERAGE_PATTERN>
       </EXTENSION>
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$PROJECT_DIR$/spec/models/personal_datum_spec.rb" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$PROJECT_DIR$/spec/controllers/resume_personal_data_controller_spec.rb" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*_spec.rb" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="" />
@@ -532,26 +433,6 @@
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
       <RunnerSettings RunnerId="RubyRunner" />
       <ConfigurationWrapper RunnerId="RubyRunner" />
-      <method />
-    </configuration>
-    <configuration default="false" name="file_uploads_controller" type="RubyRunConfigurationType" factoryName="Ruby" temporary="true">
-      <module name="jobboard" />
-      <RUBY_RUN_CONFIG NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
-      <RUBY_RUN_CONFIG NAME="WORK DIR" VALUE="$PROJECT_DIR$/app/controllers" />
-      <RUBY_RUN_CONFIG NAME="SHOULD_USE_SDK" VALUE="false" />
-      <RUBY_RUN_CONFIG NAME="ALTERN_SDK_NAME" VALUE="" />
-      <RUBY_RUN_CONFIG NAME="myPassParentEnvs" VALUE="true" />
-      <envs />
-      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="true" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
-        <COVERAGE_PATTERN ENABLED="true">
-          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
-        </COVERAGE_PATTERN>
-      </EXTENSION>
-      <RUBY_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="$PROJECT_DIR$/app/controllers/file_uploads_controller.rb" />
-      <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="" />
-      <RunnerSettings RunnerId="RubyDebugRunner" />
-      <ConfigurationWrapper RunnerId="RubyDebugRunner" />
       <method />
     </configuration>
     <configuration default="true" type="RakeRunConfigurationType" factoryName="Rake">
@@ -805,19 +686,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Rake.db:migrate" />
-      <item index="1" class="java.lang.String" itemvalue="RSpec.certification_spec" />
-      <item index="2" class="java.lang.String" itemvalue="RSpec.privacy_spec" />
-      <item index="3" class="java.lang.String" itemvalue="RSpec.personal_datum_spec" />
-      <item index="4" class="java.lang.String" itemvalue="Ruby.file_uploads_controller" />
+      <item index="0" class="java.lang.String" itemvalue="RSpec.resumes_controller_spec" />
+      <item index="1" class="java.lang.String" itemvalue="Rake.db:migrate" />
+      <item index="2" class="java.lang.String" itemvalue="RSpec.resume_personal_datum_spec" />
+      <item index="3" class="java.lang.String" itemvalue="RSpec.resume_job_data_controller_spec" />
+      <item index="4" class="java.lang.String" itemvalue="RSpec.resume_personal_data_controller_spec" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Rake.db:migrate" />
-        <item index="1" class="java.lang.String" itemvalue="Ruby.file_uploads_controller" />
-        <item index="2" class="java.lang.String" itemvalue="RSpec.personal_datum_spec" />
-        <item index="3" class="java.lang.String" itemvalue="RSpec.personal_datum_spec" />
-        <item index="4" class="java.lang.String" itemvalue="RSpec.personal_datum_spec" />
+        <item index="0" class="java.lang.String" itemvalue="RSpec.resume_personal_data_controller_spec" />
+        <item index="1" class="java.lang.String" itemvalue="RSpec.resume_personal_data_controller_spec" />
+        <item index="2" class="java.lang.String" itemvalue="RSpec.resume_personal_data_controller_spec" />
+        <item index="3" class="java.lang.String" itemvalue="RSpec.resume_personal_data_controller_spec" />
+        <item index="4" class="java.lang.String" itemvalue="RSpec.resume_job_data_controller_spec" />
       </list>
     </recent_temporary>
   </component>
@@ -878,29 +759,33 @@
       <created>1354501904873</created>
       <updated>1354501904873</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Dec4">
+      <created>1354595704604</created>
+      <updated>1354595704604</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="741" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.503937" sideWeight="0.49741697" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.46771654" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32440946" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18892989" sideWeight="0.5322835" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18892989" sideWeight="0.6755906" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Heroku" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32913387" sideWeight="0.49741697" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32693726" sideWeight="0.1511811" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22287823" sideWeight="0.5322835" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25984251" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24797048" sideWeight="0.6755906" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36062992" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32913387" sideWeight="0.49741697" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42519686" sideWeight="0.49151292" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33700788" sideWeight="0.49151292" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.503937" sideWeight="0.49741697" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -941,7 +826,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Dec 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="Dec4" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -958,135 +843,102 @@
     <MESSAGE value="nov 24 with production variables" />
     <MESSAGE value="nov 24  midnight" />
     <MESSAGE value="Dec 3" />
+    <MESSAGE value="Dec4" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/db/migrate/20121204032002_rename_type_in_resume.rb">
+    <entry file="file://$PROJECT_DIR$/spec/requests/resumes_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="66" selection-start="136" selection-end="136" vertical-scroll-proportion="0.4477612">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20121202155551_rename_three_fields.rb">
+    <entry file="file://$PROJECT_DIR$/spec/routing/resumes_routing_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="67" selection-start="63" selection-end="126" vertical-scroll-proportion="0.1119403">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20121203102221_rename_certification_year_field.rb">
+    <entry file="file://$PROJECT_DIR$/spec/routing/alerts_routing_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/resumes/edit.html.erb">
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-5.4632587" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/resumes/_form.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/registrations_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
-          <folding>
-            <marker date="1354366637000" expanded="true" signature="23:3217" placeholder="..." />
-            <marker date="1354366637000" expanded="true" signature="45:2813" placeholder="..." />
-            <marker date="1354366637000" expanded="true" signature="582:656" placeholder="..." />
-            <marker date="1354366637000" expanded="true" signature="694:1262" placeholder="..." />
-            <marker date="1354366637000" expanded="true" signature="730:1070" placeholder="..." />
-            <marker date="1354366637000" expanded="true" signature="1114:1241" placeholder="..." />
-            <marker date="1354366637000" expanded="true" signature="1302:1874" placeholder="..." />
-            <marker date="1354366637000" expanded="true" signature="1338:1713" placeholder="..." />
-            <marker date="1354366637000" expanded="true" signature="1757:1853" placeholder="..." />
-            <marker date="1354366637000" expanded="true" signature="1908:2016" placeholder="..." />
-            <marker date="1354366637000" expanded="true" signature="2049:2212" placeholder="..." />
-            <marker date="1354366637000" expanded="true" signature="2567:2700" placeholder="..." />
-            <marker date="1354366637000" expanded="true" signature="2835:3210" placeholder="..." />
-            <marker date="1354366637000" expanded="true" signature="2870:3200" placeholder="..." />
-            <marker date="1354366637000" expanded="true" signature="2901:3189" placeholder="..." />
-            <marker date="1354366637000" expanded="true" signature="2929:3177" placeholder="..." />
-            <marker date="1354366637000" expanded="true" signature="2963:3163" placeholder="..." />
-          </folding>
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/resumes/index.html.erb">
+    <entry file="file://$PROJECT_DIR$/spec/models/resume_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="30" selection-start="370" selection-end="370" vertical-scroll-proportion="-11.875">
-          <folding />
-        </state>
+        <state line="58" column="2" selection-start="1150" selection-end="1150" vertical-scroll-proportion="1.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/privacies/_form.html.erb">
+    <entry file="file://$PROJECT_DIR$/db/migrate/20121205084144_remove_two_columns_from_resume_personal_datum.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
-          <folding />
-        </state>
+        <state line="10" column="69" selection-start="220" selection-end="220" vertical-scroll-proportion="0.5769231" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/resumes/new.html.erb">
+    <entry file="file://$PROJECT_DIR$/spec/controllers/resumes_controller_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="78" column="0" selection-start="2214" selection-end="2214" vertical-scroll-proportion="2.9552238" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/personal_data/index.html.erb">
+    <entry file="file://$PROJECT_DIR$/spec/models/resume_personal_datum_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="51" selection-start="2459" selection-end="2459" vertical-scroll-proportion="-28.125">
-          <folding />
-        </state>
+        <state line="23" column="54" selection-start="497" selection-end="497" vertical-scroll-proportion="0.26086956" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/objective.rb">
+    <entry file="file://$PROJECT_DIR$/spec/controllers/resume_job_data_controller_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="20" selection-start="369" selection-end="369" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/resumes/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="21" selection-start="238" selection-end="238" vertical-scroll-proportion="-11.875">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbElement:/d4fafa0e/2ad0542e-3549-41ab-9288-8f20dbad59d7/jobboard_development..resumes">
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/resumes_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="134" column="52" selection-start="3369" selection-end="3369" vertical-scroll-proportion="0.7326203">
+        <state line="91" column="0" selection-start="3677" selection-end="3677" vertical-scroll-proportion="4.108392">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/personal_data_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="71" selection-start="322" selection-end="389" vertical-scroll-proportion="0.0">
+        <state line="6" column="24" selection-start="197" selection-end="197" vertical-scroll-proportion="-2.0168068">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/file_uploads/index.html.erb">
+    <entry file="file://$PROJECT_DIR$/spec/controllers/resume_personal_data_controller_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="62" selection-start="198" selection-end="198" vertical-scroll-proportion="-5.625">
+        <state line="68" column="62" selection-start="2381" selection-end="2381" vertical-scroll-proportion="2.391892">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/file_uploads_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/models/resume_personal_datum.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="94" selection-start="308" selection-end="308" vertical-scroll-proportion="0.5113636">
+        <state line="7" column="76" selection-start="270" selection-end="270" vertical-scroll-proportion="0.27631578">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/resumes_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="51" selection-start="553" selection-end="553" vertical-scroll-proportion="0.53435117">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/resume_personal_data_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="47" selection-start="600" selection-end="600" vertical-scroll-proportion="0.648855">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/objectives_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="79" column="39" selection-start="2281" selection-end="2281" vertical-scroll-proportion="0.7281796">
           <folding />
         </state>
       </provider>
