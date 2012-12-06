@@ -1,12 +1,8 @@
 <div class="row-fluid">
   <div class="span9">
-
   <h3>Education History</h3>
 <%= simple_form_for(@education) do |f| %>
   <%= f.error_notification %>
-
-  <!--<div class="form-inputs">-->
-    <!--<%= f.input :resume_id %>-->
     <%= f.input :school_name %>
     <%= f.input :school_type %>
     <%= f.input :state %>
@@ -15,15 +11,10 @@
     <%= f.input :end_date,:as => :date,:discard_day => true,:order => [:month, :year] %>
     <%= f.input :course %>
     <%= f.input :level %>
-  <!--</div>-->
-
-  <!--<div class="form-actions">-->
     <%= f.button :submit, 'Add Education',:class=> "btn btn-primary" %>
-  <!--</div>-->
 <% end %>
 </div>
 <div class="span3">
-
   <div class="dashboard-photo">
     <ul class="thumbnails">
       <li class="span12">
@@ -38,6 +29,5 @@
       </li>
     </ul>
   </div>
-
 </div>
 </div>

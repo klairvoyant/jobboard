@@ -63,18 +63,19 @@
                 </div>
             </div>
         </div>
+        <% flash.each do |name, msg| %>
+        <div class="alert alert-<%= name==:notice ? "success" :"error" %>">
+          <button type="button" class="close" data-dismiss="alert">×</button>
+          <%= msg %>
+        </div>
+        <% end %>
         <%= yield %>
         <div class="row-fluid">
           <div class="span12">
-
-            <!--<div class="d-footer-bg" align="center" style="margin-top:50px; clear:both;">-->
-            <div class="d-footer-bg" >
-              <!--<div class="footer-content" style="padding-top: 30px;">-->
-              <div class="footer-content">
-                <!--<div class="footerleft"><a href="#"><img src="dashboard/twtr.png" /></a>&nbsp;<a href="#"><img src="dashboard/lnkdin.png" /></a>&nbsp;<a href="#"><img src="dashboard/gplus.png" /></a>&nbsp;<a href="#"><img src="dashboard/fb.png" /></a></div>-->
-                <div class="footerleft"><a href="#"><%=image_tag("dashboard/twtr.png")%></a>&nbsp;&nbsp;&nbsp;<a href="#"><%=image_tag("dashboard/lnkdin.png")%></a>&nbsp;&nbsp;&nbsp;<a href="#"><%=image_tag("dashboard/gplus.png")%></a>&nbsp;&nbsp;&nbsp;<a href="#"><%=image_tag("dashboard/fb.png")%></a></div>
-
-                <div class="footermiddle">
+             <div class="d-footer-bg" >
+                <div class="footer-content">
+                  <div class="footerleft"><a href="#"><%=image_tag("dashboard/twtr.png")%></a>&nbsp;&nbsp;&nbsp;<a href="#"><%=image_tag("dashboard/lnkdin.png")%></a>&nbsp;&nbsp;&nbsp;<a href="#"><%=image_tag("dashboard/gplus.png")%></a>&nbsp;&nbsp;&nbsp;<a href="#"><%=image_tag("dashboard/fb.png")%></a></div>
+                   <div class="footermiddle">
                   <a href='#' class="footertabs">Terms of Agreement </a> | <a href='#' class="footertabs"> Privacy Terms </a>
                   |  <a href='#' class="footertabs"> Contact Us </a>
                   <br /><br />

@@ -1,13 +1,18 @@
+<% flash.each do |name, msg| %>
+    <div class="alert alert-<%= name==:notice ? "success" :"error" %>">
+      <button type="button" class="close" data-dismiss="alert">×</button>
+      <%= msg %>
+    </div>
+<% end %>
 
-<!--<table>-->
-Resume </br>
--------------- </br>
+Resume <br/>
+-------------- <br/>
 
  <% @resume.each do |resume| %>
 
     <% if resume.file_name.blank? %>
     <% else %>
-    <%= ((resume.file_name).to_s).split("/").last %> -------<%= link_to 'Delete', resume, method: :delete, data: { confirm: 'Are you sure?' } %></br>
+    <%= ((resume.file_name).to_s).split("/").last %> -------<%= link_to 'Delete', resume, method: :delete, data: { confirm: 'Are you sure?' } %><br/>
     <% end %>
 
  <% end %>
@@ -17,27 +22,27 @@ Resume </br>
      <% @value= file_upload.file_type %>
 
       <% if @value==1  %>
-        <%= ((file_upload.file_path).to_s).split("/").last %> -------<%= link_to 'Delete', file_upload, method: :delete, data: { confirm: 'Are you sure?' } %></br>
+        <%= ((file_upload.file_path).to_s).split("/").last %> -------<%= link_to 'Delete', file_upload, method: :delete, data: { confirm: 'Are you sure?' } %><br/>
 
       <% end %>
 <% end %>
 
-</br>Cover Letter  </br>
-------------------- </br>
+<br/>Cover Letter  <br/>
+------------------- <br/>
 <% @file_uploads.each do |file_upload| %>
     <% @value= file_upload.file_type %>
 
     <% if @value==2  %>
-        <%= ((file_upload.file_path).to_s).split("/").last %> -------<%= link_to 'Delete', file_upload, method: :delete, data: { confirm: 'Are you sure?' } %></br>
+        <%= ((file_upload.file_path).to_s).split("/").last %> -------<%= link_to 'Delete', file_upload, method: :delete, data: { confirm: 'Are you sure?' } %><br/>
     <% end %>
 <% end %>
 
-</br>Recommendation </br>
---------------------</br>
+<br/>Recommendation <br/>
+--------------------<br/>
 <% @file_uploads.each do |file_upload| %>
     <% @value= file_upload.file_type %>
 
     <% if @value==3  %>
-        <%= ((file_upload.file_path).to_s).split("/").last %> -------<%= link_to 'Delete', file_upload, method: :delete, data: { confirm: 'Are you sure?' } %></br>
+        <%= ((file_upload.file_path).to_s).split("/").last %> -------<%= link_to 'Delete', file_upload, method: :delete, data: { confirm: 'Are you sure?' } %><br/>
     <% end %>
 <% end %>

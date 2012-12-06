@@ -1,7 +1,6 @@
 <div class="row-fluid">
   <div class="span9">
-
-  <h3>Employment History</h3>
+    <h3>Employment History</h3>
 <%= simple_form_for(@employment_history) do |f| %>
   <%= f.error_notification %>
     <%= f.input :company_name %>
@@ -12,11 +11,9 @@
     <%= f.button :submit, 'Add',:class=> "btn btn-primary" %>
   <% end %>
     <%= link_to 'Next', new_education_path,:class => 'btn btn-primary pull-right' %>
-
-  </div>
+    </div>
   <div class="span3">
-
-    <div class="dashboard-photo">
+      <div class="dashboard-photo">
       <ul class="thumbnails">
         <li class="span12">
           <div class="thumbnail">
@@ -25,11 +22,9 @@
                 <%= image_tag (@person.photo.to_s) %>
             <% end %>
             <h4><%= current_user.first_name %></h4>
-
-          </div>
+            </div>
         </li>
       </ul>
     </div>
-
   </div>
 </div>

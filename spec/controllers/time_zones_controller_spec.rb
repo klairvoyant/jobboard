@@ -35,10 +35,6 @@ require 'spec_helper'
         assigns(:time_zone).should be_a(TimeZone)
         assigns(:time_zone).should be_persisted
       end
-      #it "redirects to the created time_zone" do
-      #  post :create, {:time_zone => valid_attributes}, valid_session
-      #  response.should redirect_to(TimeZone.last)
-      #end
     end
     describe "with invalid params" do
       it "assigns a newly created but unsaved time_zone as @time_zone" do

@@ -1,6 +1,5 @@
 <div class="row-fluid topPush">
   <div class="span2">
-    <!--<p><button class="btn btn-large dashboard-name-btn" type="button"><h4><%=image_tag("dashboard/name.png")%>&nbsp;Name</h4></button></p>-->
     <ul class="thumbnails">
       <li class="span8">
         <div class="thumbnail">
@@ -13,20 +12,12 @@
         </div>
       </li>
     </ul>
-    <!--<p><button class="btn btn-large dashboard-left-btns" type="button"><i class="icon-user"></i>&nbsp;Apprentice</button></p>-->
-    <!--<p><button class="btn btn-large dashboard-left-btns" type="button"><i class="icon-envelope"></i>&nbsp;Messages</button></p>-->
-    <!--<p><button class="btn btn-large dashboard-left-btns" type="button"> <i class="icon-exclamation-sign"></i>&nbsp;Alerts</button></p>-->
-    <!--<p><button class="btn btn-large dashboard-left-btns" type="button"><i class="icon-wrench"></i>&nbsp;Settings</button></p>-->
-
     <p><a href= "#{<%=apprentice_job_details_path%>}" class="btn buttonwidth"> <i class="icon-user"></i> Apprentice </a> </p>
     <p><a href= "" class="btn buttonwidth"> <i class="icon-envelope"></i> Messages </a> </p>
     <p><a href= "" class="btn buttonwidth"> <i class="icon-exclamation-sign"></i> Alerts </a> </p>
     <p><a href="#{<%= edit_privacy_path(:id=> current_user.id) %>}"  class="btn buttonwidth"> <i class="icon-wrench"></i> Settings </a> </p>
-
-
     <div class="interviews">
       <ul >
-
         <li><%=image_tag("interviews.png",:class => "imageAlign")%></li>
         <li class="interviews-even">Confirmed Interviews</li>
         <li class="interviews-odd"><em><%= @confirmedcount %></em></li>
@@ -39,16 +30,11 @@
       </ul>
     </div>
     <div class="upload">
-
       <%=image_tag("upload-doc.png")%>
       <span class="uploadspan">Upload cover letters, your resume, and letters of recommendation.</span>
-
       <%=render :template=>'file_uploads/index'%>
-
       --------------------------------------------------
       <%=render :template=>'file_uploads/new'%>
-
-      <!--<%#= link_to 'Upload', '',:class => 'btn btn-primary' %>-->
     </div>
   </div>
   <div class="span7">
@@ -56,8 +42,6 @@
       <div class="middle-c">
         <div class="dashboard-bg">
           <div class="dashboard-sticker2">    </div>
-
-
           <div class="row-fluid">
             <div class="span3">
               <ul class="thumbnails">
@@ -67,44 +51,36 @@
                         <img src="http://placehold.it/200x120" alt="">
                     <%else %>
                     <%= image_tag @personal_datum.photo.to_s %>
+                        <h4><%= current_user.first_name %></h4>
                     <% end %>
-                    <h4><%= current_user.first_name %></h4>
-                  </div>
+                 </div>
                 </li>
               </ul>
-
             </div>
             <div class="span5">
-
-                 <% if @personal_datum.nil?  %>
-
+              <% if @personal_datum.nil?  %>
                   <div class="input-prepend">
                     <span class="add-on">User Name</span>
                     <input class="span7" id="prependedInput" type="text" placeholder= "Name" >
                   </div>
-
                   <div class="input-prepend">
                     <span class="add-on">School</span>
                     <input class="span8" id="prependedInput2" type="text" placeholder= "School"  >
                   </div>
-
                   <div class="input-prepend">
                     <span class="add-on">Area of study</span>
                     <input class="span7" id="prependedInput3" type="text" placeholder= "Area of study"  >
                   </div>
-
                   <div class="input-prepend">
                     <span class="add-on">email</span>
                     <input class="span8" id="prependedInput4" type="text" placeholder= "email" >
                   </div>
-
                   <div class="input-prepend">
                     <span class="add-on">Phone</span>
                     <input class="span8" id="prependedInput5" type="text" placeholder= "phone" >
                   </div>
                   </div>
                   <div class="span4">
-                    <!--<div class="dashboard-video">-->
                     <ul class="thumbnails">
                       <li class="span12">
                         <div class="thumbnail">
@@ -112,67 +88,42 @@
                         </div>
                       </li>
                     </ul>
-                    <!--<%#=image_tag("dashboard/video-resume.png")%>-->
-
-                    <!--</div>-->
                   </div>
                   </div>
                   <div class="row-fluid">
                     <div class="span1">
-
                     </div>
                     <div class="span9">
-
-
-                      <label>About Me</label>
+                     <label>About Me</label>
                       <textarea rows="3" cols="20" placeholder= "About me"></textarea>
-
                       <label>Experience</label>
                       <textarea rows="3" cols="20" placeholder= "experience"></textarea>
-
                       <div>
                         <%= link_to 'Edit', edit_personal_datum_path(@personal_datum),:class=>"btn btn-primary" %>
                       </div>
-
-
-
-
-
-
-
-
             <% else %>
-
-
-                    <!--<%# @personal_data.each do |personal_datum| %>-->
-
                     <div class="input-prepend">
                       <span class="add-on">User Name</span>
                       <input class="span7"  type="text" placeholder= <%= @personal_datum.name %> >
                     </div>
-
                     <div class="input-prepend">
                       <span class="add-on">School</span>
                       <input class="span8"  type="text" placeholder= <%= @personal_datum.school %> >
                     </div>
-
                     <div class="input-prepend">
                       <span class="add-on">Area of study</span>
                       <input class="span7"  type="text" placeholder= <%= @personal_datum.area_of_study %> >
                     </div>
-
                     <div class="input-prepend">
                       <span class="add-on">email</span>
                       <input class="span8"  type="text" placeholder= <%= @personal_datum.email %> >
                     </div>
-
                     <div class="input-prepend">
                       <span class="add-on">Phone</span>
                       <input class="span8"  type="text" placeholder= <%= @personal_datum.phone %> >
                     </div>
                   </div>
             <div class="span4">
-                    <!--<div class="dashboard-video">-->
                       <ul class="thumbnails">
                         <li class="span12">
                           <div class="thumbnail">
@@ -180,49 +131,30 @@
                           </div>
                         </li>
                       </ul>
-                      <!--<%#=image_tag("dashboard/video-resume.png")%>-->
-
-                    <!--</div>-->
                   </div>
           </div>
           <div class="row-fluid">
                     <div class="span1">
-
                     </div>
                     <div class="span9">
-
-
                       <label>About Me</label>
                       <textarea rows="3" cols="20" placeholder= <%= @personal_datum.about_me %>></textarea>
-
                       <label>Experience</label>
                       <textarea rows="3" cols="20" placeholder= <%= @personal_datum.experience %>></textarea>
-
                       <div>
                         <%= link_to 'Edit', edit_personal_datum_path(@personal_datum),:class=>"btn btn-primary" %>
                       </div>
-
-                    <!--<%# end %>-->
-
                      <% end %>
-
-
                     </div>
-
                     <div class="span2">
-
                     </div>
-
-
               </div>
         </div>
       </div>
     </div>
-
   </div>
   <div class="span3">
     <div class="live-chat-box">
-
       <div class="input-prepend"><span class="add-on green-livechat-prepend">Live Chat</span></div>
       <!--<div class="live-chtoptions">-->
       <!--<div class="live-contacts"><a href="#"><strong>Contacts</strong></a></div>-->

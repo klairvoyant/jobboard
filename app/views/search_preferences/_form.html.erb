@@ -7,7 +7,6 @@
     <%= f.input :state %>
     <%= f.input :zipcode %>
     <%= f.button :submit, 'Save',:class=> "btn btn-primary" %>
-
 <% end %>
 </div>
 <div class="span4">
@@ -15,10 +14,7 @@
     <li><%= link_to "My search preference",edit_search_preference_path(:user_id=> current_user.id),:class=>"btn-link" %> </li>
     <li><%= link_to "Time zone settings",edit_time_zone_path(:user_id=> current_user.id),:class=>"btn-link" %></li>
     <li><%= link_to "privacy settings",edit_privacy_path(:user_id=> current_user.id),:class=>"btn-link" %></li>
-    <!--<li><%= link_to "Change Username",job_details_path,:class=>"btn-link" %></li>-->
-    <!--<li> <%= link_to "Reset password", new_password_path(User) %> </li>-->
-    <li> <%= link_to "Cancel Account",job_details_path,:class=>"btn-link" %></li>
+    <li><%= link_to "Cancel Account",job_details_path,:class=>"btn-link" %></li>
   </ul>
-
 </div>
 </div>

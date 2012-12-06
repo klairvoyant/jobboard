@@ -1,29 +1,11 @@
 <div class="row-fluid topPush">
     <div class="span2">
-    <p><button class="btn btn-large dashboard-name-btn" type="button"><h4><%=image_tag("dashboard/name.png")%>&nbsp;Name</h4></button></p>
-    <p><button class="btn btn-large dashboard-left-btns" type="button"><i class="icon-user"></i>&nbsp;Apprentice</button></p>
-    <p><button class="btn btn-large dashboard-left-btns" type="button"><i class="icon-envelope"></i>&nbsp;Messages</button></p>
-    <p><button class="btn btn-large dashboard-left-btns" type="button"> <i class="icon-exclamation-sign"></i>&nbsp;Alerts</button></p>
-    <p><button class="btn btn-large dashboard-left-btns" type="button"><i class="icon-wrench"></i>&nbsp;Settings</button></p>
-
-
-    <!--<div class="interviews">-->
-      <!--<ul >-->
-
-        <!--<li><%#=image_tag("interviews.png",:class => "imageAlign")%></li>-->
-        <!--<li class="interviews-even">Confirmed Interviews</li>-->
-        <!--<li class="interviews-odd"><em><%#= @confirmedcount %></em></li>-->
-        <!--<li class="interviews-even">Interview Request</li>-->
-        <!--<li class="interviews-odd"><em><%#= @requestedcount %></em></li>-->
-        <!--<li class="interviews-even">Completed Interviews</li>-->
-        <!--<li class="interviews-odd"><em><%#= @completecount %></em></li>-->
-        <!--<li class="interviews-even">Incomplete Interviews</li>-->
-        <!--<li class="interviews-odd"><em><%#= @incompletecount %></em></li>-->
-      <!--</ul>-->
-    <!--</div>-->
-    <div class="upload">
-      <!--<img src="images/upload-doc.png" width="137" />-->
-      <%=image_tag("upload-doc.png")%>
+      <p><a href= "#{<%=apprentice_job_details_path%>}" class="btn buttonwidth"> <i class="icon-user"></i> Apprentice </a> </p>
+      <p><a href= "" class="btn buttonwidth"> <i class="icon-envelope"></i> Messages </a> </p>
+      <p><a href= "" class="btn buttonwidth"> <i class="icon-exclamation-sign"></i> Alerts </a> </p>
+      <p><a href="#{<%= edit_privacy_path(:id=> current_user.id) %>}"  class="btn buttonwidth"> <i class="icon-wrench"></i> Settings </a> </p>
+     <div class="upload">
+     <%=image_tag("upload-doc.png")%>
       <span class="uploadspan">Upload cover letters, your resume, and letters of recommendation.</span>
       <%= link_to 'Upload', '',:class => 'btn btn-primary' %>
     </div>
@@ -34,16 +16,13 @@
             <div class="dashboard-bg">
               <div class="dashboard-sticker2">    </div>
               <%= render 'form' %>
-
-            </div>
+               </div>
           </div>
         </div>
-
     </div>
     <div class="span3">
         <div class="live-chat-box">
-
-            <div class="input-prepend"><span class="add-on green-livechat-prepend">Live Chat</span></div>
+           <div class="input-prepend"><span class="add-on green-livechat-prepend">Live Chat</span></div>
             <!--<div class="live-chtoptions">-->
             <!--<div class="live-contacts"><a href="#"><strong>Contacts</strong></a></div>-->
             <!--<div class="live-onlin">-->

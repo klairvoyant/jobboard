@@ -1,7 +1,7 @@
 class PersonalDataController < ApplicationController
   layout "dashboard"
-  before_filter :authenticate_user!,
-  load_and_authorize_resource
+  before_filter :authenticate_user!
+  load_and_authorize_resource :except=> "index"
   def index
 
     if current_user.role==2
@@ -12,7 +12,7 @@ class PersonalDataController < ApplicationController
       redirect_to dash_board_for_recruiter_index_path  and return
     else
         @personal_datum=PersonalDatum.find_last_by_user_id(current_user.id)
-        @resume=Resume.find_all_by_option_no_and_user_id(3,current_user.id)
+        @resume=Resume.find_all_by_option_no_and_user_id(3,current_user.id)  #3 =uploaded file
         @file_uploads = FileUpload.all
         @file_upload = FileUpload.new
         if @personal_datum.nil?

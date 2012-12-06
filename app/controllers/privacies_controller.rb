@@ -3,8 +3,7 @@ class PrivaciesController < ApplicationController
   load_and_authorize_resource
   layout "default"
   def new
-
-    respond_to do |format|
+      respond_to do |format|
       format.html # new.html.erb
     end
   end
