@@ -18,10 +18,10 @@
     <!--<p><button class="btn btn-large dashboard-left-btns" type="button"> <i class="icon-exclamation-sign"></i>&nbsp;Alerts</button></p>-->
     <!--<p><button class="btn btn-large dashboard-left-btns" type="button"><i class="icon-wrench"></i>&nbsp;Settings</button></p>-->
 
-    <p><a href= <%=apprentice_job_details_path%> class="btn buttonwidth"> <i class="icon-user"></i> Apprentice </a> </p>
+    <p><a href= "#{<%=apprentice_job_details_path%>}" class="btn buttonwidth"> <i class="icon-user"></i> Apprentice </a> </p>
     <p><a href= "" class="btn buttonwidth"> <i class="icon-envelope"></i> Messages </a> </p>
     <p><a href= "" class="btn buttonwidth"> <i class="icon-exclamation-sign"></i> Alerts </a> </p>
-    <p><a href= <%= edit_privacy_path(:id=> current_user.id) %> class="btn buttonwidth"> <i class="icon-wrench"></i> Settings </a> </p>
+    <p><a href="#{<%= edit_privacy_path(:id=> current_user.id) %>}"  class="btn buttonwidth"> <i class="icon-wrench"></i> Settings </a> </p>
 
 
     <div class="interviews">
@@ -148,27 +148,27 @@
 
                     <div class="input-prepend">
                       <span class="add-on">User Name</span>
-                      <input class="span7" id="prependedInput" type="text" placeholder= <%= @personal_datum.name %> >
+                      <input class="span7"  type="text" placeholder= <%= @personal_datum.name %> >
                     </div>
 
                     <div class="input-prepend">
                       <span class="add-on">School</span>
-                      <input class="span8" id="prependedInput2" type="text" placeholder= <%= @personal_datum.school %> >
+                      <input class="span8"  type="text" placeholder= <%= @personal_datum.school %> >
                     </div>
 
                     <div class="input-prepend">
                       <span class="add-on">Area of study</span>
-                      <input class="span7" id="prependedInput3" type="text" placeholder= <%= @personal_datum.area_of_study %> >
+                      <input class="span7"  type="text" placeholder= <%= @personal_datum.area_of_study %> >
                     </div>
 
                     <div class="input-prepend">
                       <span class="add-on">email</span>
-                      <input class="span8" id="prependedInput4" type="text" placeholder= <%= @personal_datum.email %> >
+                      <input class="span8"  type="text" placeholder= <%= @personal_datum.email %> >
                     </div>
 
                     <div class="input-prepend">
                       <span class="add-on">Phone</span>
-                      <input class="span8" id="prependedInput5" type="text" placeholder= <%= @personal_datum.phone %> >
+                      <input class="span8"  type="text" placeholder= <%= @personal_datum.phone %> >
                     </div>
                   </div>
             <div class="span4">

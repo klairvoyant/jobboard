@@ -31,7 +31,7 @@ class Ability
       if user.role==3 #HR
         can :manage, :all
       elsif user.role==1  #student
-        can :manage,[Resume,Skill,ResumePersonalDatum,ResumeJobDatum,Privacy,PersonalDatum,Objective,LinkedinDetail,Language,JobDetail,Interview,EmploymentHistory,Education,Certification,Alert]
+        can :manage,[Resume,Skill,ResumePersonalDatum,ResumeJobDatum,Privacy,PersonalDatum,Objective,LinkedinDetail,Language,JobDetail,Interview,EmploymentHistory,Education,Certification,Alert,SearchPreference,TimeZone]
 
       elsif user.role==2 #alumni
         can :manage, Teacher

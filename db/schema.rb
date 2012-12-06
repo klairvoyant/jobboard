@@ -184,7 +184,6 @@ ActiveRecord::Schema.define(:version => 20121204064010) do
   create_table "resume_personal_data", :force => true do |t|
     t.integer  "resume_id"
     t.string   "resume_name"
-    t.string   "user_photo"
     t.string   "city"
     t.string   "state"
     t.string   "country"

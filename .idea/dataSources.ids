@@ -953,6 +953,156 @@
       <index name="index_users_on_email" unique="true" columns="email" />
       <index name="index_users_on_reset_password_token" unique="true" columns="reset_password_token" />
     </table>
+    <table name="alerts" schema="" catalog="jobboard_test" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="user_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="alert_type" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="message" sqlType="TEXT" length="65535" precision="0" nullable="true" jdbcType="-1" />
+      <column name="created_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
+      <column name="updated_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
+      <primary-key name="PRIMARY" columns="id" />
+    </table>
+    <table name="categories" schema="" catalog="jobboard_test" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="category" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="created_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
+      <column name="updated_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
+      <primary-key name="PRIMARY" columns="id" />
+    </table>
+    <table name="certifications" schema="" catalog="jobboard_test" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="resume_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="certification_name" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="certification_year" sqlType="DATE" length="10" precision="0" nullable="true" jdbcType="91" />
+      <column name="created_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
+      <column name="updated_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
+      <primary-key name="PRIMARY" columns="id" />
+    </table>
+    <table name="educations" schema="" catalog="jobboard_test" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="resume_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="school_name" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="school_type" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="state" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="country" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="start_date" sqlType="DATE" length="10" precision="0" nullable="true" jdbcType="91" />
+      <column name="end_date" sqlType="DATE" length="10" precision="0" nullable="true" jdbcType="91" />
+      <column name="course" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="level" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="created_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
+      <column name="updated_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
+      <primary-key name="PRIMARY" columns="id" />
+    </table>
+    <table name="employment_histories" schema="" catalog="jobboard_test" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="resume_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="company_name" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="start_date" sqlType="DATE" length="10" precision="0" nullable="true" jdbcType="91" />
+      <column name="end_date" sqlType="DATE" length="10" precision="0" nullable="true" jdbcType="91" />
+      <column name="job_title" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="job_description" sqlType="TEXT" length="65535" precision="0" nullable="true" jdbcType="-1" />
+      <column name="created_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
+      <column name="updated_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
+      <primary-key name="PRIMARY" columns="id" />
+    </table>
+    <table name="file_uploads" schema="" catalog="jobboard_test" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="user_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="file_type" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="file_path" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="created_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
+      <column name="updated_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
+      <primary-key name="PRIMARY" columns="id" />
+    </table>
+    <table name="interest_areas" schema="" catalog="jobboard_test" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="interest" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="created_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
+      <column name="updated_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
+      <primary-key name="PRIMARY" columns="id" />
+    </table>
+    <table name="interviews" schema="" catalog="jobboard_test" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="resume_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="interview_type" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="job_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="created_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
+      <column name="updated_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
+      <column name="user_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
+      <primary-key name="PRIMARY" columns="id" />
+    </table>
+    <table name="job_details" schema="" catalog="jobboard_test" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="job_title" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="category" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="company" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="job_posted_date" sqlType="DATE" length="10" precision="0" nullable="true" jdbcType="91" />
+      <column name="direct_employee" sqlType="BIT" length="0" precision="0" nullable="true" jdbcType="-7" />
+      <column name="staffing_agency" sqlType="BIT" length="0" precision="0" nullable="true" jdbcType="-7" />
+      <column name="job_type" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="experience" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="education_level" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="description" sqlType="TEXT" length="65535" precision="0" nullable="true" jdbcType="-1" />
+      <column name="zip_code" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="created_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
+      <column name="updated_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
+      <primary-key name="PRIMARY" columns="id" />
+    </table>
+    <table name="job_types" schema="" catalog="jobboard_test" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="job_type" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="created_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
+      <column name="updated_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
+      <primary-key name="PRIMARY" columns="id" />
+    </table>
+    <table name="languages" schema="" catalog="jobboard_test" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="resume_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="language_name" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="language_proficiency" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="created_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
+      <column name="updated_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
+      <primary-key name="PRIMARY" columns="id" />
+    </table>
+    <table name="linkedin_details" schema="" catalog="jobboard_test" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="user_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="created_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
+      <column name="updated_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
+      <column name="first_name" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="lastName" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="headline" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="public_profile_url" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <primary-key name="PRIMARY" columns="id" />
+    </table>
+    <table name="objectives" schema="" catalog="jobboard_test" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="objective" sqlType="TEXT" length="65535" precision="0" nullable="true" jdbcType="-1" />
+      <column name="interest_area_id" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="job_type_id" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="salary_range_id" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="created_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
+      <column name="updated_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
+      <column name="resume_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
+      <primary-key name="PRIMARY" columns="id" />
+    </table>
+    <table name="personal_data" schema="" catalog="jobboard_test" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="user_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="name" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="school" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="area_of_study" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="email" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="phone" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="photo" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="video" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="about_me" sqlType="TEXT" length="65535" precision="0" nullable="true" jdbcType="-1" />
+      <column name="experience" sqlType="TEXT" length="65535" precision="0" nullable="true" jdbcType="-1" />
+      <column name="created_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
+      <column name="updated_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
+      <column name="register" sqlType="BIT" length="0" precision="0" nullable="true" jdbcType="-7" />
+      <primary-key name="PRIMARY" columns="id" />
+    </table>
     <table name="post3s" schema="" catalog="jobboard_test" type="TABLE">
       <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
       <column name="title" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
@@ -969,9 +1119,123 @@
       <column name="updated_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
       <primary-key name="PRIMARY" columns="id" />
     </table>
+    <table name="privacies" schema="" catalog="jobboard_test" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="user_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="resume_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="privacy" sqlType="BIT" length="0" precision="0" nullable="true" jdbcType="-7" />
+      <column name="created_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
+      <column name="updated_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
+      <primary-key name="PRIMARY" columns="id" />
+    </table>
+    <table name="resume_job_data" schema="" catalog="jobboard_test" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="resume_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="objective" sqlType="TEXT" length="65535" precision="0" nullable="true" jdbcType="-1" />
+      <column name="area_of_interest" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="job_type" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="salary" sqlType="DECIMAL" length="10" precision="0" nullable="true" jdbcType="3" />
+      <column name="created_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
+      <column name="updated_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
+      <primary-key name="PRIMARY" columns="id" />
+    </table>
+    <table name="resume_personal_data" schema="" catalog="jobboard_test" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="resume_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="resume_name" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="city" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="state" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="country" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="zip" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="phone" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="linkedin_profile_path" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="facebook_profile_path" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="created_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
+      <column name="updated_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
+      <primary-key name="PRIMARY" columns="id" />
+    </table>
+    <table name="resumes" schema="" catalog="jobboard_test" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="user_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="option_no" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="file_name" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="resume_type" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="data" sqlType="TEXT" length="65535" precision="0" nullable="true" jdbcType="-1" />
+      <column name="created_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
+      <column name="updated_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
+      <primary-key name="PRIMARY" columns="id" />
+    </table>
+    <table name="salary_ranges" schema="" catalog="jobboard_test" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="salary_range" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="created_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
+      <column name="updated_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
+      <primary-key name="PRIMARY" columns="id" />
+    </table>
     <table name="schema_migrations" schema="" catalog="jobboard_test" type="TABLE">
       <column name="version" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12" />
       <index name="unique_schema_migrations" unique="true" columns="version" />
+    </table>
+    <table name="search_preferences" schema="" catalog="jobboard_test" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="user_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="category_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="city" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="state" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="zipcode" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="created_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
+      <column name="updated_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
+      <primary-key name="PRIMARY" columns="id" />
+    </table>
+    <table name="skills" schema="" catalog="jobboard_test" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="resume_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="skill_name" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="skill_years" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="created_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
+      <column name="updated_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
+      <primary-key name="PRIMARY" columns="id" />
+    </table>
+    <table name="time_zones" schema="" catalog="jobboard_test" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="user_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="time_zone" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="created_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
+      <column name="updated_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
+      <primary-key name="PRIMARY" columns="id" />
+    </table>
+    <table name="users" schema="" catalog="jobboard_test" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="email" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12" def="Jyc=" />
+      <column name="encrypted_password" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12" def="Jyc=" />
+      <column name="reset_password_token" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="reset_password_sent_at" sqlType="DATETIME" length="19" precision="0" nullable="true" jdbcType="93" />
+      <column name="remember_created_at" sqlType="DATETIME" length="19" precision="0" nullable="true" jdbcType="93" />
+      <column name="sign_in_count" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" def="MA==" />
+      <column name="current_sign_in_at" sqlType="DATETIME" length="19" precision="0" nullable="true" jdbcType="93" />
+      <column name="last_sign_in_at" sqlType="DATETIME" length="19" precision="0" nullable="true" jdbcType="93" />
+      <column name="current_sign_in_ip" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="last_sign_in_ip" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="created_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
+      <column name="updated_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
+      <column name="role" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="first_name" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="second_name" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="policy" sqlType="BIT" length="0" precision="0" nullable="true" jdbcType="-7" />
+      <column name="provider" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="uid" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="username" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <primary-key name="PRIMARY" columns="id" />
+      <index name="index_users_on_email" unique="true" columns="email" />
+      <index name="index_users_on_reset_password_token" unique="true" columns="reset_password_token" />
+    </table>
+    <table name="welcomes" schema="" catalog="jobboard_test" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="name" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="age" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="created_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
+      <column name="updated_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
+      <primary-key name="PRIMARY" columns="id" />
     </table>
     <table name="schema_migrations" schema="" catalog="jobboardtemp_development" type="TABLE">
       <column name="version" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12" />

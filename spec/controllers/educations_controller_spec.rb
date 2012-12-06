@@ -24,7 +24,9 @@ describe EducationsController do
   # Education. As you add validations to Education, be sure to
   # update the return value of this method accordingly.
   def valid_attributes
-    {}
+    {
+        :country=>"india",:course=>"B.Sc",:level=>"graduation",:school_name=>"sree",:school_type=>"goverment",:state=>'kerala',:resume_id=>2
+    }
   end
 
   # This should return the minimal set of values that should be in the session
@@ -34,22 +36,6 @@ describe EducationsController do
     {}
   end
 
-  describe "GET index" do
-    it "assigns all educations as @educations" do
-      education = Education.create! valid_attributes
-      get :index, {}, valid_session
-      assigns(:educations).should eq([education])
-    end
-  end
-
-  describe "GET show" do
-    it "assigns the requested education as @education" do
-      education = Education.create! valid_attributes
-      get :show, {:id => education.to_param}, valid_session
-      assigns(:education).should eq(education)
-    end
-  end
-
   describe "GET new" do
     it "assigns a new education as @education" do
       get :new, {}, valid_session
@@ -57,15 +43,7 @@ describe EducationsController do
     end
   end
 
-  describe "GET edit" do
-    it "assigns the requested education as @education" do
-      education = Education.create! valid_attributes
-      get :edit, {:id => education.to_param}, valid_session
-      assigns(:education).should eq(education)
-    end
-  end
-
-  describe "POST create" do
+   describe "POST create" do
     describe "with valid params" do
       it "creates a new Education" do
         expect {
@@ -81,7 +59,7 @@ describe EducationsController do
 
       it "redirects to the created education" do
         post :create, {:education => valid_attributes}, valid_session
-        response.should redirect_to(Education.last)
+        response.should redirect_to(new_education_path)
       end
     end
 
@@ -101,52 +79,7 @@ describe EducationsController do
       end
     end
   end
-
-  describe "PUT update" do
-    describe "with valid params" do
-      it "updates the requested education" do
-        education = Education.create! valid_attributes
-        # Assuming there are no other educations in the database, this
-        # specifies that the Education created on the previous line
-        # receives the :update_attributes message with whatever params are
-        # submitted in the request.
-        Education.any_instance.should_receive(:update_attributes).with({'these' => 'params'})
-        put :update, {:id => education.to_param, :education => {'these' => 'params'}}, valid_session
-      end
-
-      it "assigns the requested education as @education" do
-        education = Education.create! valid_attributes
-        put :update, {:id => education.to_param, :education => valid_attributes}, valid_session
-        assigns(:education).should eq(education)
-      end
-
-      it "redirects to the education" do
-        education = Education.create! valid_attributes
-        put :update, {:id => education.to_param, :education => valid_attributes}, valid_session
-        response.should redirect_to(education)
-      end
-    end
-
-    describe "with invalid params" do
-      it "assigns the education as @education" do
-        education = Education.create! valid_attributes
-        # Trigger the behavior that occurs when invalid params are submitted
-        Education.any_instance.stub(:save).and_return(false)
-        put :update, {:id => education.to_param, :education => {}}, valid_session
-        assigns(:education).should eq(education)
-      end
-
-      it "re-renders the 'edit' template" do
-        education = Education.create! valid_attributes
-        # Trigger the behavior that occurs when invalid params are submitted
-        Education.any_instance.stub(:save).and_return(false)
-        put :update, {:id => education.to_param, :education => {}}, valid_session
-        response.should render_template("edit")
-      end
-    end
-  end
-
-  describe "DELETE destroy" do
+   describe "DELETE destroy" do
     it "destroys the requested education" do
       education = Education.create! valid_attributes
       expect {

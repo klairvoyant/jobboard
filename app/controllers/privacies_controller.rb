@@ -2,94 +2,46 @@ class PrivaciesController < ApplicationController
   before_filter :authenticate_user!
   load_and_authorize_resource
   layout "default"
-  # GET /privacies
-  # GET /privacies.json
-  def index
-    #@privacies = Privacy.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @privacies }
-    end
-  end
-
-  # GET /privacies/1
-  # GET /privacies/1.json
-  def show
-    #@privacy = Privacy.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @privacy }
-    end
-  end
-
-  # GET /privacies/new
-  # GET /privacies/new.json
   def new
-    #@privacy = Privacy.new
 
     respond_to do |format|
       format.html # new.html.erb
-      format.json { render json: @privacy }
     end
   end
-
-  # GET /privacies/1/edit
   def edit
-    #@privacy = Privacy.find(params[:id])
     @person=PersonalDatum.find_last_by_user_id(current_user.id)
   end
-
-  # POST /privacies
-  # POST /privacies.json
   def create
-    #@privacy = Privacy.new(params[:privacy])
+    @searchpreference=SearchPreference.new #To add blank data for editing later
+    @timezone=TimeZone.new #To add blank data for editing later
     @privacy.user_id=current_user.id
     @privacy.resume_id=session[:resume_id]
+    @searchpreference.user_id=current_user.id
+    @timezone.user_id=current_user.id
 
-       respond_to do |format|
+    respond_to do |format|
       if @privacy.save
-
-        #format.html { redirect_to new_personal_datum_path}
+        @searchpreference.save # don't want to check validations want to save with id only
+        @timezone.save   # don't want to check validations want to save with id only
         format.html { redirect_to personal_data_path}
-
-
-        #format.html { redirect_to @privacy, notice: 'Privacy was successfully created.' }
-        #format.json { render json: @privacy, status: :created, location: @privacy }
-      else
+     else
         format.html { render action: "new" }
-        format.json { render json: @privacy.errors, status: :unprocessable_entity }
       end
     end
   end
-
-  # PUT /privacies/1
-  # PUT /privacies/1.json
   def update
-    #@privacy = Privacy.find(params[:id])
-
     respond_to do |format|
       if @privacy.update_attributes(params[:privacy])
-        #format.html { redirect_to @privacy, notice: 'Privacy was successfully updated.' }
         format.html { redirect_to edit_privacy_path, notice: 'Privacy was successfully updated.' }
-        format.json { head :no_content }
-      else
+       else
         format.html { render action: "edit" }
-        format.json { render json: @privacy.errors, status: :unprocessable_entity }
       end
     end
   end
-
-  # DELETE /privacies/1
-  # DELETE /privacies/1.json
   def destroy
-    #@privacy = Privacy.find(params[:id])
     @privacy.destroy
-
     respond_to do |format|
       format.html { redirect_to privacies_url }
-      format.json { head :no_content }
-    end
+     end
   end
 end
