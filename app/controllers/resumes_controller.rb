@@ -18,6 +18,10 @@ class ResumesController < ApplicationController
       end
   end
   def create
+
+    SearchPreference.find_or_create_by_user_id(:user_id=>current_user.id,:category_id=>1,:city=>'Cochin',:state=>"kerala",:zipcode=>"680505")
+    TimeZone.find_or_create_by_user_id(:user_id=>current_user.id,:time_zone=>"GMT +5:30")  #To add some data for creating new entry
+    Privacy.find_or_create_by_user_id(:user_id=>current_user.id)
     session[:user_id]=current_user.id
     @resume.user_id=current_user.id
 

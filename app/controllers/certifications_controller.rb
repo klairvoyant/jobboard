@@ -11,7 +11,7 @@ class CertificationsController < ApplicationController
     @certification.resume_id=session[:resume_id]
     @person=PersonalDatum.find_last_by_user_id(current_user.id)
     @language = Language.new
-    @privacy = Privacy.new
+    @privacy_resume = PrivacyResume.new
     respond_to do |format|
       if @certification.save
         format.html { redirect_to new_language_path,notice: @certification.certification_name + ' was successfully added'}

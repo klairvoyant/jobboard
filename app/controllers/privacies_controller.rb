@@ -12,8 +12,14 @@ class PrivaciesController < ApplicationController
 
   end
   def create
-    @person=PersonalDatum.find_last_by_user_id(current_user.id)
-    @privacy.save
+    respond_to do |format|
+      if @privacy.save
+        #format.html { redirect_to @search_preference, notice: 'Search preference was successfully created.' }
+      else
+        format.html { render action: "new" }
+      end
+    end
+
   end
   def update
     respond_to do |format|

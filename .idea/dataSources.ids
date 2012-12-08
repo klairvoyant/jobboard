@@ -11,14 +11,6 @@
         <url>file://$USER_HOME$/jdbc drivers/mysql-connector-java-5.1.18-bin.jar</url>
       </library>
     </libraries>
-    <table name="schema_migrations" schema="" catalog="bdd2_development" type="TABLE">
-      <column name="version" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12" />
-      <index name="unique_schema_migrations" unique="true" columns="version" />
-    </table>
-    <table name="schema_migrations" schema="" catalog="bdd2_test" type="TABLE">
-      <column name="version" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12" />
-      <index name="unique_schema_migrations" unique="true" columns="version" />
-    </table>
     <table name="genres" schema="" catalog="bdd3_development" type="TABLE">
       <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
       <column name="name" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
@@ -26,10 +18,23 @@
       <column name="updated_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
       <primary-key name="PRIMARY" columns="id" />
     </table>
+    <table name="messages" schema="" catalog="bdd3_development" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="title" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="text" sqlType="TEXT" length="65535" precision="0" nullable="true" jdbcType="-1" />
+      <column name="recipient_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="created_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
+      <column name="updated_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
+      <column name="sender_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
+      <primary-key name="PRIMARY" columns="id" />
+    </table>
     <table name="movies" schema="" catalog="bdd3_development" type="TABLE">
       <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
       <column name="showtime_date" sqlType="DATE" length="10" precision="0" nullable="true" jdbcType="91" />
       <column name="showtime_time" sqlType="TIME" length="8" precision="0" nullable="true" jdbcType="92" />
+      <column name="title" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="release" sqlType="DATE" length="10" precision="0" nullable="true" jdbcType="91" />
+      <column name="genres" sqlType="BIT" length="0" precision="0" nullable="true" jdbcType="-7" />
       <column name="created_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
       <column name="updated_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
       <primary-key name="PRIMARY" columns="id" />
@@ -38,6 +43,13 @@
       <column name="version" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12" />
       <index name="unique_schema_migrations" unique="true" columns="version" />
     </table>
+    <table name="users" schema="" catalog="bdd3_development" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="login" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="created_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
+      <column name="updated_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
+      <primary-key name="PRIMARY" columns="id" />
+    </table>
     <table name="genres" schema="" catalog="bdd3_test" type="TABLE">
       <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
       <column name="name" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
@@ -45,10 +57,23 @@
       <column name="updated_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
       <primary-key name="PRIMARY" columns="id" />
     </table>
+    <table name="messages" schema="" catalog="bdd3_test" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="title" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="text" sqlType="TEXT" length="65535" precision="0" nullable="true" jdbcType="-1" />
+      <column name="recipient_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="created_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
+      <column name="updated_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
+      <column name="sender_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
+      <primary-key name="PRIMARY" columns="id" />
+    </table>
     <table name="movies" schema="" catalog="bdd3_test" type="TABLE">
       <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
       <column name="showtime_date" sqlType="DATE" length="10" precision="0" nullable="true" jdbcType="91" />
       <column name="showtime_time" sqlType="TIME" length="8" precision="0" nullable="true" jdbcType="92" />
+      <column name="title" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="release" sqlType="DATE" length="10" precision="0" nullable="true" jdbcType="91" />
+      <column name="genres" sqlType="BIT" length="0" precision="0" nullable="true" jdbcType="-7" />
       <column name="created_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
       <column name="updated_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
       <primary-key name="PRIMARY" columns="id" />
@@ -56,6 +81,13 @@
     <table name="schema_migrations" schema="" catalog="bdd3_test" type="TABLE">
       <column name="version" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12" />
       <index name="unique_schema_migrations" unique="true" columns="version" />
+    </table>
+    <table name="users" schema="" catalog="bdd3_test" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="login" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="created_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
+      <column name="updated_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
+      <primary-key name="PRIMARY" columns="id" />
     </table>
     <table name="posts" schema="" catalog="bootstrapwith rails_development" type="TABLE">
       <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
@@ -668,11 +700,19 @@
     </table>
     <table name="privacies" schema="" catalog="jobboard_development" type="TABLE">
       <column name="privacy" sqlType="BIT" length="0" precision="0" nullable="true" jdbcType="-7" />
-      <column name="resume_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
       <column name="user_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" def="MA==" />
       <column name="created_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
       <column name="updated_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
       <primary-key name="PRIMARY" columns="user_id" />
+    </table>
+    <table name="privacy_resumes" schema="" catalog="jobboard_development" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="user_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="resume_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="privacy" sqlType="BIT" length="0" precision="0" nullable="true" jdbcType="-7" />
+      <column name="created_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
+      <column name="updated_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
+      <primary-key name="PRIMARY" columns="id" />
     </table>
     <table name="resume_job_data" schema="" catalog="jobboard_development" type="TABLE">
       <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
@@ -1164,6 +1204,14 @@
       <primary-key name="PRIMARY" columns="id" />
     </table>
     <table name="privacies" schema="" catalog="jobboard_test" type="TABLE">
+      <column name="user_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="privacy" sqlType="BIT" length="0" precision="0" nullable="true" jdbcType="-7" />
+      <column name="resume_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="created_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
+      <column name="updated_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
+      <primary-key name="PRIMARY" columns="user_id" />
+    </table>
+    <table name="privacy_resumes" schema="" catalog="jobboard_test" type="TABLE">
       <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
       <column name="user_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
       <column name="resume_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
@@ -1221,15 +1269,14 @@
       <index name="unique_schema_migrations" unique="true" columns="version" />
     </table>
     <table name="search_preferences" schema="" catalog="jobboard_test" type="TABLE">
-      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
-      <column name="user_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
-      <column name="category_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="user_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
       <column name="city" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
       <column name="state" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
       <column name="zipcode" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="category_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
       <column name="created_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
       <column name="updated_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
-      <primary-key name="PRIMARY" columns="id" />
+      <primary-key name="PRIMARY" columns="user_id" />
     </table>
     <table name="skills" schema="" catalog="jobboard_test" type="TABLE">
       <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
@@ -1241,12 +1288,11 @@
       <primary-key name="PRIMARY" columns="id" />
     </table>
     <table name="time_zones" schema="" catalog="jobboard_test" type="TABLE">
-      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
-      <column name="user_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="user_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
       <column name="time_zone" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
       <column name="created_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
       <column name="updated_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
-      <primary-key name="PRIMARY" columns="id" />
+      <primary-key name="PRIMARY" columns="user_id" />
     </table>
     <table name="users" schema="" catalog="jobboard_test" type="TABLE">
       <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
