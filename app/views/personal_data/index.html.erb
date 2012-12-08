@@ -3,19 +3,22 @@
     <ul class="thumbnails">
       <li class="span8">
         <div class="thumbnail">
-          <% if  @personal_datum.nil? %>
+          <% if  @personal_datum.nil?  %>
+              <img src="http://placehold.it/160x120" alt="">
+          <%elsif @personal_datum.photo.blank?%>
               <img src="http://placehold.it/160x120" alt="">
            <%else %>
           <%= image_tag @personal_datum.photo.to_s %>
+            <h4><%= current_user.first_name %></h4>
           <%end %>
-          <h4><%= current_user.first_name %></h4>
+
         </div>
       </li>
     </ul>
-    <p><a href= "#{<%=apprentice_job_details_path%>}" class="btn buttonwidth"> <i class="icon-user"></i> Apprentice </a> </p>
+    <p><a href= <%=apprentice_job_details_path%> class="btn buttonwidth"> <i class="icon-user"></i> Apprentice </a> </p>
     <p><a href= "" class="btn buttonwidth"> <i class="icon-envelope"></i> Messages </a> </p>
     <p><a href= "" class="btn buttonwidth"> <i class="icon-exclamation-sign"></i> Alerts </a> </p>
-    <p><a href="#{<%= edit_privacy_path(:id=> current_user.id) %>}"  class="btn buttonwidth"> <i class="icon-wrench"></i> Settings </a> </p>
+    <p><a href=<%= edit_privacy_path(current_user.id) %>  class="btn buttonwidth"> <i class="icon-wrench"></i> Settings </a> </p>
     <div class="interviews">
       <ul >
         <li><%=image_tag("interviews.png",:class => "imageAlign")%></li>
@@ -43,11 +46,23 @@
         <div class="dashboard-bg">
           <div class="dashboard-sticker2">    </div>
           <div class="row-fluid">
+            <div class="span12">  <!--for displaying flash messages -->
+              <% flash.each do |name, msg| %>
+                  <div class="alert alert-<%= name==:notice ? "success" :"error" %>">
+                    <button type="button" class="close" data-dismiss="alert">×</button>
+                    <%= msg %>
+                  </div>
+              <% end %>
+            </div>
+          </div>
+          <div class="row-fluid">
             <div class="span3">
               <ul class="thumbnails">
                 <li class="span12">
                   <div class="thumbnail">
-                    <% if  @personal_datum.nil? %>
+                    <% if  @personal_datum.nil?  %>
+                        <img src="http://placehold.it/200x120" alt="">
+                    <%elsif @personal_datum.photo.blank?%>
                         <img src="http://placehold.it/200x120" alt="">
                     <%else %>
                     <%= image_tag @personal_datum.photo.to_s %>

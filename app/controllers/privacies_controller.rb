@@ -9,24 +9,11 @@ class PrivaciesController < ApplicationController
   end
   def edit
     @person=PersonalDatum.find_last_by_user_id(current_user.id)
+
   end
   def create
-    @searchpreference=SearchPreference.new #To add blank data for editing later
-    @timezone=TimeZone.new #To add blank data for editing later
-    @privacy.user_id=current_user.id
-    @privacy.resume_id=session[:resume_id]
-    @searchpreference.user_id=current_user.id
-    @timezone.user_id=current_user.id
-
-    respond_to do |format|
-      if @privacy.save
-        @searchpreference.save # don't want to check validations want to save with id only
-        @timezone.save   # don't want to check validations want to save with id only
-        format.html { redirect_to personal_data_path}
-     else
-        format.html { render action: "new" }
-      end
-    end
+    @person=PersonalDatum.find_last_by_user_id(current_user.id)
+    @privacy.save
   end
   def update
     respond_to do |format|

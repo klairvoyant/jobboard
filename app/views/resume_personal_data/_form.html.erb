@@ -38,8 +38,9 @@
                   <img src="http://placehold.it/200x180" alt="">
               <%else %>
                   <%= image_tag (@person.photo.to_s) %>
+                  <h4><%= current_user.first_name %></h4>
               <% end %>
-              <h4><%= current_user.first_name %></h4>
+
             </div>
           </li>
         </ul>

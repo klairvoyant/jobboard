@@ -5,7 +5,7 @@ class LanguagesController < ApplicationController
   def new
     @person=PersonalDatum.find_last_by_user_id(current_user.id)
     @certification = Certification.new
-    @privacy = Privacy.new
+    @privacy_resume = PrivacyResume.new
     respond_to do |format|
       format.html # new.html.erb
     end
@@ -14,7 +14,7 @@ class LanguagesController < ApplicationController
     @language.resume_id=session[:resume_id]
     @person=PersonalDatum.find_last_by_user_id(current_user.id)
     @certification = Certification.new
-    @privacy = Privacy.new
+    @privacy_resume = PrivacyResume.new
     respond_to do |format|
       if @language.save
         format.html { redirect_to new_language_path ,notice: @language.language_name + ' was successfully updated.'}

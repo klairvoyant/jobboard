@@ -1,4 +1,6 @@
 Jobboard::Application.routes.draw do
+  resources :privacy_resumes
+
   resources :categories
 
   resources :salary_ranges

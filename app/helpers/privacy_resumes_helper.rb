@@ -1,0 +1,2 @@
+module PrivacyResumesHelper
+end

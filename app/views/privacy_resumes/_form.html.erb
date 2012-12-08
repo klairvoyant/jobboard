@@ -1,0 +1,8 @@
+<%= simple_form_for(@privacy_resume) do |f| %>
+  <%= f.error_notification %>
+    <%= f.collection_radio_buttons(:privacy, [['0', "Searchable"],['1', 'Private']],:first, :last,:item_wrapper_tag=>'label',:item_wrapper_class=>'bigSize', :checked=>0 ) do |b|
+      b.label { b.radio_button + " " +b.text }
+    end
+    %>
+    <%= f.button :submit, 'Save',:class=> "btn btn-primary" %>
+<% end %>

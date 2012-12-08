@@ -509,6 +509,13 @@
       <column name="updated_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
       <primary-key name="PRIMARY" columns="id" />
     </table>
+    <table name="categories" schema="" catalog="jobboard_development" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="category" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="created_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
+      <column name="updated_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
+      <primary-key name="PRIMARY" columns="id" />
+    </table>
     <table name="certifications" schema="" catalog="jobboard_development" type="TABLE">
       <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
       <column name="resume_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
@@ -554,6 +561,13 @@
       <column name="updated_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
       <primary-key name="PRIMARY" columns="id" />
     </table>
+    <table name="interest_areas" schema="" catalog="jobboard_development" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="interest" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="created_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
+      <column name="updated_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
+      <primary-key name="PRIMARY" columns="id" />
+    </table>
     <table name="interviews" schema="" catalog="jobboard_development" type="TABLE">
       <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
       <column name="resume_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
@@ -581,6 +595,13 @@
       <column name="updated_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
       <primary-key name="PRIMARY" columns="id" />
     </table>
+    <table name="job_types" schema="" catalog="jobboard_development" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="job_type" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="created_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
+      <column name="updated_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
+      <primary-key name="PRIMARY" columns="id" />
+    </table>
     <table name="languages" schema="" catalog="jobboard_development" type="TABLE">
       <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
       <column name="resume_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
@@ -604,9 +625,9 @@
     <table name="objectives" schema="" catalog="jobboard_development" type="TABLE">
       <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
       <column name="objective" sqlType="TEXT" length="65535" precision="0" nullable="true" jdbcType="-1" />
-      <column name="area_of_interest" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
-      <column name="job_type" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
-      <column name="salary_range" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="interest_area_id" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="job_type_id" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="salary_range_id" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
       <column name="created_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
       <column name="updated_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
       <column name="resume_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
@@ -646,13 +667,12 @@
       <primary-key name="PRIMARY" columns="id" />
     </table>
     <table name="privacies" schema="" catalog="jobboard_development" type="TABLE">
-      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
-      <column name="user_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
-      <column name="resume_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
       <column name="privacy" sqlType="BIT" length="0" precision="0" nullable="true" jdbcType="-7" />
+      <column name="resume_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="user_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" def="MA==" />
       <column name="created_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
       <column name="updated_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
-      <primary-key name="PRIMARY" columns="id" />
+      <primary-key name="PRIMARY" columns="user_id" />
     </table>
     <table name="resume_job_data" schema="" catalog="jobboard_development" type="TABLE">
       <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
@@ -691,9 +711,26 @@
       <column name="updated_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
       <primary-key name="PRIMARY" columns="id" />
     </table>
+    <table name="salary_ranges" schema="" catalog="jobboard_development" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="salary_range" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="created_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
+      <column name="updated_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
+      <primary-key name="PRIMARY" columns="id" />
+    </table>
     <table name="schema_migrations" schema="" catalog="jobboard_development" type="TABLE">
       <column name="version" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12" />
       <index name="unique_schema_migrations" unique="true" columns="version" />
+    </table>
+    <table name="search_preferences" schema="" catalog="jobboard_development" type="TABLE">
+      <column name="city" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="state" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="zipcode" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="category_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="user_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" def="MA==" />
+      <column name="created_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
+      <column name="updated_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
+      <primary-key name="PRIMARY" columns="user_id" />
     </table>
     <table name="skills" schema="" catalog="jobboard_development" type="TABLE">
       <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
@@ -703,6 +740,13 @@
       <column name="created_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
       <column name="updated_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
       <primary-key name="PRIMARY" columns="id" />
+    </table>
+    <table name="time_zones" schema="" catalog="jobboard_development" type="TABLE">
+      <column name="time_zone" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="user_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" def="MA==" />
+      <column name="created_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
+      <column name="updated_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
+      <primary-key name="PRIMARY" columns="user_id" />
     </table>
     <table name="users" schema="" catalog="jobboard_development" type="TABLE">
       <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />

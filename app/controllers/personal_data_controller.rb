@@ -13,7 +13,7 @@ class PersonalDataController < ApplicationController
     else
         @personal_datum=PersonalDatum.find_last_by_user_id(current_user.id)
         @resume=Resume.find_all_by_option_no_and_user_id(3,current_user.id)  #3 =uploaded file
-        @file_uploads = FileUpload.all
+        @file_uploads = FileUpload.find_all_by_user_id(current_user.id)
         @file_upload = FileUpload.new
         if @personal_datum.nil?
         else
@@ -50,6 +50,7 @@ class PersonalDataController < ApplicationController
    end
    end
   def new
+
     respond_to do |format|
       format.html # new.html.erb
     end

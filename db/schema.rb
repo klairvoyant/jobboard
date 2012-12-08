@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121204064010) do
+ActiveRecord::Schema.define(:version => 20121208070812) do
 
   create_table "alerts", :force => true do |t|
     t.integer  "user_id"
@@ -163,7 +163,13 @@ ActiveRecord::Schema.define(:version => 20121204064010) do
     t.datetime "updated_at",  :null => false
   end
 
-  create_table "privacies", :force => true do |t|
+  create_table "privacies", :primary_key => "user_id", :force => true do |t|
+    t.boolean  "privacy"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "privacy_resumes", :force => true do |t|
     t.integer  "user_id"
     t.integer  "resume_id"
     t.boolean  "privacy"
@@ -211,12 +217,11 @@ ActiveRecord::Schema.define(:version => 20121204064010) do
     t.datetime "updated_at",   :null => false
   end
 
-  create_table "search_preferences", :force => true do |t|
-    t.integer  "user_id"
-    t.integer  "category_id"
+  create_table "search_preferences", :primary_key => "user_id", :force => true do |t|
     t.string   "city"
     t.string   "state"
     t.string   "zipcode"
+    t.integer  "category_id"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end
@@ -229,8 +234,7 @@ ActiveRecord::Schema.define(:version => 20121204064010) do
     t.datetime "updated_at",  :null => false
   end
 
-  create_table "time_zones", :force => true do |t|
-    t.integer  "user_id"
+  create_table "time_zones", :primary_key => "user_id", :force => true do |t|
     t.string   "time_zone"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false

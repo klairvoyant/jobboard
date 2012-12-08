@@ -3,26 +3,11 @@
 <h3>Resume Status*</h3>
 <%= simple_form_for(@privacy) do |f| %>
   <%= f.error_notification %>
-     <%= f.collection_radio_buttons(:privacy, [['0', "Searchable"],['1', 'Private']],:first, :last,:item_wrapper_tag=>'label',:item_wrapper_class=>'bigSize', :checked=> '0' ) do |b|
+     <%= f.collection_radio_buttons(:privacy, [['0', "Searchable"],['1', 'Private']],:first, :last,:item_wrapper_tag=>'label',:item_wrapper_class=>'bigSize', :checked=> @privacy.privacy ) do |b|
       b.label { b.radio_button + " " +b.text }
     end
     %>
     <%= f.button :submit, 'Save',:class=> "btn btn-primary" %>
 <% end %>
 </div>
-<!--<div class="span4">-->
-
-  <!--<ul>-->
-    <!--<ul>-->
-      <!--<li><%#= link_to "My search preference",edit_search_preference_path(:user_id=> current_user.id),:class=>"btn-link" %> </li>-->
-      <!--<li><%#= link_to "Time zone settings",edit_time_zone_path(:user_id=> current_user.id),:class=>"btn-link" %></li>-->
-      <!--<li><%#= link_to "privacy settings",edit_privacy_path(:user_id=> current_user.id),:class=>"btn-link" %></li>-->
-      <!--&lt;!&ndash;<li><%#= link_to "Change Username",job_details_path,:class=>"btn-link" %></li>&ndash;&gt;-->
-      <!--&lt;!&ndash;<li><%#= link_to "Reset password",new_user_password_path,:class=>"btn-link" %></li>&ndash;&gt;-->
-      <!--<li> <%#= link_to "Cancel Account",job_details_path,:class=>"btn-link" %></li>-->
-    <!--</ul>-->
-  <!--</ul>-->
-
-
-<!--</div>-->
 </div>

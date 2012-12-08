@@ -22,10 +22,8 @@ div.clear {
 }
 
 header {
-  /*background: url("../images/header_background.png") center center repeat;*/
-  background: url("header_background.png") center center repeat;
-
-  height: 60px;
+   background: url("header_background.png") center center repeat;
+    height: 60px;
 }
 
 header article#logo {
@@ -48,8 +46,7 @@ header nav ul li {
 }
 
 header nav ul li a {
-  /*color: #E8EAEC;*/
-  font-family: "Verdana";
+   font-family: "Verdana";
   font-size: 14px;
   margin-right: 15px;
   cursor: pointer;
@@ -322,13 +319,6 @@ footer article.side_links a {
 
     display: inline;
     padding-left: 40px;
-
-
-
-
-
-
-
 
 }
 
