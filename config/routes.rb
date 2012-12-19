@@ -40,7 +40,7 @@ Jobboard::Application.routes.draw do
   #devise_for :users
   devise_for :users,path_names: {sign_in: "login", sign_out: "logout"}, :controllers => { :registrations => "registrations", omniauth_callbacks: "omniauth_callbacks" }
 
-
+  mailboxes_for :users
   get "home/index"
 
   resources :job_details    do

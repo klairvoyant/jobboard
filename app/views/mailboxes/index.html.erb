@@ -1,0 +1,15 @@
+<div class="topPush rightPush">
+            <h2>Mail</h2>
+            <%= render "head" %>
+            <div class="ui-tabs ui-widget ui-widget-content ui-corner-all">
+                <%= render :partial => "tabs_panel" %>
+                <div id="tabs-messages" class="ui-tabs-panel ui-widget-content ui-corner-bottom topPush2 bottomPush">
+                       <%= render "messages" %>
+                </div>
+            </div>
+             <h2>Alert</h2>
+             <div id="tabs-messages" class="ui-tabs-panel ui-widget-content ui-corner-bottom topPush2 bottomPush">
+                <%= render "alerts" %>
+             </div>
+
+</div>

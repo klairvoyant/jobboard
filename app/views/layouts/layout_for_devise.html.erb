@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Jobboardtemp</title>
+  <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <%= stylesheet_link_tag    'bootstrap_and_overrides','main', :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body class="container-fluid">
+<!--<header>-->
+  <!--<article id="logo">-->
+    <!--<%#=image_tag("small_logo.png")%>-->
+  <!--</article>-->
+  <!--<nav>-->
+    <!--<ul>-->
+      <!--<li>-->
+        <!--<a> Job Seeker </a>-->
+      <!--</li>-->
+      <!--<li>-->
+        <!--<a> Employer </a>-->
+      <!--</li>-->
+      <!--<li>-->
+        <!--<a> About Us </a>-->
+      <!--</li>-->
+      <!--<li>-->
+        <!--<%#=image_tag("like.png")%>-->
+      <!--</li>-->
+    <!--</ul>-->
+  <!--</nav>-->
+<!--</header>-->
+
+<%= yield %>
+
+<section class="content_footer">
+  <div class="center">
+    <article class="left">
+      <h2>
+        Benefit for Job Seeker
+      </h2>
+      <p class="pencil">
+        Sign up: get access
+      </p>
+      <p class="arrow">
+        Connect: get infront of the decision maker
+      </p>
+      <p class="notes">
+        Get Hired: open the door to your career
+      </p>
+    </article>
+    <article class="right">
+      <h2>
+        Benefit for Employer
+      </h2>
+      <p class="pencil">
+        Sign up: get access
+      </p>
+      <p class="arrow">
+        Hire: find the right fit
+      </p>
+      <p class="notes">
+        Manage: get the tools to manage your employer
+      </p>
+    </article>
+  </div>
+</section>
+
+<footer>
+  <article class="main_footer_content">
+    <nav>
+      <ul>
+        <li>
+          <a>Terms of Agreement</a>
+        </li>
+        <li>
+          <a>Privacy Terms </a>
+        </li>
+        <li>
+          <a class="contact_us">Contact Us </a>
+        </li>
+      </ul>
+    </nav>
+    <p>
+      @Cloudxify 2012 All rights Reserved.
+
+
+    </p>
+  </article>
+  <article class="side_links">
+    <a href="#">Follow Us </a>
+    <%=image_tag("facebook1.png",:class => "facebook")%>
+    <%=image_tag("twitter.png",:class => "twitter")%>
+  </article>
+</footer>
+
+
+</body>
+</html>

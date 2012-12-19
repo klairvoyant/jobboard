@@ -47,11 +47,31 @@
                   <li><a href="#">Calender</a></li>
                 </ul>
               </div>
+               <% @user=User.find_by_email(current_user.email)
+
+
+                  @count= @user.inbox    #return all incoming messages for @user1
+                  @no=0
+                  @no2=0
+                  for msg in @count
+                    unless msg.read?
+                      unless msg.from.email=="admin@jobboard.com"
+                        @no=@no+1
+                      else
+                        @no2=@no2+1
+                      end
+                    end
+                  end
+
+
+               %>
               <div class="header-mid-tabs">
                 <div class="btn-group" data-toggle="buttons-radio">
                   <button type="button" class="btn">Profile</button>
-                  <button type="button" class="btn">Inbox <span class="badge badge-info">3</span></button>
-                  <button type="button" class="btn">Notifications<span class="badge badge-info">5</span></button>
+                  <!--<button type="button" class="btn">Inbox <span class="badge badge-info"><%#=@no %></span></button>-->
+                  <a class="btn" href=<%=mailboxes_path %> >Mail <span class="badge badge-info"><%=@no %></span> </a>
+                  <a class="btn" href=<%=mailboxes_path %> >Notifications <span class="badge badge-info"><%=@no2 %></span> </a>
+                  <!--<button type="button" class="btn">Notifications<span class="badge badge-info"><%#=@no2 %></span></button>-->
                   <%= link_to "Logout",destroy_user_session_path,:method=> :delete,:class=>"btn" %>
                 </div>
               </div>

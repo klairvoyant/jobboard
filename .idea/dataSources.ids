@@ -654,6 +654,32 @@
       <column name="public_profile_url" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
       <primary-key name="PRIMARY" columns="id" />
     </table>
+    <table name="message_copies" schema="" catalog="jobboard_development" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="sent_messageable_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="sent_messageable_type" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="recipient_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="subject" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="body" sqlType="TEXT" length="65535" precision="0" nullable="true" jdbcType="-1" />
+      <column name="created_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
+      <column name="updated_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
+      <primary-key name="PRIMARY" columns="id" />
+      <index name="outbox_idx" unique="false" columns="sent_messageable_id,recipient_id" />
+    </table>
+    <table name="messages" schema="" catalog="jobboard_development" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="received_messageable_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="received_messageable_type" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="sender_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="subject" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="body" sqlType="TEXT" length="65535" precision="0" nullable="true" jdbcType="-1" />
+      <column name="opened" sqlType="BIT" length="0" precision="0" nullable="true" jdbcType="-7" def="MA==" />
+      <column name="deleted" sqlType="BIT" length="0" precision="0" nullable="true" jdbcType="-7" def="MA==" />
+      <column name="created_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
+      <column name="updated_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
+      <primary-key name="PRIMARY" columns="id" />
+      <index name="inbox_idx" unique="false" columns="received_messageable_id,sender_id" />
+    </table>
     <table name="objectives" schema="" catalog="jobboard_development" type="TABLE">
       <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
       <column name="objective" sqlType="TEXT" length="65535" precision="0" nullable="true" jdbcType="-1" />

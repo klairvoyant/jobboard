@@ -1,0 +1,13 @@
+<div class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all ui-sortable changeFont">
+
+  <span class="ui-state-default ui-corner-top ui-tabs-selected ui-state-active">
+    <%= link_to "Inbox", box_mailboxes_path(:inbox), :remote => true %>
+  </span>
+  <span class="ui-state-default ui-corner-top rightPush">
+    <%= link_to "Outbox", box_mailboxes_path(:outbox), :remote => true %>
+  </span>
+  <span class="ui-state-default ui-corner-top rightPush">
+    <%= link_to "Trash", box_mailboxes_path(:trash), :remote => true %>
+  </span>
+
+ </div>

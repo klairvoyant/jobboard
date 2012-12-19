@@ -44,6 +44,9 @@ gem 'omniauth-google-oauth2'
 gem 'less-rails'
 gem 'linkedin'
 gem "carrierwave"
+gem "has_mailbox"
+gem 'will_paginate'
+
 
 
 group :production do

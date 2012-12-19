@@ -1,103 +1,120 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Jobboardtemp</title>
+  <title>Job Board</title>
   <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
   <!--[if lt IE 9]>
   <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
-  <%= stylesheet_link_tag    'bootstrap_and_overrides','main', :media => "all" %>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-
 <body class="container-fluid">
-<header>
-  <article id="logo">
-    <%=image_tag("small_logo.png")%>
-  </article>
-  <nav>
-    <ul>
-      <li>
-        <a> Job Seeker </a>
-      </li>
-      <li>
-        <a> Employer </a>
-      </li>
-      <li>
-        <a> About Us </a>
-      </li>
-      <li>
-        <%=image_tag("like.png")%>
-      </li>
-    </ul>
-  </nav>
-</header>
+<div class="row-fluid" >
+  <div class="span12">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner ">
+        <div class="container-fluid header-bg">
+          <a class="brand" href="#"><%=image_tag('logo.png')%></a>
+          <div class="nav-collapse collapse">
+            <br>
+            <ul class="nav pull-right">
+              <li class="active"><a href="#">Job Seeker</a></li>
+              <li><a href="#about">Employer</a></li>
+              <li><a href="#contact">About Us</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div >
+      <div id="navbar-example" class="navbar navbar-static margin-header-tabs">
+        <div class=" header-tabs">
+          <div class="header-left-tabs">
+            <ul class="no-list-style inline-lising-tabs">
+              <li><a href="#"> <i class="icon-home"></i> </a></li>
+              <li><%=image_tag("dashboard/seperator.png")%></li>
+              <li><%= link_to "Dashboard",personal_data_path,:class=>"btn-link" %></li>
+              <li><%=image_tag("dashboard/seperator.png")%></li>
+              <li><%= link_to "Resume",new_resume_path,:class=>"btn-link" %></li>
+              <li><%=image_tag("dashboard/seperator.png")%></li>
+              <li><%= link_to "Jobs",job_details_path,:class=>"btn-link" %></li>
+              <li><%=image_tag("dashboard/seperator.png")%></li>
+              <li><a href="#">Network</a></li>
+              <li><%=image_tag("dashboard/seperator.png")%></li>
+              <li><a href="#">Groups</a></li>
+              <li><%=image_tag("dashboard/seperator.png")%></li>
+              <li><a href="#">Calender</a></li>
+            </ul>
+          </div>
 
-<%= yield %>
+         <% @user=User.find_by_email(current_user.email)
+         @count= @user.inbox    #return all incoming messages for @user1
+         @no=0
+         @no2=0
+         for msg in @count
+             unless msg.read?
+             unless msg.from.email=="admin@jobboard.com"
+             @no=@no+1
+             else
+             @no2=@no2+1
+             end
+             end
+         end
+          %>
+           <div class="header-mid-tabs">
+            <div class="btn-group" data-toggle="buttons-radio">
+              <button type="button" class="btn">Profile</button>
+              <!--<%#= link_to "Mail",mailboxes_path,:class=>"btn" %>-->
+              <a class="btn" href=<%=mailboxes_path %> >Mail <span class="badge badge-info"><%=@no %></span> </a>
 
-<section class="content_footer">
-  <div class="center">
-    <article class="left">
-      <h2>
-        Benefit for Job Seeker
-      </h2>
-      <p class="pencil">
-        Sign up: get access
-      </p>
-      <p class="arrow">
-        Connect: get infront of the decision maker
-      </p>
-      <p class="notes">
-        Get Hired: open the door to your career
-      </p>
-    </article>
-    <article class="right">
-      <h2>
-        Benefit for Employer
-      </h2>
-      <p class="pencil">
-        Sign up: get access
-      </p>
-      <p class="arrow">
-        Hire: find the right fit
-      </p>
-      <p class="notes">
-        Manage: get the tools to manage your employer
-      </p>
-    </article>
+              <!--<button type="button" class="btn">Inbox <span class="badge badge-info"><%#=@no %></span></button>-->
+              <!--<button type="button" class="btn">Notifications<span class="badge badge-info"><%#=@no2 %></span></button>-->
+              <a class="btn" href=<%=mailboxes_path %> >Notifications <span class="badge badge-info"><%=@no2 %></span> </a>
+              <%= link_to "Logout",destroy_user_session_path,:method=> :delete,:class=>"btn" %>
+            </div>
+          </div>
+          <form class="navbar-search pull-right">
+            <i class="icon-search"></i> <input type="text" class="search-query" placeholder="Search text, documents and people ">
+          </form>
+        </div>
+      </div>
+    </div>
   </div>
-</section>
+</div>
+<%= yield %>
+<div class="row-fluid">
+  <div class="span12">
+    <div class="d-footer-bg" >
+      <div class="footer-content">
+        <div class="footerleft"><a href="#"><%=image_tag("dashboard/twtr.png")%></a>&nbsp;&nbsp;&nbsp;<a href="#"><%=image_tag("dashboard/lnkdin.png")%></a>&nbsp;&nbsp;&nbsp;<a href="#"><%=image_tag("dashboard/gplus.png")%></a>&nbsp;&nbsp;&nbsp;<a href="#"><%=image_tag("dashboard/fb.png")%></a></div>
+        <div class="footermiddle">
+          <a href='#' class="footertabs">Terms of Agreement </a> | <a href='#' class="footertabs"> Privacy Terms </a>
+          |  <a href='#' class="footertabs"> Contact Us </a>
+          <br /><br />
+          &copy; Cloudxifiy 2012 All rights Reserved.
 
-<footer>
-  <article class="main_footer_content">
-    <nav>
-      <ul>
-        <li>
-          <a>Terms of Agreement</a>
-        </li>
-        <li>
-          <a>Privacy Terms </a>
-        </li>
-        <li>
-          <a class="contact_us">Contact Us </a>
-        </li>
-      </ul>
-    </nav>
-    <p>
-      @Cloudxify 2012 All rights Reserved.
-
-
-    </p>
-  </article>
-  <article class="side_links">
-    <a href="#">Follow Us </a>
-    <%=image_tag("facebook1.png",:class => "facebook")%>
-    <%=image_tag("twitter.png",:class => "twitter")%>
-  </article>
-</footer>
-
-
+        </div>
+        <div class="footer-right"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Le javascript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap-transition.js"></script>
+<script src="js/bootstrap-alert.js"></script>
+<script src="js/bootstrap-modal.js"></script>
+<script src="js/bootstrap-dropdown.js"></script>
+<script src="js/bootstrap-scrollspy.js"></script>
+<script src="js/bootstrap-tab.js"></script>
+<script src="js/bootstrap-tooltip.js"></script>
+<script src="js/bootstrap-popover.js"></script>
+<script src="js/bootstrap-button.js"></script>
+<script src="js/bootstrap-collapse.js"></script>
+<script src="js/bootstrap-carousel.js"></script>
+<script src="js/bootstrap-typeahead.js"></script>
 </body>
 </html>

@@ -1,0 +1,65 @@
+<%= form_tag update_mailboxes_path, :method => :post, :remote => true do %>
+	<%= select_tag "option", options_for_select(@options) %>
+	<%= submit_tag "Apply to Selected", :class => "submit btn btn-primary"  %>
+	<%= hidden_field_tag :mailbox, @mailbox %>
+
+    <div class="row-fluid">
+      <div class="span1">
+        <input type="checkbox" class="checkall" id="checkbox" name="checkbox">
+      </div>
+      <%- unless @mailbox == "outbox" -%>
+      <div class="span3">
+           From
+      </div>
+      <%- else -%>
+      <div class="span3">
+        To
+      </div>
+      <%- end -%>
+      <div class="span6">
+        Subject
+      </div>
+      <div class="span2">
+        Date
+      </div>
+    </div>
+     <!-- check opened message first and then set alternate style -->
+	        <%- x = 0 -%>
+
+
+	<%- for msg in @messages -%>
+
+     <% if msg.from.email!= "admin@jobboard.com" %>
+     <div class=" row-fluid <%= ( (@mailbox != "outbox") ? ( msg.read? ? "" : "unread " ) : "" ) + ( ((x += 1) % 2 == 0) ? "alt" : "") -%>">
+       <div class="span1">
+         <%= check_box_tag "[messages][]", msg.id %>
+       </div>
+       <%- unless @mailbox == "outbox" -%>
+       <div class="span3">
+         <%= msg.from.email %>
+       </div>
+       <%- else -%>
+       <div class="span3">
+         <%= msg.to.email %>
+       </div>
+       <%- end -%>
+       <div class="span6">
+         <%= link_to msg.subject, show_mailboxes_path(@mailbox,msg) %>
+       </div>
+       <div class="span2">
+          <%= msg.created_at.strftime( ((msg.created_at < 1.days.ago) ? "%b %d, %Y" : "%I:%M %p")) %>
+       </div>
+     </div>
+     <% end %>
+	<%- end -%>
+    <div class="row-fluid">
+      <div class="span12">
+	      <%= will_paginate @messages, :class => "pagination" %>
+	  </div>
+    </div>
+
+
+<%- end -%>
+<p>
+	<%= link_to "Compose New Message", new_mailboxes_path, :class=>"btn btn-primary"%>
+</p>

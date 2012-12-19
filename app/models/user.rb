@@ -13,6 +13,8 @@ class User < ActiveRecord::Base
   has_one  :linkedin_detail
   has_many :file_uploads
 
+  has_mailbox
+
   #validates :policy, :acceptance => true
 
   def self.from_omniauth(auth)

@@ -1,0 +1,41 @@
+<%= form_tag update_mailboxes_path, :method => :post, :remote => true do %>
+    <%= select_tag "option", options_for_select(@options) %>
+    <%= submit_tag "Apply to Selected", :class => "submit btn btn-primary"  %>
+    <%= hidden_field_tag :mailbox, @mailbox %>
+     <%- x = 0 -%>
+     <%- for msg in @messages -%>
+
+        <% if msg.from.email== "admin@jobboard.com" %>  <!-- considered it is a alert-->
+            <div class=" row-fluid <%= ( (@mailbox != "outbox") ? ( msg.read? ? "" : "unread " ) : "" ) + ( ((x += 1) % 2 == 0) ? "alt" : "") -%>">
+              <div class="span1">
+                <%= check_box_tag "[messages][]", msg.id %>
+              </div>
+              <!--<%#- unless @mailbox == "outbox" -%>-->
+                  <!--<div class="span2">-->
+                    <!--<%#= msg.from.email %>-->
+                  <!--</div>-->
+              <!--<%#- else -%>-->
+                  <!--<div class="span2">-->
+                    <!--<%#= msg.to.email %>-->
+                  <!--</div>-->
+              <!--<%#- end -%>-->
+              <div class="span8">
+                <%=  msg.body  %>
+              </div>
+              <div class="span3">
+                <%= msg.created_at.strftime( ((msg.created_at < 1.days.ago) ? "%b %d, %Y" : "%I:%M %p")) %>
+              </div>
+            </div>
+        <% end %>
+    <%- end -%>
+    <div class="row-fluid">
+      <div class="span12">
+        <%= will_paginate @messages, :class => "pagination" %>
+      </div>
+    </div>
+
+
+<%- end -%>
+<p>
+  <!--<%#= link_to "Compose New Message", new_mailboxes_path, :class=>"btn btn-primary"%>-->
+</p>
