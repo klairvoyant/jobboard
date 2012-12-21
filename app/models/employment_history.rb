@@ -4,5 +4,8 @@ class EmploymentHistory < ActiveRecord::Base
   validates :resume_id, :numericality => { :only_integer => true }
 
   belongs_to :resume
+  searchable do
+    text :company_name,:job_description, :job_title
+  end
 
 end

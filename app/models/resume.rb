@@ -18,7 +18,9 @@ class Resume < ActiveRecord::Base
   #has_one  :resume_job_data
 
 
-
+  searchable do
+    text :file_name
+  end
 
 
 

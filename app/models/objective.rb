@@ -7,4 +7,8 @@ class Objective < ActiveRecord::Base
   belongs_to :interest_area
   belongs_to :job_type
   belongs_to :salary_range
+
+  searchable do
+    text :objective
+  end
 end

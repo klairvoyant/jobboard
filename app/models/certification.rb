@@ -3,4 +3,8 @@ class Certification < ActiveRecord::Base
   validates :certification_name, :resume_id, :presence => true
   validates :resume_id, :numericality => { :only_integer => true }
   belongs_to :resume
+
+  searchable do
+    text :certification_name
+  end
 end

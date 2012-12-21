@@ -3,5 +3,8 @@ class ResumePersonalDatum < ActiveRecord::Base
   validates :zip,:phone,:resume_name,:resume_id,:country, :presence => true
 
   belongs_to :resume
+  searchable do
+    text :city, :country, :phone, :resume_name,:state, :zip
+  end
 
 end

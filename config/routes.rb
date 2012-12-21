@@ -32,7 +32,7 @@ Jobboard::Application.routes.draw do
   resources :objectives
 
   resources :personal_data  do
-    member do
+    collection do
       get 'preview'
     end
   end

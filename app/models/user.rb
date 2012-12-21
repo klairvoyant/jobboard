@@ -13,6 +13,10 @@ class User < ActiveRecord::Base
   has_one  :linkedin_detail
   has_many :file_uploads
 
+  searchable do
+    text :email, :first_name, :second_name
+  end
+
   has_mailbox
 
   #validates :policy, :acceptance => true

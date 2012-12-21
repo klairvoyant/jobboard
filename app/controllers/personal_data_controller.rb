@@ -47,8 +47,10 @@ class PersonalDataController < ApplicationController
          respond_to do |format|
            format.html # index.html.erb
          end
-   end
-   end
+    end
+
+
+  end
   def new
 
     respond_to do |format|
@@ -83,6 +85,116 @@ class PersonalDataController < ApplicationController
     respond_to do |format|
       format.html { redirect_to personal_data_url }
     end
+  end
+
+  def preview
+
+    @search =PersonalDatum.search do
+      fulltext params[:search]
+    end
+    @personal_data = @search.results
+
+    @search =Alert.search do
+      fulltext params[:search]
+    end
+    @alert = @search.results
+
+    @search =Certification.search do
+      fulltext params[:search]
+    end
+    @certification = @search.results
+
+
+    @search =Education.search do
+      fulltext params[:search]
+    end
+    @education = @search.results
+
+    @search =EmploymentHistory.search do
+      fulltext params[:search]
+    end
+    @employmentHistory = @search.results
+
+    @search =FileUpload.search do
+      fulltext params[:search]
+    end
+    @fileUpload = @search.results
+
+
+    @search =JobDetail.search do
+      fulltext params[:search]
+    end
+    @jobDetail = @search.results
+
+
+    @search =Language.search do
+      fulltext params[:search]
+    end
+    @language = @search.results
+
+    @search =LinkedinDetail.search do
+      fulltext params[:search]
+    end
+    @linkedinDetail = @search.results
+
+
+    @search =Objective.search do
+      fulltext params[:search]
+    end
+    @objective = @search.results
+
+
+    @search =Resume.search do
+      fulltext params[:search]
+    end
+    @resume = @search.results
+
+
+    @search =ResumeJobDatum.search do
+      fulltext params[:search]
+    end
+    @resumeJobDatum = @search.results
+
+
+    @search =ResumePersonalDatum.search do
+      fulltext params[:search]
+    end
+    @resumePersonalDatum = @search.results
+
+
+    @search =SearchPreference.search do
+      fulltext params[:search]
+    end
+    @searchPreference = @search.results
+
+
+    @search =Skill.search do
+      fulltext params[:search]
+    end
+    @skill = @search.results
+
+
+    @search =User.search do
+      fulltext params[:search]
+    end
+    @user = @search.results
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   end
 
 end

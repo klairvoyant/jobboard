@@ -4,4 +4,7 @@ class SearchPreference < ActiveRecord::Base
   validates :user_id,:category_id, :numericality => { :only_integer => true }
   belongs_to :category
   belongs_to :user
+  searchable do
+    text :city, :state, :zipcode
+  end
 end

@@ -6,4 +6,8 @@ class PersonalDatum < ActiveRecord::Base
   validates :about_me, :area_of_study, :email, :experience, :name, :phone, :school, :user_id, :presence => true
   validates :user_id, :numericality => { :only_integer => true }
   validates_format_of :email, :with => /^(|(([A-Za-z0-9]+_+)|([A-Za-z0-9]+\-+)|([A-Za-z0-9]+\.+)|([A-Za-z0-9]+\++))*[A-Za-z0-9]+@((\w+\-+)|(\w+\.))*\w{1,63}\.[a-zA-Z]{2,6})$/i
+
+  searchable do
+    text :area_of_study, :email, :name, :phone, :school
+  end
 end

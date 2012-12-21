@@ -65,17 +65,13 @@
            <div class="header-mid-tabs">
             <div class="btn-group" data-toggle="buttons-radio">
               <button type="button" class="btn">Profile</button>
-              <!--<%#= link_to "Mail",mailboxes_path,:class=>"btn" %>-->
               <a class="btn" href=<%=mailboxes_path %> >Mail <span class="badge badge-info"><%=@no %></span> </a>
-
-              <!--<button type="button" class="btn">Inbox <span class="badge badge-info"><%#=@no %></span></button>-->
-              <!--<button type="button" class="btn">Notifications<span class="badge badge-info"><%#=@no2 %></span></button>-->
               <a class="btn" href=<%=mailboxes_path %> >Notifications <span class="badge badge-info"><%=@no2 %></span> </a>
               <%= link_to "Logout",destroy_user_session_path,:method=> :delete,:class=>"btn" %>
             </div>
           </div>
-          <form class="navbar-search pull-right">
-            <i class="icon-search"></i> <input type="text" class="search-query" placeholder="Search text, documents and people ">
+          <form action=<%=preview_personal_data_path %>  method="get" class="navbar-search pull-right">
+            <i class="icon-search"></i> <input type="text" name="search"  class="search-query" placeholder="Search text, documents and people">
           </form>
         </div>
       </div>

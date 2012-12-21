@@ -3,4 +3,7 @@ class Skill < ActiveRecord::Base
   validates :skill_name, :skill_years,:resume_id, :presence => true
   validates :resume_id,:skill_years, :numericality => { :only_integer => true }
   belongs_to :resume
+  searchable do
+    text :skill_name, :skill_years
+  end
 end

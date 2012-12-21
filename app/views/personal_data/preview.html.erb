@@ -1,0 +1,369 @@
+<div class="topPush rightPush min_height" xmlns="http://www.w3.org/1999/html">
+<% unless @personal_data.empty?  %>
+<h3> Personal Data</h3>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th> Email</th>
+    <th>Phone</th>
+    <th>School</th>
+    <th>Area of study</th>
+  </tr>
+    <% @personal_data.each do | personal_data | %>
+      <tr>
+        <td><%= personal_data.name %></td>
+        <td><%= personal_data.email %></td>
+        <td><%= personal_data.phone %></td>
+        <td><%= personal_data.school %></td>
+        <td><%= personal_data.area_of_study %></td>
+      </tr>
+  <% end %>
+
+</table>
+    ---------------------------------------------------------------------------------------
+<% end %>
+
+  <% unless @alert.empty?  %>
+
+  <h3> Alert</h3>
+  <table>
+    <tr>
+      <th>Message</th>
+
+    </tr>
+    <% @alert.each do | alert | %>
+        <tr>
+          <td><%= alert.message %></td>
+
+        </tr>
+    <% end %>
+  </table>
+      ---------------------------------------------------------------------------------------
+  <% end %>
+
+
+
+  <% unless @certification.empty?  %>
+
+      <h3> Certification</h3>
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Year</th>
+        </tr>
+        <% @certification.each do | certification | %>
+            <tr>
+              <td><%= certification.name %></td>
+              <td><%= certification.year %></td>
+
+            </tr>
+        <% end %>
+      </table>
+      ---------------------------------------------------------------------------------------
+  <% end %>
+
+
+
+
+  <% unless @education.empty?  %>
+
+      <h3> Education</h3>
+      <table>
+        <tr>
+          <th>Country</th>
+          <th> Course</th>
+          <th>Level</th>
+          <th>School</th>
+          <th>Start date</th>
+          <th>End date</th>
+          <th>State</th>
+        </tr>
+        <% @education.each do | education | %>
+            <tr>
+              <td><%= education.country %></td>
+              <td><%= education.course %></td>
+              <td><%= education.level %></td>
+              <td><%= education.school_name %></td>
+              <td><%= education.start_date %></td>
+              <td><%= education.end_date %></td>
+              <td><%= education.state %></td>
+
+            </tr>
+        <% end %>
+     </table>
+      ---------------------------------------------------------------------------------------
+  <% end %>
+
+
+
+  <% unless @employmentHistory.empty?  %>
+
+      <h3> Employment History</h3>
+      <table>
+        <tr>
+          <th>Company Name</th>
+          <th> Job Description</th>
+          <th>Job title</th>
+          <th>Start Date</th>
+          <th>End Date</th>
+        </tr>
+        <% @employmentHistory.each do | employmentHistory | %>
+            <tr>
+              <td><%= employmentHistory.company_name %></td>
+              <td><%= employmentHistory.job_description %></td>
+              <td><%= employmentHistory.job_title %></td>
+              <td><%= employmentHistory.start_date %></td>
+              <td><%= employmentHistory.end_date %></td>
+            </tr>
+        <% end %>
+      </table>
+      ---------------------------------------------------------------------------------------
+  <% end %>
+
+
+
+
+  <% unless @fileUpload.empty?  %>
+
+      <h3> Uploaded File</h3>
+      <table>
+        <tr>
+          <th>File Path</th>
+
+        </tr>
+        <% @fileUpload.each do | fileUpload | %>
+            <tr>
+              <td><%= fileUpload.file_path %></td>
+            </tr>
+        <% end %>
+      </table>
+      ---------------------------------------------------------------------------------------
+  <% end %>
+
+
+
+
+  <% unless @jobDetail.empty?  %>
+
+      <h3> Job Details</h3>
+      <table>
+        <tr>
+          <th>Company</th>
+          <th> Description</th>
+          <th>Experience</th>
+          <th>Job Title</th>
+          <th>Zip Code</th>
+
+        </tr>
+        <% @jobDetail.each do | jobDetail | %>
+            <tr>
+              <td><%= jobDetail.company %></td>
+              <td><%= jobDetail.description %></td>
+              <td><%= jobDetail.experience %></td>
+              <td><%= jobDetail.job_title %></td>
+              <td><%= jobDetail.zipcode %></td>
+            </tr>
+        <% end %>
+      </table>
+      ---------------------------------------------------------------------------------------
+  <% end %>
+
+  <% unless @language.empty?  %>
+
+      <h3> Language</h3>
+      <table>
+        <tr>
+          <th>Language Name</th>
+          <th> Proficiency</th>
+
+        </tr>
+        <% @language.each do | language | %>
+            <tr>
+              <td><%= language.language_name %></td>
+              <td><%= language.language_proficiency %></td>
+            </tr>
+        <% end %>
+      </table>
+      ---------------------------------------------------------------------------------------
+  <% end %>
+
+
+
+  <% unless @linkedinDetail.empty?  %>
+
+      <h3> LinkedIn Details</h3>
+      <table>
+        <tr>
+          <th>First Name</th>
+          <th> Last Name</th>
+          <th>Head Line</th>
+          <th>Public Profile</th>
+
+        </tr>
+        <% @linkedinDetail.each do | linkedinDetail | %>
+            <tr>
+              <td><%= linkedinDetail.first_name %></td>
+              <td><%= linkedinDetail.lastName %></td>
+              <td><%= linkedinDetail.headline %></td>
+              <td><%= linkedinDetail.public_profile_url %></td>
+            </tr>
+        <% end %>
+      </table>
+      ---------------------------------------------------------------------------------------
+  <% end %>
+
+
+  <% unless @objective.empty?  %>
+
+      <h3> Objective</h3>
+      <table>
+        <tr>
+          <th>Objective</th>
+
+        </tr>
+        <% @objective.each do | objective | %>
+            <tr>
+              <td><%= objective.objective %></td>
+            </tr>
+        <% end %>
+      </table>
+      ---------------------------------------------------------------------------------------
+  <% end %>
+
+
+  <% unless @resume.empty?  %>
+
+      <h3> Resume</h3>
+      <table>
+        <tr>
+          <th>File Name</th>
+
+        </tr>
+        <% @resume.each do | resume | %>
+            <tr>
+              <td><%= resume.file_name %></td>
+            </tr>
+        <% end %>
+      </table>
+      ---------------------------------------------------------------------------------------
+  <% end %>
+
+
+
+
+<% unless @resumeJobDatum.empty?  %>
+
+    <h3> Resume job data</h3>
+    <table>
+      <tr>
+        <th>Objective</th>
+        <th> Salary</th>
+        <th>Area of Interest</th>
+
+      </tr>
+      <% @resumeJobDatum.each do | resumeJobDatum | %>
+          <tr>
+            <td><%= resumeJobDatum.objective %></td>
+            <td><%= resumeJobDatum.salary %></td>
+            <td><%= resumeJobDatum.area_of_interest %></td>
+          </tr>
+      <% end %>
+    </table>
+    ---------------------------------------------------------------------------------------
+<% end %>
+
+<% unless @resumePersonalDatum.empty?  %>
+
+    <h3> Resume Personal Data</h3>
+    <table>
+      <tr>
+        <th>City</th>
+        <th>Country</th>
+        <th>Facebook Profile</th>
+        <th>LinkedIn Profile</th>
+        <th>Resume Name</th>
+        <th>State</th>
+        <th>Zip</th>
+      </tr>
+      <% @resumePersonalDatum.each do | resumePersonalDatum | %>
+          <tr>
+            <td><%= resumePersonalDatum.city %></td>
+            <td><%= resumePersonalDatum.country %></td>
+            <td><%= resumePersonalDatum.facebook_profile_path %></td>
+            <td><%= resumePersonalDatum.linkedin_profile_path %></td>
+            <td><%= resumePersonalDatum.resume_name %></td>
+            <td><%= resumePersonalDatum.state %></td>
+            <td><%= resumePersonalDatum.zip %></td>
+          </tr>
+      <% end %>
+    </table>
+    ---------------------------------------------------------------------------------------
+<% end %>
+
+
+<% unless @searchPreference.empty?  %>
+
+    <h3> Search Preference</h3>
+    <table>
+      <tr>
+        <th>City</th>
+        <th> State</th>
+        <th>Zip Code</th>
+      </tr>
+      <% @searchPreference.each do | searchPreference | %>
+          <tr>
+            <td><%= @searchPreference.city %></td>
+            <td><%= @searchPreference.state %></td>
+            <td><%= @searchPreference.zipcode %></td>
+          </tr>
+      <% end %>
+    </table>
+    ---------------------------------------------------------------------------------------
+<% end %>
+
+<% unless @skill.empty?  %>
+
+    <h3> Skill</h3>
+    <table>
+      <tr>
+        <th>Skill Name</th>
+        <th> years</th>
+
+      </tr>
+      <% @skill.each do | skill | %>
+          <tr>
+            <td><%= @skill.skill_name %></td>
+            <td><%= @skill.skill_years %></td>
+          </tr>
+      <% end %>
+    </table>
+    ---------------------------------------------------------------------------------------
+<% end %>
+
+
+<% unless @user.empty?  %>
+
+    <h3> User</h3>
+    <table>
+      <tr>
+        <th>First Name</th>
+        <th>Second Name</th>
+        <th>Email</th>
+
+      </tr>
+      <% @user.each do | user | %>
+          <tr>
+            <td><%= user.first_name %></td>
+            <td><%= user.second_name %></td>
+            <td><%= user.email %></td>
+          </tr>
+      <% end %>
+    </table>
+    ---------------------------------------------------------------------------------------
+<% end %>
+</br>
+<%= link_to 'Back', :back,:class=> "btn btn-primary" %>
+</div>
+
+

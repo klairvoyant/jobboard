@@ -46,6 +46,9 @@ gem 'linkedin'
 gem "carrierwave"
 gem "has_mailbox"
 gem 'will_paginate'
+gem 'sunspot_rails'
+gem 'sunspot_solr'
+gem 'progress_bar'
 
 
 
